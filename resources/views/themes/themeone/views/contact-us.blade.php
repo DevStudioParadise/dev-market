@@ -1,7 +1,6 @@
 @extends('layout')
 @section('content')
 <section class="site-content">
-	<div id="googleMap" style="width:100%;height:380px; margin-top:-30px; margin-bottom:30px; "></div>
 	<div class="container">
   		<div class="breadcum-area">
             <div class="breadcum-inner">
