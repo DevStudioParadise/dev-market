@@ -118,8 +118,6 @@ return [
 	'Newest Products'=>'Newest Products',
 		
 	'View All'=>'View All',
-	
-	'Special'=>'Special',
 		
 	'items'=>'Item(s)',
 	'item'=>'Item',	
@@ -168,17 +166,11 @@ return [
 		
 	'Detail'=>'Detail',
 		
-	'Quantity'=>'Quantity',
-		
 	'Unit Price'=>'Unit Price',
 		
 	'Item Total'=>'Item Total',
 		
-	'Special'=>'Special',
-		
 	'Coupon Code'=>'Coupon Code',
-		
-	'Checkout'=>'Checkout',
 		
 	'Update Cart'=>'Update Cart',
 		
@@ -236,8 +228,6 @@ return [
 		
 	'Terms and Services'=>'Terms and Services',
 		
-	'Privacy Policy'=>'Privacy Policy',
-		
 	'Refund Policy'=>'Refund Policy',
 		
 	'Please accept our terms and conditions'=>'Please accept our terms and conditions',
@@ -265,10 +255,6 @@ return [
 	'Cras vel ante vel augue convallis posuere'=>'Cras vel ante vel augue convallis posuere.',
 		
 	'Ut quis dolor accumsan, viverra neque nec, blandit leo'=>'Ut quis dolor accumsan, viverra neque nec, blandit leo.',
-		
-	'Checkout'=>'Checkout',
-		
-	'Shopping cart'=>'Shopping cart',
 		
 	'Billing Address'=>'Billing Address',
 		
@@ -342,8 +328,6 @@ return [
 		
 	'Order ID'=>'Order ID',
 		
-	'Quantity'=>'Quantity',
-		
 	'Order Date'=>'Order Date',
 		
 	'Price'=>'Price',
@@ -353,8 +337,6 @@ return [
 	'Status'=>'Status',
 		
 	'Order information'=>'Order information',
-		
-	'Please select a prefered shipping method to use on this order'=>'Please select a prefered shipping method to use on this order.',
 		
 	'Customer Detail'=>'Customer Detail',
 		
@@ -403,8 +385,6 @@ return [
 	'Edit Cart'=>'Edit Cart',
 		
 	'Full Name'=>'Full Name',
-		
-	'Email'=>'Email',
 		
 	'Message'=>'Message',
 		
@@ -461,8 +441,6 @@ return [
 		
 	'Edit Address'=>'Edit Address',
 		
-	'Add Address'=>'Add Address',
-		
 	'All products are loaded'=>'All products are loaded.',
 		
 	'Related Products'=>'Related Products',
@@ -513,15 +491,11 @@ return [
 		
 	'Male'=>'Male',
 		
-	'Gender'=>'Gender',
-		
 	'Ecommerce'=>'Ecommerce',
 		
 	'Featured'=>'Featured',
 		
 	'Filters'=>'Filters',
-		
-	'Apply'=>'Apply',
 		
 	'Reset'=>'Reset',
 		
@@ -551,8 +525,6 @@ return [
 		
 	'Special products of the Week'=>'Special Products of the Week',
 		
-	'Forgot Password'=>'Forgot Password',
-		
 	'Please Enter your email to recover your password'=>'Please Enter your email to recover your password.',
 		
 	'Qty'=>'Qty',
@@ -570,8 +542,6 @@ return [
 	'Subscribe for Newsletter'=>'Subscribe for Newsletter',
 		
 	'Your email address here'=>'Your email address here...',
-		
-	'Subscribe'=>'Subscribe!',
 		
 	'About Store'=>'About Store',
 		
@@ -705,7 +675,6 @@ return [
 	'Please login first to like this product'=>'Please login first to like this product.',
 	'Product is liked'=>'Product is liked.',
 	'Product is disliked'=>'Product is disliked.',
-	'Password has been updated successfully'=>'Password has been updated successfully.',
 	'Empty Site Name'=>'Empty Site Name',
 	'Instamojo Payment'=>'Instamojo Payment',
 	'External Link'=>'External Link',
@@ -713,7 +682,6 @@ return [
 	'cancel order'=>'Cancel Order',
 	'cancelled'=>'Cancelled',
 	'Are you sure you want to cancel this order?'=>'Are you sure you want to cancel this order?',
-	'Flash Sale'=>'Flash Sale',
 	'UP COMMING'=>'UP COMMING',
 	'Min Order Limit:'=>'Min Order Limit:',
 	'Return'=>'Return',
