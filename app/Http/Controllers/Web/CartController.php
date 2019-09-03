@@ -44,106 +44,109 @@ class CartController extends DataController
 	//viewcart 
 	public function viewcart(Request $request){
 		
-		$title = array('pageTitle' => Lang::get("website.View Cart"));
-		$result = array();
-		$data = array();	
-		$result['commonContent'] = $this->commonContent();
-		
-		$result['cart'] = $this->myCart($data);
-		
-		//apply coupon
-		if(count(session('coupon'))>0){
-			$session_coupon_data = session('coupon');
-			session(['coupon' => array()]);		
-			$response = array();	
-			if(!empty($session_coupon_data)){		
-				foreach($session_coupon_data as $key=>$session_coupon){	
-						$response = $this->common_apply_coupon($session_coupon->code);
-				}
-			}	
-		}
-		//dd(session('coupon'));
-		return view("viewcart", $title)->with('result', $result); 		
+//		$title = array('pageTitle' => Lang::get("website.View Cart"));
+//		$result = array();
+//		$data = array();
+//		$result['commonContent'] = $this->commonContent();
+//
+//		$result['cart'] = $this->myCart($data);
+//
+//		//apply coupon
+//		if(count(session('coupon'))>0){
+//			$session_coupon_data = session('coupon');
+//			session(['coupon' => array()]);
+//			$response = array();
+//			if(!empty($session_coupon_data)){
+//				foreach($session_coupon_data as $key=>$session_coupon){
+//						$response = $this->common_apply_coupon($session_coupon->code);
+//				}
+//			}
+//		}
+//		//dd(session('coupon'));
+//		return view("viewcart", $title)->with('result', $result);
+        return redirect('/');
 	}
 	
 	//eidtCart 
 	public function editcart(Request $request){
-		
-		$title = array('pageTitle' => Lang::get("website.Edit Cart"));
-		$result = array();
-		$data = array();	
-		$result['commonContent'] = $this->commonContent();
-		$baskit_id = $request->id;
-		
-		$result['cart'] = $this->myCart($baskit_id);
-		
-		if(count($result['cart'])>0){	
-				
-		//category		
-		$category = DB::table('categories')->leftJoin('categories_description','categories_description.categories_id','=','categories.categories_id')->leftJoin('products_to_categories','products_to_categories.categories_id','=','categories.categories_id')->where('products_to_categories.products_id',$result['cart'][0]->products_id)->where('categories.parent_id',0)->where('language_id',Session::get('language_id'))->get();
-		
-		if(!empty($category) and count($category)>0){
-			$category_slug = $category[0]->categories_slug;
-			$category_name = $category[0]->categories_name;
-		}else{
-			$category_slug = '';
-			$category_name = '';
-		}
-		$sub_category = DB::table('categories')->leftJoin('categories_description','categories_description.categories_id','=','categories.categories_id')->leftJoin('products_to_categories','products_to_categories.categories_id','=','categories.categories_id')->where('products_to_categories.products_id',$result['cart'][0]->products_id)->where('categories.parent_id','>',0)->where('language_id',Session::get('language_id'))->get();
-		
-		if(!empty($sub_category) and count($sub_category)>0){
-			$sub_category_name = $sub_category[0]->categories_name;
-			$sub_category_slug = $sub_category[0]->categories_slug;		
-		}else{
-			$sub_category_name = '';
-			$sub_category_slug = '';	
-		}
-		
-		$result['category_name'] = $category_name;
-		$result['category_slug'] = $category_slug;
-		$result['sub_category_name'] = $sub_category_name;
-		$result['sub_category_slug'] = $sub_category_slug;
-		
-		$isFlash = DB::table('flash_sale')->where('products_id',$result['cart'][0]->products_id)
-					->where('flash_expires_date','>=',  time())->where('flash_status','=',  1)
-					->get();
-		
-		if(!empty($isFlash) and count($isFlash)>0){
-			$type = "flashsale";
-		}else{
-			$type = "";
-		}	
-		
-		$myVar = new DataController();
-		$data = array('page_number'=>'0', 'type'=>$type, 'products_id'=>$result['cart'][0]->products_id, 'limit'=>'1', 'min_price'=>'', 'max_price'=>'');
-		$detail = $myVar->products($data);
-		$result['detail'] = $detail;
-		
-		
-		$i = 0;
-		foreach($result['detail']['product_data'][0]->categories as $postCategory){
-			if($i==0){
-				$postCategoryId = $postCategory->categories_id;
-				$i++;
-			}
-		}
-		
-		$data = array('page_number'=>'0', 'type'=>'', 'categories_id'=>$postCategoryId, 'limit'=>'15', 'min_price'=>'', 'max_price'=>'');
-		$simliar_products = $myVar->products($data);
-		$result['simliar_products'] = $simliar_products;
-		
-		
-		$cart = '';
-		$myVar = new CartController();
-		$result['cartArray'] = $myVar->cartIdArray($cart);
-		
-		//liked products
-		$result['liked_products'] = $this->likedProducts();	
-		
-		return view("editcart", $title)->with('result', $result); 
-		}else{
-			return redirect('/viewcart');
-		}
+//
+//		$title = array('pageTitle' => Lang::get("website.Edit Cart"));
+//		$result = array();
+//		$data = array();
+//		$result['commonContent'] = $this->commonContent();
+//		$baskit_id = $request->id;
+//
+//		$result['cart'] = $this->myCart($baskit_id);
+//
+//		if(count($result['cart'])>0){
+//
+//		//category
+//		$category = DB::table('categories')->leftJoin('categories_description','categories_description.categories_id','=','categories.categories_id')->leftJoin('products_to_categories','products_to_categories.categories_id','=','categories.categories_id')->where('products_to_categories.products_id',$result['cart'][0]->products_id)->where('categories.parent_id',0)->where('language_id',Session::get('language_id'))->get();
+//
+//		if(!empty($category) and count($category)>0){
+//			$category_slug = $category[0]->categories_slug;
+//			$category_name = $category[0]->categories_name;
+//		}else{
+//			$category_slug = '';
+//			$category_name = '';
+//		}
+//		$sub_category = DB::table('categories')->leftJoin('categories_description','categories_description.categories_id','=','categories.categories_id')->leftJoin('products_to_categories','products_to_categories.categories_id','=','categories.categories_id')->where('products_to_categories.products_id',$result['cart'][0]->products_id)->where('categories.parent_id','>',0)->where('language_id',Session::get('language_id'))->get();
+//
+//		if(!empty($sub_category) and count($sub_category)>0){
+//			$sub_category_name = $sub_category[0]->categories_name;
+//			$sub_category_slug = $sub_category[0]->categories_slug;
+//		}else{
+//			$sub_category_name = '';
+//			$sub_category_slug = '';
+//		}
+//
+//		$result['category_name'] = $category_name;
+//		$result['category_slug'] = $category_slug;
+//		$result['sub_category_name'] = $sub_category_name;
+//		$result['sub_category_slug'] = $sub_category_slug;
+//
+//		$isFlash = DB::table('flash_sale')->where('products_id',$result['cart'][0]->products_id)
+//					->where('flash_expires_date','>=',  time())->where('flash_status','=',  1)
+//					->get();
+//
+//		if(!empty($isFlash) and count($isFlash)>0){
+//			$type = "flashsale";
+//		}else{
+//			$type = "";
+//		}
+//
+//		$myVar = new DataController();
+//		$data = array('page_number'=>'0', 'type'=>$type, 'products_id'=>$result['cart'][0]->products_id, 'limit'=>'1', 'min_price'=>'', 'max_price'=>'');
+//		$detail = $myVar->products($data);
+//		$result['detail'] = $detail;
+//
+//
+//		$i = 0;
+//		foreach($result['detail']['product_data'][0]->categories as $postCategory){
+//			if($i==0){
+//				$postCategoryId = $postCategory->categories_id;
+//				$i++;
+//			}
+//		}
+//
+//		$data = array('page_number'=>'0', 'type'=>'', 'categories_id'=>$postCategoryId, 'limit'=>'15', 'min_price'=>'', 'max_price'=>'');
+//		$simliar_products = $myVar->products($data);
+//		$result['simliar_products'] = $simliar_products;
+//
+//
+//		$cart = '';
+//		$myVar = new CartController();
+//		$result['cartArray'] = $myVar->cartIdArray($cart);
+//
+//		//liked products
+//		$result['liked_products'] = $this->likedProducts();
+//
+//		return view("editcart", $title)->with('result', $result);
+//		}else{
+//			return redirect('/viewcart');
+//		}
+
+        return redirect('/');
 	}
 	
 	//deleteCart
