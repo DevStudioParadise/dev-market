@@ -633,7 +633,7 @@ return [
 		
 	'Change Password'=>'Change Password',
 		
-	'infoPages'=>'Info Pages',
+	'infoPages'=>'Services',
 		
 	'homePages'=>'Home Pages',
 		
@@ -698,7 +698,7 @@ return [
 	'2nd Day Air'=>'2nd Day Air',
 	'Next Day Air'=>'Next Day Air',
 	'My Account'=>'My Account',
-	'Info Pages'=>'Info Pages',
+	'Info Pages'=>'Services',
 	'Dummy Text'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum velit est, et semper massa pulvinar ut. Aliquam sagittis augue at lobortis hendrerit. Vestibulum sit amet posuere quam. Vivamus consectetur tortor eu sollicitudin ullamcorper. Sed dignissim scelerisque enim, sit amet fermentum velit imperdiet eu. Phasellus varius tincidunt nibh, sed ornare felis porttitor quis.',
 	
 	'Product is unliked'=>'Product is unliked.',
