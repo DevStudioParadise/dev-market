@@ -12,227 +12,227 @@ return [
     | these language lines according to your application's requirements.
     |
     */
+
+    'bannerLabel1' => 'Бесплатная доставка',
+
+    'bannerLabel1Text' => 'При заказе от $ 99',
+
+    'bannerLabel2' => 'Возврат денег',
+
+    'bannerLabel2Text' => '30 дней возврата денег',
+
+    'bannerLabel3' => 'Поддержка 24/7',
 		
-	'bannerLabel1'=>'Free Shipping',
+	'hotline'=>'Горячая линия',
+
+    'bannerLabel4' => 'Безопасный платеж',
+
+    'bannerLabel4Text' => 'Защита онлайн-платежей',
+
+    'TopSales' => 'Топ продаж',
+
+    'Special' => 'Специальный',
+
+    'MostLiked' => 'Самые любимые',
 		
-	'bannerLabel1Text'=>'On order over $99',
+	'New'=>'Новый',
 		
-	'bannerLabel2'=>'Money Return',
+	'Likes'=>'Нравится',
 		
-	'bannerLabel2Text'=>'30 Days money return',
+	'Welcome to our Store'=>'Добро пожаловать в наш магазин',
 		
-	'bannerLabel3'=>'Support 24/7',
+	'Orders'=>'Заказы',
 		
-	'hotline'=>'Hotline',
-	
-	'bannerLabel4'=>'Safe Payment',
+	'All Categories'=>'Все категории',
 		
-	'bannerLabel4Text'=>'Protect online payment',
+	'Search entire store here'=>'Поиск по всему магазину здесь',
 		
-	'TopSales'=>'Top Sales',
+	'Profile'=>'Профиль',
 		
-	'Special'=>'Special',
+	'Logout'=>'Выход',
 		
-	'MostLiked'=>'Most Liked',
+	'Login/Register'=>'Вход/Регистрация',
 		
-	'New'=>'New',
+	'item(s)'=>'элемент(ы)',
 		
-	'Likes'=>'Likes',
+	'Quantity'=>'Количество',
 		
-	'Welcome to our Store'=>'Welcome to our Store',
+	'Total Items'=>'Всего предметов',
 		
-	'Orders'=>'Orders',
+	'Total Price'=>'Итоговая цена',
 		
-	'All Categories'=>'All Categories',
+	'View Cart'=>'Просмотр корзины',
 		
-	'Search entire store here'=>'Search entire store here',
+	'Checkout'=>'Проверять',
 		
-	'Profile'=>'Profile',
+	'Menu'=>'Меню',
 		
-	'Logout'=>'Logout',
-		
-	'Login/Register'=>'Login/Register',
-		
-	'item(s)'=>'item(s)',
-		
-	'Quantity'=>'Quantity',
-		
-	'Total Items'=>'Total Items',
-		
-	'Total Price'=>'Total Price',
-		
-	'View Cart'=>'View Cart',
-		
-	'Checkout'=>'Checkout',
-		
-	'Menu'=>'Menu',	
-		
-	'My Cart'=>'My Cart',
+	'My Cart'=>'Моя корзина',
 		
 	'footer text'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed vel nulla eros. Sed dui magna, faucibus et enim vel, auctor dapibus ante. Nullam in sem ultrices, efficitur arcu quis, fermentum mi.',
 		
-	'Helpful Links'=>'Helpful Links',
+	'Helpful Links'=>'Полезные ссылки',
 		
-	'Terms'=>'Terms',
+	'Terms'=>'Термины',
 		
-	'Privacy'=>'Privacy',
+	'Privacy'=>'Конфиденциальность',
 		
-	'Discount'=>'Discount',
+	'Discount'=>'Скидка',
 		
-	'About Us'=>'About Us',
+	'About Us'=>'О нас',
 		
-	'Contact Us'=>'Contact Us',
+	'Contact Us'=>'Контакты',
 		
-	'Terms & Condtions'=>'Terms & Condtions',
+	'Terms & Condtions'=>'Условия использования',
 		
-	'Wishlist'=>'Wishlist',
+	'Wishlist'=>'Список желания',
 		
-	'Shopping Cart'=>'Shopping Cart',
+	'Shopping Cart'=>'Корзина',
 		
-	'Privacy Policy'=>'Privacy Policy',
+	'Privacy Policy'=>'Политика Конфиденциальности',
 		
-	'Phone'=>'Phone',
+	'Phone'=>'Телефон',
 		
 	'Email'=>'Email',
 		
-	'Copy Rights'=>'2017 Company, Inc',
+	'Copy Rights'=>'2019 Company, Inc',
 		
-	'From our News'=>'From our News',
+	'From our News'=>'Из наших новостей',
 		
-	'View All News'=>'View All News',
+	'View All News'=>'Посмотреть все новости',
 		
-	'Readmore'=>'Readmore',
+	'Readmore'=>'Прочитайте больше',
 		
-	'Weekly'=>'Weekly',
+	'Weekly'=>'еженедельно',
 		
-	'banner saving text'=>'Saving up to 50% off all online store items this week.',
+	'banner saving text'=>'Экономия до 50% на всех товарах интернет-магазина на этой неделе.',
 		
-	'Shop now'=>'Shop now',
+	'Shop now'=>'Магазин сейчас',
 		
-	'Sale'=>'Sale',
+	'Sale'=>'Распродажа',
 		
-	'Top Selling of the Week'=>'Top Selling of the Week',
+	'Top Selling of the Week'=>'Топ продаж недели',
 		
-	'View Detail'=>'View Detail',
+	'View Detail'=>'Посмотреть детали',
 		
-	'Newest Products'=>'Newest Products',
+	'Newest Products'=>'Новейшие продукты',
 		
-	'View All'=>'View All',
+	'View All'=>'Посмотреть все',
 		
-	'items'=>'Item(s)',
-	'item'=>'Item',	
+	'items'=>'Элемент(ы)',
+	'item'=>'Элемент',
 		
-	'SubTotal'=>'Sub Total',		
+	'SubTotal'=>'Промежуточный итог',
 		
-	'Couponisappliedsuccessfully'=>'Coupon is applied successfully!',
+	'Couponisappliedsuccessfully'=>'Купон успешно применен!',
 		
-	'You are not allowed to use this coupon'=>'You are not allowed to use this coupon.',
+	'You are not allowed to use this coupon'=>'Вы не можете использовать этот купон.',
 		
-	'This coupon has been reached to its maximum usage limit'=>'This coupon has been reached to its maximum usage limit.',
+	'This coupon has been reached to its maximum usage limit'=>'Достигнут максимальный предел использования этого купона.',
 		
-	'coupon is used limit'=>'Coupon is used limit',
+	'coupon is used limit'=>'Купон используется лимит',
 		
-	'Coupon amount limit is low than minimum price'=>'Coupon amount limit is low than minimum price.',
+	'Coupon amount limit is low than minimum price'=>'Предельная сумма купона ниже минимальной цены.',
 		
-	'Coupon amount limit is exceeded than maximum price'=>'Coupon amount limit is exceeded than maximum price.',
+	'Coupon amount limit is exceeded than maximum price'=>'Превышен лимит суммы купона, чем максимальная цена.',
 		
-	'Coupon cannot be applied this product is in sale'=>'Coupon cannot be applied this product is in sale.',
+	'Coupon cannot be applied this product is in sale'=>'Купон не может быть применен, этот продукт продается.',
 		
-	'Coupon amount is greater than total price'=>'Coupon amount is greater than total price.',
+	'Coupon amount is greater than total price'=>'Сумма купона превышает общую стоимость.',
 		
-	'Coupon amount is greater than product price'=>'Coupon amount is greater than product price.',
+	'Coupon amount is greater than product price'=>'Сумма купона больше цены товара.',
 		
-	'Coupon does not exist'=>'Coupon does not exist or invalid coupon code.',
+	'Coupon does not exist'=>'Купон не существует или неверный код купона.',
 		
-	'Please enter a valid coupon code'=>'Please enter a valid coupon code',
+	'Please enter a valid coupon code'=>'Пожалуйста, введите действительный код купона',
 		
-	'Coupon is already applied'=>'Coupon is already applied',
+	'Coupon is already applied'=>'Купон уже применен',
 		
-	'Cart item has been deleted successfully'=>'Cart item has been deleted successfully!',
+	'Cart item has been deleted successfully'=>'Корзина успешно удалена!',
 		
-	'Coupon has been removed successfully'=>'Coupon has been removed successfully!',
+	'Coupon has been removed successfully'=>'Купон был успешно удален!',
 		
-	'Cart has been updated successfully'=>'Cart has been updated successfully!',
+	'Cart has been updated successfully'=>'Корзина была успешно обновлена!',
 		
-	'Coupon can not be apllied to empty cart'=>'Coupon can not be apllied to empty cart.',
+	'Coupon can not be apllied to empty cart'=>'Купон не может быть применен к пустой корзине.',
 		
-	'cartEmptyText'=>'You have no items in your shopping cart.<br>Click <a href="shop">here</a> to continue shopping.',
+	'cartEmptyText'=>'В вашей корзине нет товаров. <br> Нажмите <a href="shop"> здесь </a>, чтобы продолжить покупки.',
 		
-	'Home'=>'Home',
+	'Home'=>'Домой',
 		
-	'Shopping cart'=>'Shopping cart',
+	'Shopping cart'=>'Корзина',
 		
-	'Poducts'=>'Poducts',
+	'Poducts'=>'Товары',
 		
-	'Detail'=>'Detail',
+	'Detail'=>'Подробность',
 		
-	'Unit Price'=>'Unit Price',
+	'Unit Price'=>'Цена за единицу',
 		
-	'Item Total'=>'Item Total',
+	'Item Total'=>'Всего товаров',
 		
-	'Coupon Code'=>'Coupon Code',
+	'Coupon Code'=>'код купона',
 		
-	'Update Cart'=>'Update Cart',
+	'Update Cart'=>'Обновить корзину',
 		
-	'Back To Shopping'=>'Back To Shopping',
+	'Back To Shopping'=>'Вернуться к покупкам',
 		
-	'Total'=>'Total',
+	'Total'=>'Всего',
 		
-	'Discount(Coupon)'=>'Discount (Coupon)',
+	'Discount(Coupon)'=>'Купон на скидку',
 		
-	'Order Summary'=>'Order Summary',
+	'Order Summary'=>'итог заказа',
 		
-	'Subtotal'=>'Subtotal',
+	'Subtotal'=>'Промежуточный итог',
 		
 	'Apply'=>'Apply',
 		
-	'Please enter your first name'=>'Please enter your first name.',
+	'Please enter your first name'=>'Пожалуйста, введите ваше имя.',
 		
-	'Please enter your last name'=>'Please enter your last name.',
+	'Please enter your last name'=>'Пожалуйста, введите свою фамилию.',
 		
-	'Login'=>'Login',
+	'Login'=>'Вход',
 		
-	'Create An Account'=>'Create an Account',
+	'Create An Account'=>'Завести аккаунт',
 		
-	'Personal Information'=>'Personal Information',
+	'Personal Information'=>'Персональные данные',
 		
-	'Error'=>'Error',
+	'Error'=>'Ошибка',
 		
-	'Success'=>'Success',
+	'Success'=>'Успех',
 		
-	'First Name'=>'First Name',
+	'First Name'=>'Имя',
 		
-	'Last Name'=>'Last Name',
+	'Last Name'=>'Фамилия',
 		
-	'Email Adrress'=>'Email Adrress',
+	'Email Adrress'=>'Адрес электронной почты',
 		
-	'Please enter your valid email address'=>'Please enter your valid email address.',
+	'Please enter your valid email address'=>'Пожалуйста, введите ваш действительный адрес электронной почты.',
 		
-	'Gender'=>'Gender',
+	'Gender'=>'Пол',
 		
-	'Please select your gender'=>'Please select your gender.',
+	'Please select your gender'=>'Пожалуйста, выберите Ваш пол.',
 		
-	'Picture'=>'Picture',
+	'Picture'=>'Картина',
 		
-	'Password'=>'Password',
+	'Password'=>'пароль',
 		
-	'Please enter your password'=>'Please enter your password.',
+	'Please enter your password'=>'Пожалуйста, введите пароль.',
 		
-	'Confirm Password'=>'Confirm Password',
+	'Confirm Password'=>'Подтвердите Пароль',
 		
-	'Please re-enter your password'=>'Please re-enter your password.',
+	'Please re-enter your password'=>'Пожалуйста, введите еще раз ваш пароль.',
 		
-	'Password does not match the confirm password'=>'Password does not match the confirm password.',
+	'Password does not match the confirm password'=>'Пароль не совпадает с подтвержденным паролем.',
 		
-	'Creating an account means you are okay with our'=>'Creating an account means you are okay with our',
+	'Creating an account means you are okay with our'=>'Создание аккаунта означает, что вы в порядке с нашими',
 		
-	'Terms and Services'=>'Terms and Services',
+	'Terms and Services'=>'Условия и Услуги',
 		
-	'Refund Policy'=>'Refund Policy',
+	'Refund Policy'=>'Политика возврата',
 		
-	'Please accept our terms and conditions'=>'Please accept our terms and conditions',
+	'Please accept our terms and conditions'=>'Пожалуйста, примите наши условия',
 		
-	'Sign Up'=>'Sign Up',
+	'Sign Up'=>'Подписаться',
 		
 	'Lorem ipsum dolor sit amet, consectetur adipiscing elit'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 		
@@ -256,406 +256,406 @@ return [
 		
 	'Ut quis dolor accumsan, viverra neque nec, blandit leo'=>'Ut quis dolor accumsan, viverra neque nec, blandit leo.',
 		
-	'Billing Address'=>'Billing Address',
+	'Billing Address'=>'Платежный адрес',
 		
 	
 		
-	'Payment Methods'=>'Payment Methods',
+	'Payment Methods'=>'Способы оплаты',
 		
-	'Order Detail'=>'Order Detail',
+	'Order Detail'=>'Детали заказа',
 		
-	'Company'=>'Company',
+	'Company'=>'Компания',
 		
-	'Address'=>'Address',
+	'Address'=>'Адрес',
 		
-	'Country'=>'Country',
+	'Country'=>'Страна',
 		
-	'State'=>'State',
+	'State'=>'Штат',
 		
-	'City'=>'City',
+	'City'=>'Город',
 		
-	'Zip/Postal Code'=>'Zip/Postal Code',
+	'Zip/Postal Code'=>'Почтовый индекс',
 		
-	'Continue'=>'Continue',
+	'Continue'=>'Продолжить',
 		
-	'Please enter your company name'=>'Please enter your company name.',
+	'Please enter your company name'=>'Пожалуйста, введите название вашей компании.',
 		
-	'Please enter your address'=>'Please enter your address.',
+	'Please enter your address'=>'Пожалуйста, введите ваш адрес.',
 		
-	'Please select your country'=>'Please select your country.',
+	'Please select your country'=>'Пожалуйста, выберите вашу страну.',
 		
-	'Please select your state'=>'Please select your state.',
+	'Please select your state'=>'Пожалуйста, выберите ваш штат.',
 		
-	'Please enter your city'=>'Please enter your city.',
+	'Please enter your city'=>'Пожалуйста, введите ваш город.',
 		
-	'Please enter your Zip/Postal Code'=>'Please enter your Zip/Postal Code.',
+	'Please enter your Zip/Postal Code'=>'Пожалуйста, введите свой почтовый индекс.',
 		
-	'Update'=>'Update',
+	'Update'=>'Обновить',
 		
-	'Add Address'=>'Add Address',
+	'Add Address'=>'Добавить Адрес',
 		
-	'Your address has been deteled successfully'=>'Your address has been deteled successfully!',
+	'Your address has been deteled successfully'=>'Ваш адрес был успешно удален!',
 		
-	'Your address has been chnaged successfully'=>'Your address has been chnaged successfully!',
+	'Your address has been chnaged successfully'=>'Ваш адрес был успешно изменен!',
 		
-	'Default'=>'Default',
+	'Default'=>'По умолчанию',
 		
-	'Address Info'=>'Address Info',
+	'Address Info'=>'Информация об адресе',
 		
-	'Action'=>'Action',
+	'Action'=>'действие',
 		
-	'Your address has been updated successfully'=>'Your address has been updated successfully!',
+	'Your address has been updated successfully'=>'Ваш адрес был успешно обновлен!',
 		
-	'Same shipping and billing address'=>'Same shipping and billing address.',
+	'Same shipping and billing address'=>'Тот же адрес доставки и выставления счета.',
 		
-	'Select Country'=>'Select Country',
+	'Select Country'=>'Выберите страну',
 		
-	'Select State'=>'Select State',
+	'Select State'=>'Выберите штат',
 		
-	'Other'=>'Other',
+	'Other'=>'Другой',
 		
-	'Shipping Methods'=>'Shipping Methods',
+	'Shipping Methods'=>'Методы доставки',
 		
-	'Confirm Order'=>'Confirm Order',
+	'Confirm Order'=>'Подтвердите заказ',
 		
-	'Order Now'=>'Order Now',
+	'Order Now'=>'Заказать сейчас',
 		
-	'Please select a prefered shipping method to use on this order'=>'Please select a prefered shipping method to use on this order.',
+	'Please select a prefered shipping method to use on this order'=>'Пожалуйста, выберите предпочтительный способ доставки для этого заказа.',
 		
-	'My Orders'=>'My Orders',
+	'My Orders'=>'мои заказы',
 		
-	'No order is placed yet'=>'No order is placed yet.',
+	'No order is placed yet'=>'Заказ еще не размещен.',
 		
-	'Order ID'=>'Order ID',
+	'Order ID'=>'номер заказа',
 		
-	'Order Date'=>'Order Date',
+	'Order Date'=>'Дата заказа',
 		
-	'Price'=>'Price',
+	'Price'=>'Цена',
 		
-	'View Order'=>'View Order',
+	'View Order'=>'Посмотреть заказ',
 		
-	'Status'=>'Status',
+	'Status'=>'Статус',
 		
-	'Order information'=>'Order information',
+	'Order information'=>'Запросить информацию',
 		
-	'Customer Detail'=>'Customer Detail',
+	'Customer Detail'=>'Деталь клиента',
 		
-	'Admin Comments'=>'Admin Comments',
+	'Admin Comments'=>'Комментарии администратора',
 		
-	'Order Comments'=>'Order Comments',
+	'Order Comments'=>'Заказать комментарии',
 		
-	'Comments'=>'Comments',
+	'Comments'=>'Комментарии',
 		
-	'Shipping Cost'=>'Shipping Cost',
+	'Shipping Cost'=>'Стоимость доставки',
 		
-	'Tax'=>'Tax',
+	'Tax'=>'налог',
 		
-	'Payment Method'=>'Payment Method',
+	'Payment Method'=>'Способ оплаты',
 		
-	'Shipping Method'=>'Shipping Method',
+	'Shipping Method'=>'способ доставки',
 		
-	'Payment/Shipping Method'=>'Payment/Shipping Method',
+	'Payment/Shipping Method'=>'Способ оплаты / доставки',
 		
-	'Billing Detail'=>'Billing Detail',
+	'Billing Detail'=>'Платежная информация',
 		
-	'Shipping Detail'=>'Shipping Detail',
+	'Shipping Detail'=>'Сведения о доставке',
 		
-	'Pay'=>'Pay',
+	'Pay'=>'Оплата',
 		
-	'Your location does not support this'=>'Your location does not support ',
+	'Your location does not support this'=>'Ваше местоположение не поддерживает ',
 		
-	'Please select your shipping method'=>'Please select your shipping method.',
+	'Please select your shipping method'=>'Пожалуйста, выберите способ доставки.',
 		
-	'Please select a prefered payment method to use on this order'=>'Please select a prefered payment method to use on this order.',
+	'Please select a prefered payment method to use on this order'=>'Пожалуйста, выберите предпочтительный способ оплаты для этого заказа.',
 		
-	'Please select your payment method'=>'Please select your payment method.',
+	'Please select your payment method'=>'Пожалуйста, выберите способ оплаты.',
 		
 	'BrainTree Payment'=>'BrainTree Payment',
 		
-	'Card number'=>'Card number',
+	'Card number'=>'Номер карты',
 		
 	'Expiration'=>'Expiration',
 		
 	'CVC'=>'CVC',
 		
-	'Payment successful'=>'Payment successful',
+	'Payment successful'=>'Оплата успешна',
 		
-	'Thanks You Your payment has been processed successfully'=>'Thanks You! Your payment has been processed successfully.',
+	'Thanks You Your payment has been processed successfully'=>'Спасибо вам! Ваш платеж был успешно обработан.',
 		
-	'Edit Cart'=>'Edit Cart',
+	'Edit Cart'=>'Редактировать корзину',
 		
-	'Full Name'=>'Full Name',
+	'Full Name'=>'ФИО',
 		
-	'Message'=>'Message',
+	'Message'=>'Сообщение',
 		
-	'Our Address'=>'Our Address',
+	'Our Address'=>'Наш адресс',
 		
-	'contact us message'=>'Thank you for contact us. We will contact with you within three business days.',
+	'contact us message'=>'Спасибо, что связались с нами. Мы свяжемся с вами в течение трех рабочих дней.',
 		
-	'Subject'=>'Subject',
+	'Subject'=>'Предмет',
 		
-	'Send'=>'Send',
+	'Send'=>'Отправить',
 	
-	'News Detail'=>'News Detail',
-	'Date'=>'Date',
+	'News Detail'=>'Новости подробно',
+	'Date'=>'Дата',
 		
-	'News'=>'News',
+	'News'=>'Новости',
 		
-	'All News'=>'All News',
+	'All News'=>'Все новости',
 		
-	'Sort'=>'Sort',
+	'Sort'=>'Сортировка',
 		
-	'Shop'=>'Shop',
+	'Shop'=>'Магазин',
 		
-	'Newest'=>'Newest',
+	'Newest'=>'Новейший',
 		
-	'Price: High To Low'=>'Price: High To Low',
+	'Price: High To Low'=>'Цена: по убыванию',
 		
-	'Price: Low To High'=>'Price: Low To High',
+	'Price: Low To High'=>'Цена: от низкой к высокой',
 		
-	'Top Seller'=>'Top Seller',
+	'Top Seller'=>'Лучший продавец',
 		
-	'Special Products'=>'Special Products',
+	'Special Products'=>'Специальные продукты',
 		
-	'Most Liked'=>'Most Liked',
+	'Most Liked'=>'Самые любимые',
 		
-	'Display'=>'Display',
+	'Display'=>'Показать',
 		
-	'Limit'=>'Limit',
+	'Limit'=>'Лимит',
 		
-	'No record found'=>'No record found!',
+	'No record found'=>'Запись не найдена!',
 		
-	'All products are loaded.'=>'All products are loaded.',
+	'All products are loaded.'=>'Все продукты загружены.',
 		
-	'All news are loaded'=>'All news are loaded.',
+	'All news are loaded'=>'Все новости загружены.',
 		
-	'Load More'=>'Load More',
+	'Load More'=>'Загрузи больше',
 		
-	'Oldest'=>'Oldest',
+	'Oldest'=>'самый старший',
 		
-	'News Categories'=>'News Categories',
+	'News Categories'=>'Категории новостей',
 		
-	'A - Z'=>'A - Z',
+	'A - Z'=>'А - Я',
 		
-	'Z - A'=>'Z - A',
+	'Z - A'=>'Я - А',
 		
-	'Edit Address'=>'Edit Address',
+	'Edit Address'=>'Изменить адрес',
 		
-	'All products are loaded'=>'All products are loaded.',
+	'All products are loaded'=>'Все продукты загружены.',
 		
-	'Related Products'=>'Related Products',
+	'Related Products'=>'сопутствующие товары',
 		
-	'Products Description'=>'Products Description',
+	'Products Description'=>'Описание продуктов',
 		
-	'Order(s)'=>'Order(s)',
+	'Order(s)'=>'Заказ (ы)',
 		
-	'Login Or Create An Account'=>'Login Or Create an Account',
+	'Login Or Create An Account'=>'Войти или Создать аккаунт',
 		
-	'New Customers'=>'New Customers',
+	'New Customers'=>'новые клиенты',
 		
-	'login page text for customer'=>'By creating an account with our store, you will be able to move through the checkout process faster, store multiple shipping addresses, view and track your orders in your account and more.',
+	'login page text for customer'=>'Создав учетную запись в нашем магазине, вы сможете быстрее пройти через процесс оформления заказа, сохранить несколько адресов доставки, просматривать и отслеживать свои заказы в своей учетной записи и многое другое.',
 		
-	'Dont have account'=>'Don\'t have account?',
+	'Dont have account'=>'Нет аккаунта?',
 		
-	'or Sign in with'=>'or Sign in with',
+	'or Sign in with'=>'или Войдите через',
 		
-	'Login with Facebook'=>'Login with Facebook',
+	'Login with Facebook'=>'Войти с Facebook',
 		
-	'Login with Google'=>'Login with Google',
+	'Login with Google'=>'Войти через Google',
 		
-	'Registered Customers'=>'Registered Customers',
+	'Registered Customers'=>'Зарегистрированные клиенты',
 		
-	'If you have an account with us, please log in'=>'If you have an account with us, please log in',
+	'If you have an account with us, please log in'=>'Если у вас есть аккаунт с нами, пожалуйста, войдите',
 		
-	'This field is required'=>'This field is required.',
+	'This field is required'=>'Это поле обязательно к заполнению.',
 		
-	'Forgot Password'=>'Forgot Password?',
+	'Forgot Password'=>'Забыли пароль?',
 		
-	'Please enter your password and should be at least 6 characters long'=>'Please enter your password and should be at least 6 characters long.',
+	'Please enter your password and should be at least 6 characters long'=>'Пожалуйста, введите ваш пароль и должен быть не менее 6 символов.',
 		
-	'New Password'=>'New Password',
+	'New Password'=>'новый пароль',
 		
-	'Current Password'=>'Current Password',
+	'Current Password'=>'Текущий пароль',
 		
-	'Please enter current password'=>'Please enter current password.',
+	'Please enter current password'=>'Пожалуйста, введите текущий пароль.',
 		
-	'Please enter your valid phone number'=>'Please enter your valid phone number.',
+	'Please enter your valid phone number'=>'Пожалуйста, введите ваш действительный номер телефона.',
 		
-	'Phone Number'=>'Phone Number',
+	'Phone Number'=>'Номер телефона',
 		
-	'Please enter your date of birth'=>'Please enter your date of birth.',
+	'Please enter your date of birth'=>'Пожалуйста, введите вашу дату рождения.',
 		
-	'Date of Birth'=>'Date of Birth',
+	'Date of Birth'=>'Дата рождения',
 		
-	'Female'=>'Female',
+	'Female'=>'Женский',
 		
-	'Male'=>'Male',
+	'Male'=>'Мужской',
 		
-	'Ecommerce'=>'Ecommerce',
+	'Ecommerce'=>'Электронная торговля',
 		
-	'Featured'=>'Featured',
+	'Featured'=>'Рекомендуемые',
 		
-	'Filters'=>'Filters',
+	'Filters'=>'фильтры',
 		
-	'Reset'=>'Reset',
+	'Reset'=>'Сброс',
 		
-	'Subscribe'=>'Subscribe!',
+	'Subscribe'=>'Подписывайся!',
 		
-	'Shipping Address'=>'Shipping Address',
+	'Shipping Address'=>'адреса доставки',
 		
-	'Returned all products'=>'Returned all products.',
+	'Returned all products'=>'Вернули все товары.',
 		
-	'Search results empty'=>'Search results empty.',
+	'Search results empty'=>'Результаты поиска пустые.',
 		
-	'Categories'=>'Categories',
+	'Categories'=>'категории',
 		
-	'Product Detail'=>'Product Detail',
+	'Product Detail'=>'Информация о продукте',
 		
-	'Returned all filters successfully'=>'Returned all filters successfully.',
+	'Returned all filters successfully'=>'Возвращены все фильтры успешно.',
 		
-	'Filter is empty for this category'=>'Filter is empty for this category.',
+	'Filter is empty for this category'=>'Фильтр пуст для этой категории.',
 		
-	'Select Zone'=>'Select Zone',
+	'Select Zone'=>'Выберите зону',
 		
-	'select Country'=>'Select Country',
+	'select Country'=>'Выберите страну',
 		
-	'All Products'=>'All Products',
+	'All Products'=>'Все продукты',
 		
-	'Product is added'=>'Product is added!',
+	'Product is added'=>'Товар добавлен!',
 		
-	'Special products of the Week'=>'Special Products of the Week',
+	'Special products of the Week'=>'Специальные продукты недели',
 		
-	'Please Enter your email to recover your password'=>'Please Enter your email to recover your password.',
+	'Please Enter your email to recover your password'=>'Пожалуйста, введите адрес электронной почты, чтобы восстановить пароль.',
 		
-	'Qty'=>'Qty',
+	'Qty'=>'Кол-во',
 		
-	'You have no items in your shopping cart'=>'You have no items in your shopping cart.',
+	'You have no items in your shopping cart'=>'У вас нет товаров в корзине.',
 		
-	'Password has been sent to your email address'=>'Password has been sent to your email address.',
+	'Password has been sent to your email address'=>'Пароль был отправлен на ваш адрес электронной почты.',
 		
-	'Email address does not exist'=>'Email address does not exist.',
+	'Email address does not exist'=>'Адрес электронной почты не существует.',
 		
-	'Add to Cart'=>'Add to Cart',
+	'Add to Cart'=>'добавить в корзину',
 		
-	'Added'=>'Added!',
+	'Added'=>'Добавлено!',
 		
-	'Subscribe for Newsletter'=>'Subscribe for Newsletter',
+	'Subscribe for Newsletter'=>'Подписаться на рассылку',
 		
-	'Your email address here'=>'Your email address here...',
+	'Your email address here'=>'Ваш адрес электронной почты здесь ...',
 		
-	'About Store'=>'About Store',
+	'About Store'=>'О магазине',
 		
-	'Our Services'=>'Our Services',
+	'Our Services'=>'Наши услуги',
 		
-	'Information'=>'Information',
+	'Information'=>'Информация',
 		
-	'Popular Categories'=>'Popular Categories',
+	'Popular Categories'=>'Популярные категории',
 		
-	'Error while placing order'=>'Error while placing order.',
+	'Error while placing order'=>'Ошибка при оформлении заказа.',
 		
-	'Payment has been processed successfully'=>'Payment has been processed successfully!',
+	'Payment has been processed successfully'=>'Платеж успешно обработан!',
 		
-	'Your order has been placed'=>'Your order has been placed',
+	'Your order has been placed'=>'Ваш заказ был размещен',
 		
-	'Email or password is incorrect'=>'Email or password is incorrect!',
+	'Email or password is incorrect'=>'Email или пароль указан неверно!',
 		
-	'something is wrong'=>'something is wrong!',
+	'something is wrong'=>'что-то не так!',
 		
-	'Email already exist'=>'Email already exist!',
+	'Email already exist'=>'Электронная почта уже существует!',
 		
 		
-	'ApplyCoupon'=>'Apply Coupon',
+	'ApplyCoupon'=>'Применить купон',
 		
-	'proceedToCheckout'=>'Proceed To Checkout',
+	'proceedToCheckout'=>'Оформить заказ',
 		
-	'orderNotes'=>'Order Notes',
+	'orderNotes'=>'Примечания к заказу',
 	
-	'Previous'=>'Previous',
-	'Next'=>'Next',
+	'Previous'=>'Назад',
+	'Next'=>'Вмеред',
 		
-	'Out of Stock'=>'Out of Stock',
+	'Out of Stock'=>'Нет на складе',
 		
-	'In stock'=>'In stock',
+	'In stock'=>'В наличии',
 		
-	'Low in Stock'=>'Low in Stock',
+	'Low in Stock'=>'Небольшое количество на складе',
 		
-	'Edit'=>'Edit',
+	'Edit'=>'редактировать',
 		
-	'Remove Item'=>'Remove Item',
+	'Remove Item'=>'Удалить объект',
 		
-	'per page'=>'per page',
+	'per page'=>'на страницу',
 		
-	'orderNotesandSummary'=>'Order Notes & Summary',
+	'orderNotesandSummary'=>'Заказ Примечания и Резюме',
 		
-	'Signup'=>'Signup',
+	'Signup'=>'Зарегистрироваться',
 		
-	'myProfile'=>'My Profile',
+	'myProfile'=>'Мой профайл',
 		
-	'orderID'=>'Order ID #',
+	'orderID'=>'Номер заказа #',
 		
-	'orderStatus'=>'Order Status',
+	'orderStatus'=>'Статус заказа',
 		
 	'Please enter your name'=>'Please enter your name.',
 		
-	'Please enter your message'=>'Please enter your message.',
+	'Please enter your message'=>'Пожалуйста, введите ваше сообщение.',
 		
-	'Prfile has been updated successfully'=>'Prfile has been updated successfully!',
+	'Prfile has been updated successfully'=>'Профиль был успешно обновлен!',
 		
-	'Change Password'=>'Change Password',
+	'Change Password'=>'Изменить пароль',
 		
 	'infoPages'=>'Услуги',
 		
-	'homePages'=>'Home Pages',
+	'homePages'=>'Домашние страницы',
 		
-	'homePage1'=>'Home Page 1',
-	'homePage2'=>'Home Page 2',
-	'homePage3'=>'Home Page 3',
-	'homePage4'=>'Home Page 4',
-	'homePage5'=>'Home Page 5',
+	'homePage1'=>'Домашняя страница 1',
+	'homePage2'=>'Домашняя страница 2',
+	'homePage3'=>'Домашняя страница 3',
+	'homePage4'=>'Домашняя страница 4',
+	'homePage5'=>'Домашняя страница 5',
 		
-	'collection'=>'Collection',
+	'collection'=>'Коллекция',
 		
-	'hot'=>'Hot',
+	'hot'=>'Горячей',
 		
-	'new in Stores'=>'New in Stores',
+	'new in Stores'=>'Новое в магазинах',
 		
-	'categroies'=>'Categroies',
+	'categroies'=>'категории',
 		
-	'Call Us Free'=>'Call Us Free',
+	'Call Us Free'=>'Звоните нам бесплатно',
 		
-	'Featured News'=>'Featured News',
+	'Featured News'=>'Рекомендуемые Новости',
 		
-	'Upload Profile Photo'=>'Upload Profile Photo',
+	'Upload Profile Photo'=>'Загрузить фото профиля',
 		
-	'Choose...'=>'Choose...',
+	'Choose...'=>'Выберите...',
 		
-	'Showing'=>'Showing 1–',
+	'Showing'=>'Показаны 1–',
 		
-	'of'=>'of',
+	'of'=>'из',
 		
-	'results'=>'results.',
+	'results'=>'результаты.',
 		
-	'Password has been updated successfully'=>'Password has been updated successfully!',
+	'Password has been updated successfully'=>'Пароль был успешно обновлен!',
 		
-	'Record not found'=>'Record not found!',
-	'contact us title'=>'Ecommerce Contact Us',
-	'Follow Us'=>'Follow Us',
+	'Record not found'=>'Запись не найдена!',
+	'contact us title'=>'Электронная коммерция Свяжитесь с нами',
+	'Follow Us'=>'Подписывайтесь на нас',
 		
-	'Shipping addresses are not added yet'=>'Shipping addresses are not added yet.',
+	'Shipping addresses are not added yet'=>'Адреса доставки еще не добавлены.',
 		
-	'product is not added to your wish list'=>'Product is not added to your wishlist.',
+	'product is not added to your wish list'=>'Продукт не добавлен в ваш список желаний.',
 		
-	'Search result for'=>'Search result for',
+	'Search result for'=>'Результат поиска для',
 		
-	'item found'=>'item found.',
-	'cancel'=>'cancel',
+	'item found'=>'элемент найден',
+	'cancel'=>'отмена',
 	
-	'Please write notes of your order'=>'Please write notes of your order',
-	'Coupon Applied'=>'Coupon Applied',
+	'Please write notes of your order'=>'Пожалуйста, напишите заметки вашего заказа',
+	'Coupon Applied'=>'Купон применяется',
 	
 	//new
-	'Welcome'=>'Welcome',
-	'Welcome Guest!'=>'Welcome Guest!',
+	'Welcome'=>'Добро пожаловать',
+	'Welcome Guest!'=>'Добро пожаловать, Гость!',
 	'Worldwide Express Plus'=>'Worldwide Express Plus',
 	'Standard'=>'Standard',
 	'Worldwide Expedited'=>'Worldwide Expedited',
@@ -667,32 +667,32 @@ return [
 	'Ground'=>'Ground',
 	'2nd Day Air'=>'2nd Day Air',
 	'Next Day Air'=>'Next Day Air',
-	'My Account'=>'My Account',
+	'My Account'=>'Мой аккаунт',
 	'Info Pages'=>'Услуги',
 	'Dummy Text'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed rutrum velit est, et semper massa pulvinar ut. Aliquam sagittis augue at lobortis hendrerit. Vestibulum sit amet posuere quam. Vivamus consectetur tortor eu sollicitudin ullamcorper. Sed dignissim scelerisque enim, sit amet fermentum velit imperdiet eu. Phasellus varius tincidunt nibh, sed ornare felis porttitor quis.',
 	
-	'Product is unliked'=>'Product is unliked.',
-	'Please login first to like this product'=>'Please login first to like this product.',
-	'Product is liked'=>'Product is liked.',
-	'Product is disliked'=>'Product is disliked.',
-	'Empty Site Name'=>'Empty Site Name',
-	'Instamojo Payment'=>'Instamojo Payment',
-	'External Link'=>'External Link',
-	'Flash Sale'=>'Flash Sale',
-	'cancel order'=>'Cancel Order',
-	'cancelled'=>'Cancelled',
-	'Are you sure you want to cancel this order?'=>'Are you sure you want to cancel this order?',
-	'UP COMMING'=>'UP COMMING',
-	'Min Order Limit:'=>'Min Order Limit:',
-	'Return'=>'Return',
-	'Are you sure you want to return this order?'=>'Are you sure you want to return this order?',
-	'return order'=>'Return Order',
-	'Avail free shpping on'=>'Avail free shpping on',
-	'Coupon does not belongs to this product'=>'Coupon does not belongs to this product.',
-	'You have successfully subscribed.'=>'You have successfully subscribed.',
-	'You have already subscribed.'=>'You have already subscribed.',
-	'Some problem occurred, please try again.'=>'Some problem occurred, please try again.',
-	'Please enter your email address'=>'Please enter your email address.'
+	'Product is unliked'=>'Продукт не нравится.',
+	'Please login first to like this product'=>'Пожалуйста, войдите сначала, чтобы понравиться этот продукт.',
+	'Product is liked'=>'Продукт понравился.',
+	'Product is disliked'=>'Продукт не нравится.',
+	'Empty Site Name'=>'Пустое имя сайта',
+	'Instamojo Payment'=>'Instamojo Оплата',
+	'External Link'=>'внешняя ссылка',
+	'Flash Sale'=>'Флэш продажа',
+	'cancel order'=>'Отменить заказ',
+	'cancelled'=>'отменен',
+	'Are you sure you want to cancel this order?'=>'Вы уверены, что хотите отменить этот заказ?',
+	'UP COMMING'=>'КАЛЕНДАРЬ',
+	'Min Order Limit:'=>'Минимальный лимит заказа:',
+	'Return'=>'Возврат',
+	'Are you sure you want to return this order?'=>'Вы уверены, что хотите вернуть этот заказ?',
+	'return order'=>'Возврат заказа',
+	'Avail free shpping on'=>'Доступна бесплатная доставка по',
+	'Coupon does not belongs to this product'=>'Купон не принадлежит этому продукту.',
+	'You have successfully subscribed.'=>'Вы успешно подписались.',
+	'You have already subscribed.'=>'Вы уже подписались.',
+	'Some problem occurred, please try again.'=>'Возникла проблема. Пожалуйста, попробуйте еще раз.',
+	'Please enter your email address'=>'Пожалуйста, введите свой адрес электронной почты.'
 		
 	
 ];
