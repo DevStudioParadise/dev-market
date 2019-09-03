@@ -1,5 +1,7 @@
 .header-area{
-	
+	position: sticky;
+	top: 0;
+	z-index: 10;
    	.header-mini{
 		background-color:darken(theme-color("primary"), 5%);
 		padding-top:0.3125rem;

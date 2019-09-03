@@ -19,26 +19,27 @@
                         <div class="collapse navbar-collapse" id="navbar_collapse_0">
                             <ul class="navbar-nav">
                                             
-                                @if (Auth::guard('customer')->check())
-                                    <li class="nav-item">
-                                        <div class="nav-link">
-                                            <span class="p-pic"><img src="{{asset('').auth()->guard('customer')->user()->customers_picture}}" alt="image"></span>@lang('website.Welcome')&nbsp;{{ auth()->guard('customer')->user()->customers_firstname }}&nbsp;{{ auth()->guard('customer')->user()->customers_lastname }}!
-                                        </div>
-                                    </li>
-                                    <li class="nav-item"> <a href="{{ URL::to('/profile')}}" class="nav-link -before">@lang('website.Profile')</a> </li>
-                                    <li class="nav-item"> <a href="{{ URL::to('/wishlist')}}" class="nav-link -before">@lang('website.Wishlist')</a> </li>
-                                    <li class="nav-item"> <a href="{{ URL::to('/orders')}}" class="nav-link -before">@lang('website.Orders')</a> </li>
-                                    
-                                    <li class="nav-item"> <a href="{{ URL::to('/shipping-address')}}" class="nav-link -before">@lang('website.Shipping Address')</a> </li>
-                                    <li class="nav-item"> <a href="{{ URL::to('/logout')}}" class="nav-link -before">@lang('website.Logout')</a> </li>
-                                @else
-                                    <li class="nav-item"><div class="nav-link">@lang('website.Welcome Guest!')</div></li>
-                                    <li class="nav-item"> <a href="{{ URL::to('/login')}}" class="nav-link -before"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;@lang('website.Login/Register')</a> </li>
-                                @endif
+{{--                                @if (Auth::guard('customer')->check())--}}
+{{--                                    <li class="nav-item">--}}
+{{--                                        <div class="nav-link">--}}
+{{--                                            <span class="p-pic"><img src="{{asset('').auth()->guard('customer')->user()->customers_picture}}" alt="image"></span>@lang('website.Welcome')&nbsp;{{ auth()->guard('customer')->user()->customers_firstname }}&nbsp;{{ auth()->guard('customer')->user()->customers_lastname }}!--}}
+{{--                                        </div>--}}
+{{--                                    </li>--}}
+{{--                                    <li class="nav-item"> <a href="{{ URL::to('/profile')}}" class="nav-link -before">@lang('website.Profile')</a> </li>--}}
+{{--                                    <li class="nav-item"> <a href="{{ URL::to('/wishlist')}}" class="nav-link -before">@lang('website.Wishlist')</a> </li>--}}
+{{--                                    <li class="nav-item"> <a href="{{ URL::to('/orders')}}" class="nav-link -before">@lang('website.Orders')</a> </li>--}}
+{{--                                    --}}
+{{--                                    <li class="nav-item"> <a href="{{ URL::to('/shipping-address')}}" class="nav-link -before">@lang('website.Shipping Address')</a> </li>--}}
+{{--                                    <li class="nav-item"> <a href="{{ URL::to('/logout')}}" class="nav-link -before">@lang('website.Logout')</a> </li>--}}
+{{--                                @else--}}
+{{--                                    <li class="nav-item"><div class="nav-link">@lang('website.Welcome Guest!')</div></li>--}}
+{{--                                    <li class="nav-item"> <a href="{{ URL::to('/login')}}" class="nav-link -before"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;@lang('website.Login/Register')</a> </li>--}}
+{{--                                @endif--}}
                             </ul> 
                         </div>   
-                	</div>
+
                  </nav>
+                </div>
             </div>
         </div>
     </div>
@@ -79,7 +80,7 @@
                 <div class="col-12 col-sm-5 col-md-4 col-lg-3 spaceleft-0">
                 <ul class="top-right-list">
                 
-{{--                    --}}
+                    
 {{--                    <li class="wishlist-header">--}}
 {{--                        <a href="{{ URL::to('/wishlist')}}">--}}
 {{--                            <span class="badge badge-secondary" id="wishlist-count">{{$result['commonContent']['totalWishList']}}</span>                            <span class="fa-stack fa-lg">--}}
@@ -88,7 +89,7 @@
 {{--                            </span>--}}
 {{--                        </a>--}}
 {{--                    </li>--}}
-
+{{--                    --}}
 {{--                    <li class="cart-header dropdown head-cart-content"></li>--}}
                 </ul>
               </div>

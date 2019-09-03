@@ -291,6 +291,9 @@ body[dir="rtl"]{
 	
 	
 	.header-area{
+		position: sticky;
+		top: 0;
+		z-index: 10;
 		.header-mini{
 			.navbar-0{
 				.navbar-brand{
