@@ -232,7 +232,7 @@ return [
 		
 	'Please accept our terms and conditions'=>'Пожалуйста, примите наши условия',
 		
-	'Sign Up'=>'Подписаться',
+	'Sign Up'=>'Зарегистрироваться',
 		
 	'Lorem ipsum dolor sit amet, consectetur adipiscing elit'=>'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
 		
