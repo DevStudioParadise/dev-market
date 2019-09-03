@@ -53,40 +53,43 @@ class CustomersController extends DataController
 	
 	//signup 
 	public function signup(Request $request){	
-		if(auth()->guard('customer')->check()){
-			return redirect('/');
-		}
-		else{
-			$title = array('pageTitle' => Lang::get("website.Sign Up"));
-			$result = array();						
-			$result['commonContent'] = $this->commonContent();		
-			return view("signup", $title)->with('result', $result);   
-		} 			
+//		if(auth()->guard('customer')->check()){
+//			return redirect('/');
+//		}
+//		else{
+//			$title = array('pageTitle' => Lang::get("website.Sign Up"));
+//			$result = array();
+//			$result['commonContent'] = $this->commonContent();
+//			return view("signup", $title)->with('result', $result);
+//		}
+        return redirect('/');
 	}
 	
 	//login 
 	public function login(Request $request){	
-		if(auth()->guard('customer')->check()){
-			return redirect('/');
-		}
-		else{
-			
-			$title = array('pageTitle' => Lang::get("website.Login"));
-			$result = array();		
-			
-			$previous_url = Session::get('_previous.url');
-				
-			
-			$ref = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
-			$ref = rtrim($ref, '/');
-						
-			if ($previous_url == url('checkout') or $previous_url == url('shop') or $previous_url == url('')) {
-				session(['previous'=> $previous_url]);
-			}					
-					
-			$result['commonContent'] = $this->commonContent();		
-			return view("login", $title)->with('result', $result);   
-		} 		
+//		if(auth()->guard('customer')->check()){
+//			return redirect('/');
+//		}
+//		else{
+//
+//			$title = array('pageTitle' => Lang::get("website.Login"));
+//			$result = array();
+//
+//			$previous_url = Session::get('_previous.url');
+//
+//
+//			$ref = isset($_SERVER['HTTP_REFERER']) ? $_SERVER['HTTP_REFERER'] : '';
+//			$ref = rtrim($ref, '/');
+//
+//			if ($previous_url == url('checkout') or $previous_url == url('shop') or $previous_url == url('')) {
+//				session(['previous'=> $previous_url]);
+//			}
+//
+//			$result['commonContent'] = $this->commonContent();
+//			return view("login", $title)->with('result', $result);
+//		}
+
+        return redirect('/');
 				
 	}
 	
