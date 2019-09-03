@@ -87,19 +87,19 @@
                                 </span>
                             </a>
                         </li>-->
-                        <li class="wishlist-header">
-                            <a href="{{ URL::to('/wishlist')}}">
-                                <span class="badge badge-secondary" id="wishlist-count">{{$result['commonContent']['totalWishList']}}</span>
-                                <!--<img class="img-fluid" src="{{asset('').'public/images/wishlist_bag.png'}}" alt="icon">-->
-                                
-                                <span class="fa-stack fa-lg">
-                                  <i class="fa fa-shopping-bag fa-stack-2x"></i>
-                                  <i class="fa fa-heart fa-stack-2x"></i>
-                                </span>
-                            </a>
-                        </li>
-                        
-                        <li class="cart-header dropdown head-cart-content"></li>
+{{--                        <li class="wishlist-header">--}}
+{{--                            <a href="{{ URL::to('/wishlist')}}">--}}
+{{--                                <span class="badge badge-secondary" id="wishlist-count">{{$result['commonContent']['totalWishList']}}</span>--}}
+{{--                                <!--<img class="img-fluid" src="{{asset('').'public/images/wishlist_bag.png'}}" alt="icon">-->--}}
+{{--                                --}}
+{{--                                <span class="fa-stack fa-lg">--}}
+{{--                                  <i class="fa fa-shopping-bag fa-stack-2x"></i>--}}
+{{--                                  <i class="fa fa-heart fa-stack-2x"></i>--}}
+{{--                                </span>--}}
+{{--                            </a>--}}
+{{--                        </li>--}}
+{{--                        --}}
+{{--                        <li class="cart-header dropdown head-cart-content"></li>--}}
                     </ul>
                 </div>
             </div>
