@@ -1,7 +1,7 @@
 <div class="sidebar">
     <div class="widget block-categories">
         <div class="block-title">
-            <h2>@lang('website.InfoPages')</h2>
+            <h2>@lang('website.Info Pages')</h2>
         </div>
         <div class="block-content">
             <ul class="list-categories">
