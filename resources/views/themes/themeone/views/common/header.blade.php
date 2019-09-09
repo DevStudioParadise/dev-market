@@ -6,18 +6,20 @@
                 	<nav id="navbar_0" class="navbar navbar-expand-md navbar-dark navbar-0 p-0">
                         <div class="navbar-brand">
                             <select name="change_language" id="change_language" class="change-language">
-                            @foreach($languages as $languages_data)
-                                <option value="{{$languages_data->code}}" data-class="{{$languages_data->code}}" data-style="background-image: url({{asset('').$languages_data->image}});" @if(session('locale')==$languages_data->code) selected @endif>{{$languages_data->name}}</option>
-                            @endforeach
+                                @foreach($languages as $languages_data)
+                                    <option value="{{$languages_data->code}}" data-class="{{$languages_data->code}}"
+                                            data-style="background-image: url({{asset('').$languages_data->image}});"
+                                            @if(session('locale')==$languages_data->code) selected @endif>{{$languages_data->name}}</option>
+                                @endforeach
                             </select>
                         </div>
-                    
+
                         <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar_collapse_0" aria-controls="navbar_collapse_0" aria-expanded="false" aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbar_collapse_0">
                             <ul class="navbar-nav">
-                                            
+
                                 @if (Auth::guard('customer')->check())
                                     <li class="nav-item">
                                         <div class="nav-link">
@@ -35,7 +37,7 @@
                                     <li class="nav-item"> <a href="{{ URL::to('/login')}}" class="nav-link -before"><i class="fa fa-lock" aria-hidden="true"></i>&nbsp;@lang('website.Login/Register')</a> </li>
                                 @endif
                             </ul>
-                        </div>   
+                        </div>
 
                  </nav>
                 </div>
