@@ -67,6 +67,9 @@
                                         <a href="{{ URL::to('/product-detail/'.$special->products_slug)}}" class="fa fa-eye"></a>
                                     @endif
                                 </div>
+                                <div class="buttons">
+                                    <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$special->products_slug)}}">@lang('website.View Detail')</a>
+                                </div>
                              </div>
                           </article>
                         </div>
@@ -229,9 +232,10 @@
                                         <a href="{{ URL::to('/product-detail/'.$products->products_slug)}}" class="fa fa-eye"></a>
                                     @endif
                                 </div>
-
-
-                             </div>
+                                <div class="buttons">
+                                    <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$products->products_slug)}}">@lang('website.View Detail')</a>
+                                </div>
+                            </div>
                             </article>
                         </div>
                         @endforeach
