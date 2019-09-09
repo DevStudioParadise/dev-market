@@ -283,32 +283,8 @@
 
                      <div class="product-hover">
                      	<div class="icons">
-                        	<div class="icon-liked">
-
-                            	<span products_id = '{{$top_seller->products_id}}' class="fa @if ($top_seller->isLiked==1) fa-heart @else fa-heart-o @endif is_liked"><span class="badge badge-secondary">{{$top_seller->products_liked}}</span></span>
-                            </div>
-
                             @if($top_seller->products_type!=2)
                                 <a href="{{ URL::to('/product-detail/'.$top_seller->products_slug)}}" class="fa fa-eye"></a>
-                            @endif
-                        </div>
-                        <div class="buttons">
-                        	 @if($top_seller->products_type==0)
-                                @if(!in_array($top_seller->products_id,$result['cartArray']))
-                                   @if($top_seller->defaultStock==0)
-                                        <button type="button" class="btn btn-block btn-danger" products_id="{{$top_seller->products_id}}">@lang('website.Out of Stock')</button>
-                                    @elseif($top_seller->products_min_order>1)
-                                   		 <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$top_seller->products_slug)}}">@lang('website.View Detail')</a>
-                                    @else
-                                       <button type="button" class="btn btn-block btn-secondary cart" products_id="{{$top_seller->products_id}}">@lang('website.Add to Cart')</button>
-                                    @endif
-                                @else
-                                    <button type="button" class="btn btn-block btn-secondary active">@lang('website.Added')</button>
-                                @endif
-                            @elseif($top_seller->products_type==1)
-                                <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$top_seller->products_slug)}}">@lang('website.View Detail')</a>
-                            @elseif($top_seller->products_type==2)
-                                <a href="{{$top_seller->products_url}}" target="_blank" class="btn btn-block btn-secondary">@lang('website.External Link')</a>
                             @endif
                         </div>
                      </div>

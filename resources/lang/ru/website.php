@@ -35,7 +35,7 @@ return [
 
     'MostLiked' => 'Самые любимые',
 		
-	'New'=>'Новый',
+	'New'=>'New',
 		
 	'Likes'=>'Нравится',
 		
@@ -113,7 +113,7 @@ return [
 		
 	'Top Selling of the Week'=>'Топ продаж недели',
 		
-	'View Detail'=>'Посмотреть детали',
+	'View Detail'=>'Подробнее',
 		
 	'Newest Products'=>'Новейшие продукты',
 		

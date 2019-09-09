@@ -129,34 +129,7 @@
                                       @endif
                                                                       
                                     <h3 class="product-title">{{$result['detail']['product_data'][0]->products_name}}</h3>   
-                                                                    
-                                    <div class="product-info">
-                                        
-                                        @if(!empty($result['category_name']) and !empty($result['sub_category_name']))
-                                            
-                                         <a href="{{ URL::to('/shop?category='.$result['sub_category_slug'])}}" class="category">{{$result['sub_category_name']}}</a>
-                                        @elseif(!empty($result['category_name']) and empty($result['sub_category_name']))
-                                         <a href="{{ URL::to('/shop?category='.$result['category_slug'])}}" class="category">{{$result['category_name']}}</a>
-                                            
-                                        @endif
-                                        
-                                        <div class="orders">{{$result['detail']['product_data'][0]->products_ordered}}&nbsp;@lang('website.Order(s)')</div>                                                                                
-                                        @if($result['detail']['product_data'][0]->products_type == 0)
-                                        	
-                                            @if($result['detail']['product_data'][0]->defaultStock == 0)
-                                            <div class="availbility"><i class="fa fa-check" aria-hidden="true"></i>&nbsp; @lang('website.Out of Stock') </div>
-                                           
-                                            @else 
-                                                <div class="availbility"><i class="fa fa-check" aria-hidden="true"></i>&nbsp; @lang('website.In stock') </div>
-                                            @endif
-                                            
-                                        @else
-                                        	 <div class="availbility stock-out-cart" hidden><i class="fa fa-check" aria-hidden="true"></i>&nbsp; @lang('website.Out of Stock') </div>
-                                             <div class="availbility stock-cart" hidden><i class="fa fa-check" aria-hidden="true"></i>&nbsp; @lang('website.In stock') </div>
-                                        @endif                                                                                
-                                        
-                                    </div>
-            
+
                                      <div class="product-price">
                                      	@if(!empty($result['detail']['product_data'][0]->flash_price))
                                         <span class="discount">
