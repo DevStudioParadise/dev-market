@@ -82,41 +82,122 @@ class DefaultController extends DataController
 			$max_price = $request->max_price;
 		}else{
 			$max_price = '';
-		}	
+		}
+
+        if(!empty($request->min_emp)){
+            $min_emp = $request->min_emp;
+        }else{
+            $min_emp = '';
+        }
+
+        //max_price
+        if(!empty($request->max_emp)){
+            $max_emp = $request->max_emp;
+        }else{
+            $max_emp = '';
+        }
+
+
+        if(!empty($request->min_age)){
+            $min_age = $request->min_age;
+        }else{
+            $min_age = '';
+        }
+
+        //max_price
+        if(!empty($request->max_age)){
+            $max_age = $request->max_age;
+        }else{
+            $max_age = '';
+        }
+
+        if(!empty($request->min_payback)){
+            $min_payback = $request->min_payback;
+        }else{
+            $min_payback = '';
+        }
+
+        //max_price
+        if(!empty($request->max_payback)){
+            $max_payback = $request->max_payback;
+        }else{
+            $max_payback = '';
+        }
 		
 		//products
 		$myVar = new DataController();
-		$data = array('page_number'=>'0', 'type'=>'', 'limit'=>10, 'min_price'=>$min_price, 'max_price'=>$max_price );
+		$data = array(
+		    'page_number'=>'0',
+            'type'=>'',
+            'limit'=>10,
+            'min_price'=>$min_price,
+            'max_price'=>$max_price,
+            'min_emp'=>$min_emp,
+            'max_emp'=>$max_emp,
+            'min_age'=>$min_age,
+            'max_age'=>$max_age,
+            'min_payback'=>$min_payback,
+            'max_payback'=>$max_payback);
 		$special_products = $myVar->products($data);
 		$result['products'] = $special_products;
 		
 		//special products
 		$myVar = new DataController();
-		$data = array('page_number'=>'0', 'type'=>'special', 'limit'=>$limit, 'min_price'=>$min_price, 'max_price'=>$max_price );
+		$data = array('page_number'=>'0', 'type'=>'special', 'limit'=>$limit, 'min_price'=>$min_price, 'max_price'=>$max_price,
+            'min_emp'=>$min_emp,
+            'max_emp'=>$max_emp,
+            'min_age'=>$min_age,
+            'max_age'=>$max_age,
+            'min_payback'=>$min_payback,
+            'max_payback'=>$max_payback,);
 		$special_products = $myVar->products($data);
 		$result['special'] = $special_products;
 		
 		//top seller
 		$myVar = new DataController();
-		$data = array('page_number'=>'0', 'type'=>'topseller', 'limit'=>$limit, 'min_price'=>$min_price, 'max_price'=>$max_price );
+		$data = array('page_number'=>'0', 'type'=>'topseller', 'limit'=>$limit, 'min_price'=>$min_price, 'max_price'=>$max_price,
+            'min_emp'=>$min_emp,
+            'max_emp'=>$max_emp,
+            'min_age'=>$min_age,
+            'max_age'=>$max_age,
+            'min_payback'=>$min_payback,
+            'max_payback'=>$max_payback,);
 		$top_seller = $myVar->products($data);
 		$result['top_seller'] = $top_seller;
 		
 		//most liked
 		$myVar = new DataController();
-		$data = array('page_number'=>'0', 'type'=>'mostliked', 'limit'=>$limit, 'min_price'=>$min_price, 'max_price'=>$max_price );
+		$data = array('page_number'=>'0', 'type'=>'mostliked', 'limit'=>$limit, 'min_price'=>$min_price, 'max_price'=>$max_price,
+            'min_emp'=>$min_emp,
+            'max_emp'=>$max_emp,
+            'min_age'=>$min_age,
+            'max_age'=>$max_age,
+            'min_payback'=>$min_payback,
+            'max_payback'=>$max_payback,);
 		$most_liked = $myVar->products($data);
 		$result['most_liked'] = $most_liked;
 		
 		//is feature
 		$myVar = new DataController();
-		$data = array('page_number'=>'0', 'type'=>'is_feature', 'limit'=>$limit, 'min_price'=>$min_price, 'max_price'=>$max_price );
+		$data = array('page_number'=>'0', 'type'=>'is_feature', 'limit'=>$limit, 'min_price'=>$min_price, 'max_price'=>$max_price,
+            'min_emp'=>$min_emp,
+            'max_emp'=>$max_emp,
+            'min_age'=>$min_age,
+            'max_age'=>$max_age,
+            'min_payback'=>$min_payback,
+            'max_payback'=>$max_payback,);
 		$featured = $myVar->products($data);
 		$result['featured'] = $featured;
 		
 		//is feature
 		$myVar = new DataController();
-		$data = array('page_number'=>'0', 'type'=>'flashsale', 'limit'=>$limit, 'min_price'=>$min_price, 'max_price'=>$max_price );
+		$data = array('page_number'=>'0', 'type'=>'flashsale', 'limit'=>$limit, 'min_price'=>$min_price, 'max_price'=>$max_price,
+            'min_emp'=>$min_emp,
+            'max_emp'=>$max_emp,
+            'min_age'=>$min_age,
+            'max_age'=>$max_age,
+            'min_payback'=>$min_payback,
+            'max_payback'=>$max_payback,);
 		$flash_sale = $myVar->products($data);
 		$result['flash_sale'] = $flash_sale;
 		//dd($result['flash_sale']);
@@ -171,7 +252,13 @@ class DefaultController extends DataController
 		$temp_i = array_unique($temp_i);				
 		foreach($temp_i as $temp_data){			
 			$myVar = new DataController();
-			$data = array('page_number'=>'0', 'type'=>'', 'products_id'=>$temp_data, 'limit'=>7, 'min_price'=>'', 'max_price'=>'');
+			$data = array('page_number'=>'0', 'type'=>'', 'products_id'=>$temp_data, 'limit'=>7, 'min_price'=>'', 'max_price'=>'',
+                'min_emp'=>$min_emp,
+                'max_emp'=>$max_emp,
+                'min_age'=>$min_age,
+                'max_age'=>$max_age,
+                'min_payback'=>$min_payback,
+                'max_payback'=>$max_payback,);
 			$single_product = $myVar->products($data);
 			if(!empty($single_product['product_data'][0])){
 				$detail[] = $single_product['product_data'][0];

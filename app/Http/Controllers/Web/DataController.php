@@ -139,7 +139,7 @@ class DataController extends Controller
 		}
 		
 		//recent product
-		$data = array('page_number'=>0, 'type'=>'', 'limit'=>5, 'categories_id'=>'', 'search'=>'', 'min_price'=>'', 'max_price'=>'' );			
+		$data = array('page_number'=>0, 'type'=>'', 'limit'=>5, 'categories_id'=>'', 'search'=>'', 'min_price'=>'', 'max_price'=>'', 'min_age'=>'', 'max_age'=>'', 'min_emp'=>'', 'max_emp'=>'','min_payback'=>'', 'max_payback'=>'' );
 		$products = $this->products($data);
 		$result['recentProducts'] = $products;
 		
@@ -245,8 +245,14 @@ class DataController extends Controller
 		}		
 		
 		$min_price	 							=   $data['min_price'];	
-		$max_price	 							=   $data['max_price'];	
-		$take									=   $data['limit'];
+		$max_price	 							=   $data['max_price'];
+        $min_emp	 							=   $data['min_emp'];
+        $max_emp	 							=   $data['max_emp'];
+        $min_age	 							=   $data['min_age'];
+        $max_age	 							=   $data['max_age'];
+        $min_payback	 						=   $data['min_payback'];
+        $max_payback	 						=   $data['max_payback'];
+        $take									=   $data['limit'];
 		$currentDate 							=   time();	
 		$type									=	$data['type'];
 		
@@ -347,6 +353,18 @@ class DataController extends Controller
 			if(!empty($max_price)){
 				$categories->whereBetween('products.products_price', [$min_price, $max_price]);
 			}
+
+            if(!empty($max_age)){
+                $categories->whereBetween('products.products_age', [$min_age, $max_age]);
+            }
+
+            if(!empty($max_emp)){
+                $categories->whereBetween('products.products_emp', [$min_emp, $max_emp]);
+            }
+
+            if(!empty($max_payback)){
+                $categories->whereBetween('products.products_payback', [$min_payback, $max_payback]);
+            }
 			
 			if(!empty($data['search'])){
 				
@@ -386,7 +404,18 @@ class DataController extends Controller
 				
 				if(!empty($max_price)){
 					$categories->whereBetween('products.products_price', [$min_price, $max_price]);
-				}			
+				}
+                if(!empty($max_age)){
+                    $categories->whereBetween('products.products_age', [$min_age, $max_age]);
+                }
+
+                if(!empty($max_emp)){
+                    $categories->whereBetween('products.products_emp', [$min_emp, $max_emp]);
+                }
+
+                if(!empty($max_payback)){
+                    $categories->whereBetween('products.products_payback', [$min_payback, $max_payback]);
+                }
 					
 				$categories->orWhere('products_options_values.products_options_values_name', 'LIKE', '%'.$searchValue.'%')->where('products_status','=',1);				
 				if(!empty($data['categories_id'])){
@@ -423,6 +452,17 @@ class DataController extends Controller
 				if(!empty($max_price)){
 					$categories->whereBetween('products.products_price', [$min_price, $max_price]);
 				}
+                if(!empty($max_age)){
+                    $categories->whereBetween('products.products_age', [$min_age, $max_age]);
+                }
+
+                if(!empty($max_emp)){
+                    $categories->whereBetween('products.products_emp', [$min_emp, $max_emp]);
+                }
+
+                if(!empty($max_payback)){
+                    $categories->whereBetween('products.products_payback', [$min_payback, $max_payback]);
+                }
 				
 				$categories->orWhere('products_name', 'LIKE', '%'.$searchValue.'%')->where('products_status','=',1);	
 							
@@ -461,6 +501,17 @@ class DataController extends Controller
 				if(!empty($max_price)){
 					$categories->whereBetween('products.products_price', [$min_price, $max_price]);
 				}
+                if(!empty($max_age)){
+                    $categories->whereBetween('products.products_age', [$min_age, $max_age]);
+                }
+
+                if(!empty($max_emp)){
+                    $categories->whereBetween('products.products_emp', [$min_emp, $max_emp]);
+                }
+
+                if(!empty($max_payback)){
+                    $categories->whereBetween('products.products_payback', [$min_payback, $max_payback]);
+                }
 				
 				$categories->orWhere('products_model', 'LIKE', '%'.$searchValue.'%')->where('products_status','=',1);
 				

@@ -200,6 +200,9 @@ class AdminProductsController extends Controller
 					'products_quantity'		 =>   0,
 					'products_model'		 =>   $request->products_model,
 					'products_price'		 =>   $request->products_price,
+                    'products_emp'		 =>   $request->products_emp,
+                    'products_age'		 =>   $request->products_age,
+                    'products_payback'		 =>   $request->products_payback,
 					'products_date_added'	 =>   $date_added,
 					'products_weight'		 =>   $request->products_weight,
 					'products_status'		 =>   $request->products_status,
@@ -1632,6 +1635,12 @@ class AdminProductsController extends Controller
 					'products_model'		 =>   $request->products_model,
 
 					'products_price'		 =>   $request->products_price,
+
+					'products_emp'		 =>   $request->products_emp,
+
+					'products_age'		 =>   $request->products_age,
+
+					'products_payback'		 =>   $request->products_payback,
 
 					'products_last_modified' =>   $products_last_modified,
 

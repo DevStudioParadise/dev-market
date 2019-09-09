@@ -1401,6 +1401,75 @@ jQuery('.slide-toggle').on('click', function(event){
 	   jQuery( "#max_price_show" ).val(jQuery( "#slider-range" ).slider( "values", 1 ) );
 	   //jQuery( "#slider-range" ).slider( "option", "max", 50 );
 	 });
+	jQuery( function() {
+		var maximum_emp = jQuery( ".maximum_emp" ).val();
+		jQuery( "#slider-range-emp" ).slider({
+			range: true,
+			min: 0,
+			max: maximum_emp,
+			values: [ 0, maximum_emp ],
+			slide: function( event, ui ) {
+				jQuery('#min_emp').val(ui.values[ 0 ] );
+				jQuery('#max_emp').val(ui.values[ 1 ] );
+
+				jQuery('#min_emp_show').val( ui.values[ 0 ] );
+				jQuery('#max_emp_show').val( ui.values[ 1 ] );
+			},
+			create: function(event, ui){
+				jQuery(this).slider('value',20);
+			}
+		});
+		jQuery( "#min_emp_show" ).val( jQuery( "#slider-range-emp" ).slider( "values", 0 ) );
+		jQuery( "#max_emp_show" ).val(jQuery( "#slider-range-emp" ).slider( "values", 1 ) );
+		//jQuery( "#slider-range" ).slider( "option", "max", 50 );
+	});
+
+	jQuery( function() {
+		var maximum_age = jQuery( ".maximum_age" ).val();
+		jQuery( "#slider-range-age" ).slider({
+			range: true,
+			min: 0,
+			max: maximum_age,
+			values: [ 0, maximum_age ],
+			slide: function( event, ui ) {
+				jQuery('#min_age').val(ui.values[ 0 ] );
+				jQuery('#max_age').val(ui.values[ 1 ] );
+
+				jQuery('#min_age_show').val( ui.values[ 0 ] );
+				jQuery('#max_age_show').val( ui.values[ 1 ] );
+			},
+			create: function(event, ui){
+				jQuery(this).slider('value',20);
+			}
+		});
+		jQuery( "#min_age_show" ).val( jQuery( "#slider-range-age" ).slider( "values", 0 ) );
+		jQuery( "#max_age_show" ).val(jQuery( "#slider-range-age" ).slider( "values", 1 ) );
+		//jQuery( "#slider-range" ).slider( "option", "max", 50 );
+	});
+
+	jQuery( function() {
+		var maximum_payback = jQuery( ".maximum_payback" ).val();
+		jQuery( "#slider-range-payback" ).slider({
+			range: true,
+			min: 0,
+			max: maximum_payback,
+			values: [ 0, maximum_payback ],
+			slide: function( event, ui ) {
+				jQuery('#min_payback').val(ui.values[ 0 ] );
+				jQuery('#max_payback').val(ui.values[ 1 ] );
+
+				jQuery('#min_payback_show').val( ui.values[ 0 ] );
+				jQuery('#max_payback_show').val( ui.values[ 1 ] );
+			},
+			create: function(event, ui){
+				jQuery(this).slider('value',20);
+			}
+		});
+		jQuery( "#min_payback_show" ).val( jQuery( "#slider-range-payback" ).slider( "values", 0 ) );
+		jQuery( "#max_payback_show" ).val(jQuery( "#slider-range-payback" ).slider( "values", 1 ) );
+		//jQuery( "#slider-range" ).slider( "option", "max", 50 );
+	});
+
 
 
 

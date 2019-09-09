@@ -304,8 +304,40 @@
                                     <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
                                   </div>
                                 </div>
-                                
-                                
+
+                              <hr>
+
+                              <div class="form-group">
+                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('website.Business age') }}</label>
+                                  <div class="col-sm-10 col-md-4">
+                                      <input type="number" name="products_age" class="form-control field-validate" value="{{$result['product'][0]->products_age}}">
+                                      <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('website.Business age') }} </span>
+                                      <span class="help-block hidden">{{ trans('website.Business age') }}</span>
+                                  </div>
+                              </div>
+
+                              <hr>
+                              <div class="form-group">
+                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('website.Number Of Employees') }}</label>
+                                  <div class="col-sm-10 col-md-4">
+                                      <input type="number" name="products_emp" class="form-control field-validate" value="{{$result['product'][0]->products_emp}}">
+                                      <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('website.Number Of Employees') }} </span>
+                                      <span class="help-block hidden">{{ trans('website.Number Of Employees') }}</span>
+                                  </div>
+                              </div>
+                              <hr>
+                              <div class="form-group">
+                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('website.Payback (month)') }}</label>
+                                  <div class="col-sm-10 col-md-4">
+                                      <input type="number" name="products_payback" class="form-control field-validate" value="{{$result['product'][0]->products_payback}}">
+                                      <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('website.Payback (month)') }} </span>
+                                      <span class="help-block hidden">{{ trans('website.Payback (month)') }}</span>
+                                  </div>
+                              </div>
+                              <hr>
                                 @foreach($result['description'] as $description_data)
                                             
                                 <div class="form-group">

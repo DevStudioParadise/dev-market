@@ -167,10 +167,16 @@ return [
 	'Poducts'=>'Poducts',
 		
 	'Detail'=>'Detail',
+
+    'Number Of Employees' => 'Number Of Employees',
 		
 	'Quantity'=>'Quantity',
 		
 	'Unit Price'=>'Unit Price',
+
+    'Business age' => 'Business age',
+
+    'Payback (month)' => 'Payback (month)',
 		
 	'Item Total'=>'Item Total',
 		

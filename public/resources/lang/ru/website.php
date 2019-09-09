@@ -94,12 +94,19 @@ return [
 	'Phone'=>'Телефон',
 		
 	'Email'=>'Email',
+
+
+    'Number Of Employees' => 'Кол-Во Сотрудников',
+
+    'Business age' => 'Возраст бизнеса',
 		
 	'Copy Rights'=>'2019 Company, Inc',
 		
 	'From our News'=>'Из наших новостей',
 		
 	'View All News'=>'Посмотреть все новости',
+
+    'Payback (month)' => 'Payback (month)',
 		
 	'Readmore'=>'Прочитайте больше',
 		

@@ -80,9 +80,51 @@ class ProductsController extends DataController
 			$max_price = $request->max_price;
 		}else{
 			$max_price = '';
-		}	
-		
-		//category		
+		}
+
+
+        if(!empty($request->min_emp)){
+            $min_emp = $request->min_emp;
+        }else{
+            $min_emp = '';
+        }
+
+        //max_price
+        if(!empty($request->max_emp)){
+            $max_emp = $request->max_emp;
+        }else{
+            $max_emp = '';
+        }
+
+
+        if(!empty($request->min_age)){
+            $min_age = $request->min_age;
+        }else{
+            $min_age = '';
+        }
+
+        //max_price
+        if(!empty($request->max_age)){
+            $max_age = $request->max_age;
+        }else{
+            $max_age = '';
+        }
+
+        if(!empty($request->min_payback)){
+            $min_payback = $request->min_payback;
+        }else{
+            $min_payback = '';
+        }
+
+        //max_price
+        if(!empty($request->max_payback)){
+            $max_payback = $request->max_payback;
+        }else{
+            $max_payback = '';
+        }
+
+
+        //category
 		if(!empty($request->category) and $request->category!='all'){
 			$category = DB::table('categories')->leftJoin('categories_description','categories_description.categories_id','=','categories.categories_id')->where('categories_slug',$request->category)->where('language_id',Session::get('language_id'))->get();
 			
@@ -163,7 +205,22 @@ class ProductsController extends DataController
 		}
 		
 		$myVar = new DataController();	
-		$data = array('page_number'=>$page_number, 'type'=>$type, 'limit'=>$limit, 'categories_id'=>$categories_id, 'search'=>$search, 'filters'=>$filters, 'limit'=>$limit, 'min_price'=>$min_price, 'max_price'=>$max_price );	
+		$data = array(
+		    'page_number'=>$page_number,
+            'type'=>$type,
+            'limit'=>$limit,
+            'categories_id'=>$categories_id,
+            'search'=>$search,
+            'filters'=>$filters,
+            'min_price'=>$min_price,
+            'max_price'=>$max_price,
+            'min_emp'=>$min_emp,
+            'max_emp'=>$max_emp,
+            'min_age'=>$min_age,
+            'max_age'=>$max_age,
+            'min_payback'=>$min_payback,
+            'max_payback'=>$max_payback,
+        );
 		
 		$products = $myVar->products($data);
 		$result['products'] = $products;
@@ -212,9 +269,48 @@ class ProductsController extends DataController
 			$max_price = $request->max_price;
 		}else{
 			$max_price = '';
-		}	
-				
-		if(!empty($request->limit)){
+		}
+
+        if(!empty($request->min_age)){
+            $min_age = $request->min_age;
+        }else{
+            $min_age = '';
+        }
+
+        //max_price
+        if(!empty($request->max_age)){
+            $max_age = $request->max_age;
+        }else{
+            $max_age = '';
+        }
+
+        if(!empty($request->min_emp)){
+            $min_emp = $request->min_emp;
+        }else{
+            $min_emp = '';
+        }
+
+        //max_price
+        if(!empty($request->max_emp)){
+            $max_emp = $request->max_emp;
+        }else{
+            $max_emp = '';
+        }
+
+        if(!empty($request->min_payback)){
+            $min_payback = $request->min_payback;
+        }else{
+            $min_payback = '';
+        }
+
+        //max_price
+        if(!empty($request->max_payback)){
+            $max_payback = $request->max_payback;
+        }else{
+            $max_payback = '';
+        }
+
+        if(!empty($request->limit)){
 			$limit = $request->limit;
 		}else{
 			$limit = 15;
@@ -258,7 +354,20 @@ class ProductsController extends DataController
 		}		
 				
 		$myVar = new DataController();
-		$data = array('page_number'=>'0', 'type'=>$type, 'products_id'=>$products[0]->products_id, 'limit'=>$limit, 'min_price'=>$min_price, 'max_price'=>$max_price);
+		$data = array(
+		    'page_number'=>'0',
+            'type'=>$type,
+            'products_id'=>$products[0]->products_id,
+            'limit'=>$limit,
+            'min_price'=>$min_price,
+            'max_price'=>$max_price,
+            'min_emp'=>$min_emp,
+            'max_emp'=>$max_emp,
+            'min_age'=>$min_age,
+            'max_age'=>$max_age,
+            'min_payback'=>$min_payback,
+            'max_payback'=>$max_payback,
+        );
 		$detail = $myVar->products($data);
 		$result['detail'] = $detail;
 		$postCategoryId = array();
@@ -270,7 +379,13 @@ class ProductsController extends DataController
 			}
 		}
 				
-		$data = array('page_number'=>'0', 'type'=>'', 'categories_id'=>$postCategoryId, 'limit'=>$limit, 'min_price'=>$min_price, 'max_price'=>$max_price);
+		$data = array('page_number'=>'0', 'type'=>'', 'categories_id'=>$postCategoryId, 'limit'=>$limit, 'min_price'=>$min_price, 'max_price'=>$max_price,
+            'min_emp'=>$min_emp,
+            'max_emp'=>$max_emp,
+            'min_age'=>$min_age,
+            'max_age'=>$max_age,
+            'min_payback'=>$min_payback,
+            'max_payback'=>$max_payback);
 		$simliar_products = $myVar->products($data);
 		$result['simliar_products'] = $simliar_products;
 		
@@ -287,19 +402,59 @@ class ProductsController extends DataController
 	
 	public function filterProducts(Request $request){
 		
-		//min_price
-		if(!empty($request->min_price)){
-			$min_price = $request->min_price;
-		}else{
-			$min_price = '';
-		}
-		
-		//max_price
-		if(!empty($request->max_price)){
-			$max_price = $request->max_price;
-		}else{
-			$max_price = '';
-		}	
+		///min_price
+        if(!empty($request->min_price)){
+            $min_price = $request->min_price;
+        }else{
+            $min_price = '';
+        }
+
+        //max_price
+        if(!empty($request->max_price)){
+            $max_price = $request->max_price;
+        }else{
+            $max_price = '';
+        }
+
+        if(!empty($request->min_age)){
+            $min_age = $request->min_age;
+        }else{
+            $min_age = '';
+        }
+
+        //max_price
+        if(!empty($request->max_age)){
+            $max_age = $request->max_age;
+        }else{
+            $max_age = '';
+        }
+
+        if(!empty($request->min_emp)){
+            $min_emp = $request->min_emp;
+        }else{
+            $min_emp = '';
+        }
+
+        //max_price
+        if(!empty($request->max_emp)){
+            $max_emp = $request->max_emp;
+        }else{
+            $max_emp = '';
+        }
+
+        if(!empty($request->min_payback)){
+            $min_payback = $request->min_payback;
+        }else{
+            $min_payback = '';
+        }
+
+        //max_price
+        if(!empty($request->max_payback)){
+            $max_payback = $request->max_payback;
+        }else{
+            $max_payback = '';
+        }
+
 				
 		if(!empty($request->limit)){
 			$limit = $request->limit;
@@ -352,7 +507,21 @@ class ProductsController extends DataController
 		}	
 						
 		$myVar = new DataController();
-		$data = array('page_number'=>$request->page_number, 'type'=>$type, 'limit'=>$limit, 'categories_id'=>$categories_id, 'search'=>$search, 'filters'=>$filters, 'limit'=>$limit, 'min_price'=>$min_price, 'max_price'=>$max_price );
+		$data = array(
+		    'page_number'=>$request->page_number,
+            'type'=>$type, 'limit'=>$limit,
+            'categories_id'=>$categories_id,
+            'search'=>$search, 'filters'=>$filters,
+            'limit'=>$limit,
+            'min_price'=>$min_price,
+            'max_price'=>$max_price,
+            'min_emp'=>$min_emp,
+            'max_emp'=>$max_emp,
+            'min_age'=>$min_age,
+            'max_age'=>$max_age,
+            'min_payback'=>$min_payback,
+            'max_payback'=>$max_payback
+            );
 		$products = $myVar->products($data);
 		$result['products'] = $products;	
 			
