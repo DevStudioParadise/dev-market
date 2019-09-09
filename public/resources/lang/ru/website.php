@@ -113,7 +113,7 @@ return [
 		
 	'Top Selling of the Week'=>'Топ продаж недели',
 		
-	'View Detail'=>'Посмотреть детали',
+	'View Detail'=>'Подробнее',
 		
 	'Newest Products'=>'Новейшие продукты',
 		
@@ -184,7 +184,7 @@ return [
 		
 	'Subtotal'=>'Промежуточный итог',
 		
-	'Apply'=>'Apply',
+	'Apply'=>'Применить',
 		
 	'Please enter your first name'=>'Пожалуйста, введите ваше имя.',
 		
@@ -214,7 +214,7 @@ return [
 		
 	'Picture'=>'Картина',
 		
-	'Password'=>'пароль',
+	'Password'=>'Пароль',
 		
 	'Please enter your password'=>'Пожалуйста, введите пароль.',
 		
@@ -302,7 +302,7 @@ return [
 		
 	'Address Info'=>'Информация об адресе',
 		
-	'Action'=>'действие',
+	'Action'=>'Действие',
 		
 	'Your address has been updated successfully'=>'Ваш адрес был успешно обновлен!',
 		
@@ -348,7 +348,7 @@ return [
 		
 	'Shipping Cost'=>'Стоимость доставки',
 		
-	'Tax'=>'налог',
+	'Tax'=>'Налог',
 		
 	'Payment Method'=>'Способ оплаты',
 		

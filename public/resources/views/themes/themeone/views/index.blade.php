@@ -91,21 +91,7 @@
 
 
                         <div class="buttons">
-                        	 @if($products->products_type==0)
-                                @if(!in_array($products->products_id,$result['cartArray']))
-                                    @if($products->defaultStock==0)
-                                        <button type="button" class="btn btn-block btn-danger" products_id="{{$products->products_id}}">@lang('website.Out of Stock')</button>
-                                    @else
-                                        <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$products->products_slug)}}">@lang('website.View Detail')</a>
-                                    @endif
-                                @else
-                                    <button type="button" class="btn btn-block btn-secondary active">@lang('website.Added')</button>
-                                @endif
-                            @elseif($products->products_type==1)
-                                <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$products->products_slug)}}">@lang('website.View Detail')</a>
-                            @elseif($products->products_type==2)
-                                <a href="{{$products->products_url}}" target="_blank" class="btn btn-block btn-secondary">@lang('website.External Link')</a>
-                            @endif
+                            <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$products->products_slug)}}">@lang('website.View Detail')</a>
                         </div>
                      </div>
 
@@ -172,21 +158,7 @@
 
 
                         <div class="buttons">
-                        	 @if($products->products_type==0)
-                                @if(!in_array($products->products_id,$result['cartArray']))
-                                    @if($products->defaultStock==0)
-                                        <button type="button" class="btn btn-block btn-danger" products_id="{{$products->products_id}}">@lang('website.Out of Stock')</button>
-                                    @else
-                                        <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$products->products_slug)}}">@lang('website.View Detail')</a>
-                                    @endif
-                                @else
-                                    <button type="button" class="btn btn-block btn-secondary active">@lang('website.Added')</button>
-                                @endif
-                            @elseif($products->products_type==1)
-                                <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$products->products_slug)}}">@lang('website.View Detail')</a>
-                            @elseif($products->products_type==2)
-                                <a href="{{$products->products_url}}" target="_blank" class="btn btn-block btn-secondary">@lang('website.External Link')</a>
-                            @endif
+                            <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$products->products_slug)}}">@lang('website.View Detail')</a>
                         </div>
                      </div>
 
@@ -283,36 +255,11 @@
 
                      <div class="product-hover">
                      	<div class="icons">
-                        	<div class="icon-liked">
-
-                            	<span products_id = '{{$top_seller->products_id}}' class="fa @if ($top_seller->isLiked==1) fa-heart @else fa-heart-o @endif is_liked"><span class="badge badge-secondary">{{$top_seller->products_liked}}</span></span>
-                            </div>
-
                             @if($top_seller->products_type!=2)
                                 <a href="{{ URL::to('/product-detail/'.$top_seller->products_slug)}}" class="fa fa-eye"></a>
                             @endif
                         </div>
-                        <div class="buttons">
-                        	 @if($top_seller->products_type==0)
-                                @if(!in_array($top_seller->products_id,$result['cartArray']))
-                                   @if($top_seller->defaultStock==0)
-                                        <button type="button" class="btn btn-block btn-danger" products_id="{{$top_seller->products_id}}">@lang('website.Out of Stock')</button>
-                                    @elseif($top_seller->products_min_order>1)
-                                   		 <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$top_seller->products_slug)}}">@lang('website.View Detail')</a>
-                                    @else
-                                       <button type="button" class="btn btn-block btn-secondary cart" products_id="{{$top_seller->products_id}}">@lang('website.Add to Cart')</button>
-                                    @endif
-                                @else
-                                    <button type="button" class="btn btn-block btn-secondary active">@lang('website.Added')</button>
-                                @endif
-                            @elseif($top_seller->products_type==1)
-                                <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$top_seller->products_slug)}}">@lang('website.View Detail')</a>
-                            @elseif($top_seller->products_type==2)
-                                <a href="{{$top_seller->products_url}}" target="_blank" class="btn btn-block btn-secondary">@lang('website.External Link')</a>
-                            @endif
-                        </div>
                      </div>
-
                   </article>
                 </div>
                 @endforeach
@@ -393,23 +340,7 @@
                         </div>
 
                         <div class="buttons">
-                        	 @if($special->products_type==0)
-                                @if(!in_array($special->products_id,$result['cartArray']))
-                                    @if($special->defaultStock==0)
-                                        <button type="button" class="btn btn-block btn-danger" products_id="{{$special->products_id}}">@lang('website.Out of Stock')</button>
-                                    @elseif($special->products_min_order>1)
-                                   		 <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$special->products_slug)}}">@lang('website.View Detail')</a>
-                                    @else
-                                        <button type="button" class="btn btn-block btn-secondary cart" products_id="{{$special->products_id}}">@lang('website.Add to Cart')</button>
-                                    @endif
-                                @else
-                                    <button type="button" class="btn btn-block btn-secondary active">@lang('website.Added')</button>
-                                @endif
-                            @elseif($special->products_type==1)
-                                <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$special->products_slug)}}">@lang('website.View Detail')</a>
-                            @elseif($special->products_type==2)
-                                <a href="{{$special->products_url}}" target="_blank" class="btn btn-block btn-secondary">@lang('website.External Link')</a>
-                            @endif
+                            <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$special->products_slug)}}">@lang('website.View Detail')</a>
                         </div>
                      </div>
 
@@ -493,24 +424,7 @@
                         </div>
 
                         <div class="buttons">
-                        	@if($most_liked->products_type==0)
-                                @if(!in_array($most_liked->products_id,$result['cartArray']))
-                                    @if($most_liked->defaultStock==0)
-                                        <button type="button" class="btn btn-block btn-danger" products_id="{{$most_liked->products_id}}">@lang('website.Out of Stock')</button>
-                                   @elseif($most_liked->products_min_order>1)
-                                   		 <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$most_liked->products_slug)}}">@lang('website.View Detail')</a>
-                                    @else
-                                        <button type="button" class="btn btn-block btn-secondary cart" products_id="{{$most_liked->products_id}}">@lang('website.Add to Cart')</button>
-                                    @endif
-                                @else
-                                    <button type="button" class="btn btn-block btn-secondary active">@lang('website.Added')</button>
-                                @endif
-                            @elseif($most_liked->products_type==1)
-                                <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$most_liked->products_slug)}}">@lang('website.View Detail')</a>
-                            @elseif($most_liked->products_type==2)
-                                <a href="{{$most_liked->products_url}}" target="_blank" class="btn btn-block btn-secondary">@lang('website.External Link')</a>
-                            @endif
-
+                            <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$most_liked->products_slug)}}">@lang('website.View Detail')</a>
                         </div>
                      </div>
 

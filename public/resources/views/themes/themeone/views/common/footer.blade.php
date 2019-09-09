@@ -19,8 +19,6 @@
               <ul class="links-list pl-0 mb-0">
                 <li> <a href="{{ URL::to('/')}}"><i class="fa fa-angle-double-right" aria-hidden="true"></i>@lang('website.Home')</a> </li>
                 <li> <a href="{{ URL::to('/shop')}}"><i class="fa fa-angle-double-right" aria-hidden="true"></i>@lang('website.Shop')</a> </li>
-                <li> <a href="{{ URL::to('/orders')}}"><i class="fa fa-angle-double-right" aria-hidden="true"></i>@lang('website.Orders')</a> </li>
-                <li> <a href="{{ URL::to('/viewcart')}}"><i class="fa fa-angle-double-right" aria-hidden="true"></i>@lang('website.Shopping Cart')</a> </li>            <li> <a href="{{ URL::to('/wishlist')}}"><i class="fa fa-angle-double-right" aria-hidden="true"></i>@lang('website.Wishlist')</a> </li>            
               </ul>
             </div>
             <div class="single-footer">

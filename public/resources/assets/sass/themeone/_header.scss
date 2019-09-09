@@ -1,3 +1,7 @@
+.ui-icon {
+	width: 16px!important;
+	height: 16px!important;
+}
 .header-area{
 	position: sticky;
 	top: 0;
@@ -25,12 +29,12 @@
 					color:color-yiq(theme-color("primary"));
 					padding: 0;
 					width:100%;
-					
+
 					&:active, &:focus{
 						color:color-yiq(theme-color("primary"));
 						outline:none;
 					}
-					
+
 					.ui-selectmenu-text{
 						padding-left:30px;
 					}
