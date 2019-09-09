@@ -260,9 +260,6 @@
                             @endif
                         </div>
                      </div>
-                      <div class="buttons">
-                          <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$products->products_slug)}}">@lang('website.View Detail')</a>
-                      </div>
                   </article>
                 </div>
                 @endforeach

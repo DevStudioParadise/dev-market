@@ -3,13 +3,12 @@
     	<div class="container">
             <div class="row align-items-center">
                 <div class="col-12">
-                
                 	<nav id="navbar_0" class="navbar navbar-expand-md navbar-dark navbar-0 p-0">
                         <div class="navbar-brand">
                             <select name="change_language" id="change_language" class="change-language">
-                            @foreach($languages as $languages_data)                               
+                            @foreach($languages as $languages_data)
                                 <option value="{{$languages_data->code}}" data-class="{{$languages_data->code}}" data-style="background-image: url({{asset('').$languages_data->image}});" @if(session('locale')==$languages_data->code) selected @endif>{{$languages_data->name}}</option>
-                            @endforeach 
+                            @endforeach
                             </select>
                         </div>
                     
