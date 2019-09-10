@@ -1449,7 +1449,7 @@ jQuery('.slide-toggle').on('click', function(event){
 
 	jQuery( function() {
 		var maximum_payback = jQuery( ".maximum_payback" ).val();
-		jQuery( "#slider-range-age" ).slider({
+		jQuery( "#slider-range-payback" ).slider({
 			range: true,
 			min: 0,
 			max: maximum_payback,
@@ -1465,8 +1465,8 @@ jQuery('.slide-toggle').on('click', function(event){
 				jQuery(this).slider('value',20);
 			}
 		});
-		jQuery( "#min_payback_show" ).val( jQuery( "#slider-payback-age" ).slider( "values", 0 ) );
-		jQuery( "#max_payback_show" ).val(jQuery( "#slider-payback-age" ).slider( "values", 1 ) );
+		jQuery( "#min_payback_show" ).val( jQuery( "#slider-range-payback" ).slider( "values", 0 ) );
+		jQuery( "#max_payback_show" ).val(jQuery( "#slider-range-payback" ).slider( "values", 1 ) );
 		//jQuery( "#slider-range" ).slider( "option", "max", 50 );
 	});
 

@@ -176,7 +176,7 @@ return [
 
     'Business age' => 'Business age',
 
-    'Payback (month)' => 'Окупаемость ( мес.)',
+    'Payback (month)' => 'Payback (month)',
 		
 	'Item Total'=>'Item Total',
 		

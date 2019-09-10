@@ -106,7 +106,7 @@ return [
 		
 	'View All News'=>'Посмотреть все новости',
 
-    'Payback (month)' => 'Payback (month)',
+    'Payback (month)' => 'Окупаемость ( мес.)',
 		
 	'Readmore'=>'Прочитайте больше',
 		

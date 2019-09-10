@@ -229,7 +229,9 @@
                                              	$max_order_limit = $result['detail']['product_data'][0]->defaultStock;
                                              }
 
-
+                                            $product_age =  $result['detail']['product_data'][0]->products_age;
+                                            $product_emp =  $result['detail']['product_data'][0]->products_emp;
+                                            $product_payback =  $result['detail']['product_data'][0]->products_payback;
                                         	if(!empty($result['detail']['product_data'][0]->flash_price)){
 
                                                 $product_price = $min_order_limit*$result['detail']['product_data'][0]->flash_price+0;
@@ -265,6 +267,24 @@
                                                 <span>@lang('website.Total Price')&nbsp;:</span>
                                                 <span class="total_price">
                                                 {{$web_setting[19]->value}}{{$product_price}}
+                                                </span>
+                                            </div>
+                                            <div class="price-box">
+                                                <span>@lang('website.Payback (month)')&nbsp;:</span>
+                                                <span class="total_price">
+                                                    {{$product_payback}}
+                                                </span>
+                                            </div>
+                                            <div class="price-box">
+                                                <span>@lang('website.Number Of Employees')&nbsp;:</span>
+                                                <span class="total_price">
+                                                    {{$product_emp}}
+                                                </span>
+                                            </div>
+                                            <div class="price-box">
+                                                <span>@lang('website.Business age')&nbsp;:</span>
+                                                <span class="total_price">
+                                                    {{$product_age}} @lang('labels.Month')
                                                 </span>
                                             </div>
 

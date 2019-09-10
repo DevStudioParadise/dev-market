@@ -19,8 +19,8 @@
         <input type="hidden" name="max_emp" id="max_emp" value="500">
         <input type="hidden" name="min_age" id="min_age" value="0">
         <input type="hidden" name="max_age" id="max_age" value="500">
-        <input type="hidden" name="min_age" id="min_payback" value="0">
-        <input type="hidden" name="max_age" id="max_payback" value="36">
+        <input type="hidden" name="min_payback" id="min_payback" value="0">
+        <input type="hidden" name="max_payback" id="max_payback" value="36">
         @if(app('request')->input('filters_applied')==1)
         <input type="hidden" name="filters_applied" id="filters_applied" value="1">
         <input type="hidden" name="options" id="options" value="<?php echo implode($result['filter_attribute']['options'],',')?>">
