@@ -354,17 +354,6 @@
                                     <span class="help-block hidden">{{ trans('labels.ProductPriceText') }}</span>
                                   </div>
                                 </div>
-                                
-                                <div class="form-group">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Max Order Limit') }}</label>
-                                  <div class="col-sm-10 col-md-4">
-                                    {!! Form::text('products_max_stock',  '0', array('class'=>'form-control', 'id'=>'products_max_stock')) !!}
-                                    <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                    {{ trans('labels.Max Order Limit Text') }}
-                                    </span>                                  
-                                    <span class="help-block hidden">{{ trans('labels.Max Order Limit Text') }}</span>
-                                  </div>
-                                </div>
 
                                 <div class="form-group">
                                   <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductsModel') }}</label>
