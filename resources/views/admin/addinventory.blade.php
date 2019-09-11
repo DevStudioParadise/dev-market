@@ -52,7 +52,7 @@
 
    						  <div class="row">
         					<!-- Left col -->
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                               <!-- MAP & BOX PANE -->
                               
                               <!-- /.box -->
@@ -167,78 +167,13 @@
                               <!-- /.row -->
                             </div>
         
-                            <div class="col-md-6">
-                              <!-- MAP & BOX PANE -->
-                              
-                              <!-- /.box -->
-                              <div class="row">
-                                <!-- /.col -->
-                                <div class="col-md-12">
-                                  <!-- USERS LIST -->
-                                  <div class="box box-danger">
-                                    <div class="box-header with-border">
-                                      <h3 class="box-title">{{ trans('labels.Manage Min/Max Quantity') }}</h3>
-                                    </div>
-                                    <!-- /.box-header -->
-                                    <div class="box-body">
-                                    {!! Form::open(array('url' =>'admin/addminmax', 'name'=>'addminmax', 'id'=>'addminmax', 'method'=>'post', 'class' => 'form-horizontal form-validate-level', 'enctype'=>'multipart/form-data')) !!}
-                                    {!! Form::hidden('products_id',  $result['products'][0]->products_id, array('class'=>'form-control', 'id'=>'products_id')) !!}
-                                    
-                                    @if($result['products'][0]->products_type==1)
-                                        {!! Form::hidden('inventory_ref_id',  '', array('class'=>'form-control check_reference_id', 'id'=>'inventory_ref_id')) !!}
-                                    @endif
-                                    
-                                  
-                                   <div class="form-group">
-                                      <label for="name" class="col-sm-2 col-md-4 control-label">
-                                         {{ trans('labels.Min Level') }}                             	 
-                                      </label>
-                                      <div class="col-sm-10 col-md-8">
-                                            <input type="text" name="min_level" id="min_level" value="{{$result['min_level']}}"  class="form-control number-validate-level">
-                                            <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                            {{ trans('labels.Min Level Text') }}</span>                             
-                                      </div>
-                                   </div>
-                                   
-                                   <div class="form-group">
-                                      <label for="name" class="col-sm-2 col-md-4 control-label">
-                                         {{ trans('labels.Max Level') }}                             	 
-                                      </label>
-                                      <div class="col-sm-10 col-md-8">
-                                            <input type="text" name="max_level" id="max_level" value="{{$result['max_level']}}"  class="form-control number-validate-level">
-                                            <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                            {{ trans('labels.Min Level Text') }}</span>                             
-                                      </div>
-                                   </div>
-                                    <div class="alert alert-danger alert-dismissible" id="minmax-error" role="alert" style="display: none">
-                                      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                      {{ trans('labels.This stock is not asscociated with any attributes. Please choose products attributes first') }}
-                                    </div>
-                                    <!-- /.users-list -->
-                                    </div>
-                                    <!-- /.box-body -->
-                                    <div class="box-footer text-center">
-                                        <button type="submit" class="btn btn-primary pull-right">{{ trans('labels.Update') }}</button> 
-                                    </div>
-                                    
-                                   {!! Form::close() !!}
-                                    <!-- /.box-footer -->
-                                  </div>
-                                  <!--/.box -->
-                                </div>
-                                
-                                <!-- /.col -->
-                              </div>
-                              <!-- /.row -->
-                            </div>
-        
                             <div class="box-footer col-xs-12">
                                 @if($result['products'][0]->products_type==1)
                                         <a href="{{ URL::to('admin/addproductattribute/'.$result['products'][0]->products_id) }}"  class="btn btn-default pull-left">{{ trans('labels.AddOptions') }}</a>
                                       @else
                                   <a href="{{ URL::to("admin/products")}}" class="btn btn-default pull-left"> <i class="fa fa-angle-left"></i> {{ trans('labels.back') }}</a>
                                   @endif
-                                  <a href="{{ URL::to("admin/addproductimages/{$result['products'][0]->products_id}")}}" class="btn btn-primary pull-right">  {{ trans('labels.AddImages') }} <i class="fa fa-angle-right"></i></a>                             
+                                  <a href="{{ URL::to("admin/addproductimages/{$result['products'][0]->products_id}")}}" class="btn btn-primary pull-right">  {{ trans('labels.AddImages') }} <i class="fa fa-angle-right"></i></a>
                             </div>
     					  </div>
                         </div>

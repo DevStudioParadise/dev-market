@@ -10,9 +10,9 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Controllers\App\CategoriesController;
 
+use Illuminate\Support\Facades\Lang;
 use Validator;
 use App;
-use Lang;
 use DB;
 //for password encryption or hash protected
 use Hash;
@@ -50,8 +50,9 @@ class AdminProductsController extends Controller
 	
 	//get product
 	public function getProducts($products_id){
-		
-		$language_id     =   1;		
+
+        $language_id      =  DB::table('languages')->where('code','=',Lang::locale())->first();
+        $language_id = $language_id->languages_id;
 		
 		$product = DB::table('products')
 			->leftJoin('products_description','products_description.products_id','=','products.products_id')
@@ -78,7 +79,8 @@ class AdminProductsController extends Controller
 			print Lang::get("labels.You do not have to access this route");
 		}else{
 		$title = array('pageTitle' => Lang::get("labels.Products"));
-		$language_id            				=   '1';			
+            $language_id      =  DB::table('languages')->where('code','=',Lang::locale())->first();
+            $language_id = $language_id->languages_id;
 		$results								= array();		
 		
 		//get function from other controller
@@ -143,7 +145,8 @@ class AdminProductsController extends Controller
 			print Lang::get("labels.You do not have to access this route");
 		}else{
 		$title = array('pageTitle' => Lang::get("labels.AddProduct"));
-		$language_id      =   '1';
+		$language_id      =  DB::table('languages')->where('code','=',Lang::locale())->first();
+		$language_id = $language_id->languages_id;
 		
 		$result = array();
 		
@@ -156,8 +159,6 @@ class AdminProductsController extends Controller
 		$result['manufacturer'] = $myVar->getManufacturer($language_id);
 		
 		//tax class
-		$taxClass = DB::table('tax_class')->get();
-		$result['taxClass'] = $taxClass;
 		
 		//get function from other controller
 		$myVar = new AdminSiteSettingController();
@@ -174,7 +175,8 @@ class AdminProductsController extends Controller
 			print Lang::get("labels.You do not have to access this route");
 		}else{
 		$title = array('pageTitle' => Lang::get("labels.AddAttributes"));
-		$language_id      =   '1';		
+            $language_id      =  DB::table('languages')->where('code','=',Lang::locale())->first();
+            $language_id = $language_id->languages_id;
 		$date_added	= date('Y-m-d h:i:s');
 		
 		//get function from other controller
@@ -204,10 +206,7 @@ class AdminProductsController extends Controller
                     'products_age'		 =>   $request->products_age,
                     'products_payback'		 =>   $request->products_payback,
 					'products_date_added'	 =>   $date_added,
-					'products_weight'		 =>   $request->products_weight,
 					'products_status'		 =>   $request->products_status,
-					'products_tax_class_id'  =>   $request->tax_class_id,
-					'products_weight_unit'	 =>	  $request->products_weight_unit,
 					'low_limit'				 =>   0,
 					'products_type'			 =>	  $request->products_type,
 					'is_feature'			 =>	  $request->is_feature,
@@ -411,7 +410,8 @@ class AdminProductsController extends Controller
 		}else{		
 
 		$title = array('pageTitle' => Lang::get("labels.ProductInventory"));
-		$language_id      =   '1';	
+            $language_id      =  DB::table('languages')->where('code','=',Lang::locale())->first();
+            $language_id = $language_id->languages_id;
 		$products_id      =   $request->id;					
 
 		$result = array();	
@@ -780,7 +780,8 @@ class AdminProductsController extends Controller
 
 	public function getOptionsValue(Request $request){
 
-		$language_id = 1;
+        $language_id      =  DB::table('languages')->where('code','=',Lang::locale())->first();
+        $language_id = $language_id->languages_id;
 
 		$value = DB::table('products_options_values')
 
@@ -828,9 +829,10 @@ class AdminProductsController extends Controller
 
 		}else{
 
-		
 
-		$language_id = 1;
+
+            $language_id      =  DB::table('languages')->where('code','=',Lang::locale())->first();
+            $language_id = $language_id->languages_id;
 
 		
 
@@ -968,7 +970,8 @@ class AdminProductsController extends Controller
 
 		}else{
 
-		$language_id = 1;
+            $language_id      =  DB::table('languages')->where('code','=',Lang::locale())->first();
+            $language_id = $language_id->languages_id;
 
 		$products_attributes_id = DB::table('products_attributes')->insertGetId([
 
@@ -1032,7 +1035,8 @@ class AdminProductsController extends Controller
 
 	public function addnewdefaultattribute(Request $request){
 
-		$language_id = 1;
+        $language_id      =  DB::table('languages')->where('code','=',Lang::locale())->first();
+        $language_id = $language_id->languages_id;
 
 		$products_attributes = '';
 
@@ -1128,7 +1132,8 @@ class AdminProductsController extends Controller
 
 		}else{
 
-		$language_id = 1;
+            $language_id      =  DB::table('languages')->where('code','=',Lang::locale())->first();
+            $language_id = $language_id->languages_id;
 
 		$checkRecord = DB::table('products_attributes')->where([
 
@@ -1202,7 +1207,8 @@ class AdminProductsController extends Controller
 
 			if(!empty($request->products_options_id) and !empty($request->products_id) and !empty($request->products_options_values_id)){
 
-				 $language_id = 1;
+                $language_id      =  DB::table('languages')->where('code','=',Lang::locale())->first();
+                $language_id = $language_id->languages_id;
 
 				 $checkRecord = DB::table('products_attributes')->where([
 
@@ -1282,7 +1288,8 @@ class AdminProductsController extends Controller
 
 		$title = array('pageTitle' => Lang::get("labels.EditProduct"));
 
-		$language_id      =   '1';	
+            $language_id      =  DB::table('languages')->where('code','=',Lang::locale())->first();
+            $language_id = $language_id->languages_id;
 
 		$products_id      =   $request->id;	
 
@@ -1313,10 +1320,6 @@ class AdminProductsController extends Controller
 				
 
 		//tax class
-
-		$taxClass = DB::table('tax_class')->get();
-
-		$result['taxClass'] = $taxClass;
 
 		
 
@@ -1538,7 +1541,8 @@ class AdminProductsController extends Controller
 
 		}else{
 
-		$language_id      =   '1';	
+            $language_id      =  DB::table('languages')->where('code','=',Lang::locale())->first();
+            $language_id = $language_id->languages_id;
 
 		$products_id      =   $request->id;	
 
@@ -1644,13 +1648,7 @@ class AdminProductsController extends Controller
 
 					'products_last_modified' =>   $products_last_modified,
 
-					'products_weight'		 =>   $request->products_weight,
-
 					'products_status'		 =>   $request->products_status,
-
-					'products_tax_class_id'  =>   $request->tax_class_id,
-
-					'products_weight_unit'	 =>	  $request->products_weight_unit,
 
 					'low_limit'				 =>   0,
 
@@ -2104,7 +2102,8 @@ class AdminProductsController extends Controller
 
 		$products_attributes_id = $request->products_attributes_id;
 
-		$language_id = 1;
+        $language_id      =  DB::table('languages')->where('code','=',Lang::locale())->first();
+        $language_id = $language_id->languages_id;
 
 		$options_id = $request->options_id;
 
@@ -2203,7 +2202,8 @@ class AdminProductsController extends Controller
 
 		$products_attributes_id = $request->products_attributes_id;
 
-		$language_id = 1;
+        $language_id      =  DB::table('languages')->where('code','=',Lang::locale())->first();
+        $language_id = $language_id->languages_id;
 
 		$options_id = $request->options_id;
 
@@ -2329,9 +2329,10 @@ class AdminProductsController extends Controller
 
 		}else{
 
-		
 
-		$language_id      =   '1';
+
+            $language_id      =  DB::table('languages')->where('code','=',Lang::locale())->first();
+            $language_id = $language_id->languages_id;
 
 		
 
@@ -2391,9 +2392,10 @@ class AdminProductsController extends Controller
 
 		}else{
 
-			
 
-		$language_id      =   '1';
+
+            $language_id      =  DB::table('languages')->where('code','=',Lang::locale())->first();
+            $language_id = $language_id->languages_id;
 
 		
 

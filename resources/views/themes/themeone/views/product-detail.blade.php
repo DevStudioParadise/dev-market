@@ -144,13 +144,7 @@
                                         <!--discount_price-->
                                         <span class="price @if(!empty($result['detail']['product_data'][0]->discount_price) or !empty($result['detail']['product_data'][0]->flash_price)) line-through @else change_price @endif" >
                                             {{$web_setting[19]->value}}{{$result['detail']['product_data'][0]->products_price+0}}
-                                        </span>                                    
-                                                                
-                                        @if($result['detail']['product_data'][0]->products_min_order>0)
-                                        	<span class="min-order-tag">
-                                       		&nbsp; @lang('website.Min Order Limit:') {{ $result['detail']['product_data'][0]->products_min_order }}
-                                            </span>
-                                        @endif
+                                        </span>
                                        
                                     </div>
             

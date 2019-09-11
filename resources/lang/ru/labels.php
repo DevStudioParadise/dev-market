@@ -1440,7 +1440,7 @@ return [
     'FlashExpireDate' => 'Дата окончания продажи Flash',
     'FlashExpireDateText' => 'Пожалуйста, выберите дату истечения срока действия \' Flash Sale \'. ',
     'left banner' => 'Левый баннер',
-    'right banner' => 'Правильный баннер',
+    'right banner' => 'Баннер справа',
     'banner text' => 'Размер баннера должен быть размером 160 х 600 - широкий небоскреб.',
     'link_Constant_Banners' => 'Постоянные баннеры',
     'ListingConstantBanners' => 'Перечисление постоянных баннеров',

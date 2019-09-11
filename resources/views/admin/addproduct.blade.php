@@ -48,8 +48,6 @@
                                       <select class="form-control field-validate prodcust-type" name="products_type" onChange="prodcust_type();">
                                           <option value="">{{ trans('labels.Choose Type') }}</option> 
                                           <option value="0">{{ trans('labels.Simple') }}</option>
-                                          <option value="1">{{ trans('labels.Variable') }}</option>
-                                          <option value="2">{{ trans('labels.External') }}</option>
                                       </select><span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
                                       {{ trans('labels.Product Type Text') }}.</span>
                                   </div>
@@ -345,22 +343,6 @@
                                 </div>
                                 
                               @endforeach
-                                                                
-                                <div class="form-group" id="tax-class">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.TaxClass') }} </label>
-                                  <div class="col-sm-10 col-md-4">
-                                      <select class="form-control field-validate" name="tax_class_id">
-                                        <option selected>{{ trans('labels.SelectTaxClass') }}</option>
-                                         @foreach ($result['taxClass'] as $taxClass)
-                                          <option value="{{ $taxClass->tax_class_id }}">{{ $taxClass->tax_class_title }}</option>
-                                         @endforeach
-                                      </select>                                      
-                                     <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                     {{ trans('labels.ChooseTaxClassForProductText') }}
-                                     </span>
-                                      <span class="help-block hidden">{{ trans('labels.SelectProductTaxClass') }}</span>
-                                  </div>
-                                </div>
                                 
                                 <div class="form-group">
                                   <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductsPrice') }}</label>
@@ -374,17 +356,6 @@
                                 </div>
                                 
                                 <div class="form-group">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Min Order Limit') }}</label>
-                                  <div class="col-sm-10 col-md-4">
-                                    {!! Form::text('products_min_order',  '1', array('class'=>'form-control', 'id'=>'products_min_order')) !!}
-                                    <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                    {{ trans('labels.Min Order Limit Text') }}
-                                    </span>                                  
-                                    <span class="help-block hidden">{{ trans('labels.Min Order Limit Text') }}</span>
-                                  </div>
-                                </div>
-                                
-                                <div class="form-group">
                                   <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Max Order Limit') }}</label>
                                   <div class="col-sm-10 col-md-4">
                                     {!! Form::text('products_max_stock',  '0', array('class'=>'form-control', 'id'=>'products_max_stock')) !!}
@@ -394,26 +365,7 @@
                                     <span class="help-block hidden">{{ trans('labels.Max Order Limit Text') }}</span>
                                   </div>
                                 </div>
-                                
-                                <div class="form-group">
-                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductsWeight') }}</label>
-                                  <div class="col-sm-10 col-md-2">
-                                    {!! Form::text('products_weight',  '', array('class'=>'form-control number-validate', 'id'=>'products_weight')) !!}
-                                    <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                    {{ trans('labels.RequiredTextForWeight') }}
-                                    </span>
-                                  </div>
-                                  <div class="col-sm-10 col-md-2" style="padding-left: 0;">
-                                      <select class="form-control" name="products_weight_unit">
-                                      	@if(count($result['units'])>0)
-                                              @foreach($result['units'] as $unit)
-                                              <option value="{{$unit->unit_name}}">{{$unit->unit_name}}</option>
-                                              @endforeach
-                                        @endif
-                                      </select>
-                                  </div>
-                                </div>
-                                
+
                                 <div class="form-group">
                                   <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductsModel') }}</label>
                                   <div class="col-sm-10 col-md-4">
