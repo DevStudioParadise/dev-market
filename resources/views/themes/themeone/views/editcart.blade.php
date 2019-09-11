@@ -212,21 +212,6 @@
                                                 @endforeach							
                                             </div>
                                         @endif
-                                        
-										@php
-											if($result['detail']['product_data'][0]->products_min_order>0){
-                                             	$min_order_limit = $result['detail']['product_data'][0]->products_min_order;
-                                            }else{ 
-                                            	$min_order_limit = 1;
-                                            }
-											
-											if(!empty($result['detail']['product_data'][0]->products_max_stock) and $result['detail']['product_data'][0]->products_max_stock>0 and  $result['detail']['product_data'][0]->products_max_stock < $result['detail']['product_data'][0]->defaultStock){
-                                             	$max_order_limit = $result['detail']['product_data'][0]->products_max_stock;
-                                             }else{ 
-                                             	$max_order_limit = $result['detail']['product_data'][0]->defaultStock;
-                                             }
-											 
-										@endphp
 										
                                         <div class="form-inline product-box">
                                             <div class="form-group Qty">	

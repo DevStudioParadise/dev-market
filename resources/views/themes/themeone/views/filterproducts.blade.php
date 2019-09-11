@@ -48,14 +48,8 @@
                             @endif
                         </div>
                         
-                        <div class="buttons">                            
-                            @if(!in_array($products->products_id,$result['cartArray']))
-                                <button type="button" class="btn btn-secondary btn-round cart" products_id="{{$products->products_id}}">@lang('website.Add to Cart')</button>
-                             @elseif($products->products_min_order>1)
-                             	<a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$products->products_slug)}}">@lang('website.View Detail')</a>
-                             @else
-                                <button type="button"  class="btn btn-secondary btn-round acitve">@lang('website.Added')</button>
-                            @endif
+                        <div class="buttons">
+                            <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$products->products_slug)}}">@lang('website.View Detail')</a>
                         </div>
                     </div>
                 </div>

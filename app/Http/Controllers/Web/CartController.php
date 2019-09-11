@@ -330,10 +330,7 @@ class CartController extends DataController
 		}else{
 			$stocksToValid = $result['detail']['product_data'][0]->products_max_stock;
 		}
-		
-		if($stocksToValid > $customers_basket_quantity){
-			$customers_basket_quantity = $result['detail']['product_data'][0]->products_min_order;
-		}
+
 		
 			
 		//update into cart
@@ -501,10 +498,7 @@ class CartController extends DataController
 		}else{
 			$customers_basket_quantity          =   $request->quantity;
 		}
-		
-		if($stocksToValid > $customers_basket_quantity){
-			$customers_basket_quantity = $result['detail']['product_data'][0]->products_min_order;
-		}
+
 		
 		//quantity is not default
 		if(empty($request->quantity)){
@@ -777,7 +771,7 @@ class CartController extends DataController
 		$cart = DB::table('customers_basket')
 			->join('products', 'products.products_id','=', 'customers_basket.products_id')
 			->join('products_description', 'products_description.products_id','=', 'products.products_id')
-			->select('customers_basket.*', 'products.products_model as model', 'products.products_type as products_type', 'products.products_min_order as min_order', 'products.products_max_stock as max_order', 'products.products_image as image', 'products_description.products_name as products_name', 'products.products_price as price', 'products.products_slug')
+			->select('customers_basket.*', 'products.products_model as model', 'products.products_type as products_type', 'products.products_image as image', 'products_description.products_name as products_name', 'products.products_price as price', 'products.products_slug')
 			->where([
 						['customers_basket.is_order', '=', '0'],
 						['products_description.language_id', '=', Session::get('language_id')],

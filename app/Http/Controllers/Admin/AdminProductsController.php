@@ -210,8 +210,6 @@ class AdminProductsController extends Controller
 					'low_limit'				 =>   0,
 					'products_type'			 =>	  $request->products_type,
 					'is_feature'			 =>	  $request->is_feature,
-					'products_min_order'	 =>	  $request->products_min_order,
-					'products_max_stock'	 =>	  $request->products_max_stock
 					]);
 					
 		$slug_flag = false;
@@ -1656,11 +1654,7 @@ class AdminProductsController extends Controller
 
 					'products_type'			 =>	  $request->products_type,					
 
-					'is_feature'			 =>	  $request->is_feature,
-
-					'products_min_order'	 =>	  $request->products_min_order,
-
-					'products_max_stock'	 =>	  $request->products_max_stock
+					'is_feature'			 =>	  $request->is_feature
 
 					]);
 
