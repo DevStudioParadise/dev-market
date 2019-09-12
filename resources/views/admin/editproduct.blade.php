@@ -454,6 +454,16 @@
                                     <span class="help-block hidden">{{ trans('labels.ProductPriceText') }}</span>
                                   </div>
                                 </div>
+                              <div class="form-group">
+                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductsPrice') }} BYN</label>
+                                  <div class="col-sm-10 col-md-4">
+                                      {!! Form::text('products_price_byn',  $result['product'][0]->products_price_byn, array('class'=>'form-control number-validate', 'id'=>'products_price_byn')) !!}
+                                      <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                    {{ trans('labels.ProductPriceText') }}
+                                    </span>
+                                      <span class="help-block hidden">{{ trans('labels.ProductPriceText') }}</span>
+                                  </div>
+                              </div>
                                 
                                 <div class="form-group">
                                   <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductsModel') }} </label>

@@ -84,7 +84,7 @@
 
                     <div class="price text-center">
                     	{{$web_setting[19]->value}}{{$products->flash_price+0}}
-                    	<span>{{$web_setting[19]->value}}{{$products->products_price+0}} </span>
+                    	<span>{{$web_setting[19]->value}}{{$products->products_price+0}}, {{$products->products_price_byn+0}} BYN </span>
                     </div>
 
                     <div class="product-hover">
@@ -151,7 +151,7 @@
 
                     <div class="price text-center">
                     	{{$web_setting[19]->value}}{{$products->flash_price+0}}
-                    	<span>{{$web_setting[19]->value}}{{$products->products_price+0}} </span>
+                    	<span>{{$web_setting[19]->value}}{{$products->products_price+0}}, {{$products->products_price_byn+0}} BYN </span>
                     </div>
 
                     <div class="product-hover">
@@ -245,9 +245,9 @@
                         <div class="price text-center">
                         	@if(!empty($top_seller->discount_price))
                           	{{$web_setting[19]->value}}{{$top_seller->discount_price+0}}
-                          	<span> {{$web_setting[19]->value}}{{$top_seller->products_price+0}}</span>
+                          	<span> {{$web_setting[19]->value}}{{$top_seller->products_price+0}}, {{$top_seller->products_price_byn+0}} BYN</span>
                           	@else
-                          		{{$web_setting[19]->value}}{{$top_seller->products_price+0}}
+                          		{{$web_setting[19]->value}}{{$top_seller->products_price+0}}, {{$top_seller->products_price_byn+0}} BYN
 
                           	@endif
 						</div>
@@ -326,7 +326,7 @@
 
                     <div class="price text-center">
                     	{{$web_setting[19]->value}}{{$special->discount_price+0}}
-                    	<span>{{$web_setting[19]->value}}{{$special->products_price+0}} </span>
+                    	<span>{{$web_setting[19]->value}}{{$special->products_price+0}} , {{$special->products_price_byn+0}} BYN</span>
                     </div>
 
                     <div class="product-hover">
@@ -407,8 +407,8 @@
 
                     <div class="price text-center">
                       @if(!empty($most_liked->discount_price))
-                      	{{$web_setting[19]->value}}{{$most_liked->discount_price+0}} <span>{{$web_setting[19]->value}}{{$most_liked->products_price+0}}</span> @else
-                      	{{$web_setting[19]->value}}{{$most_liked->products_price+0}}
+                      	{{$web_setting[19]->value}}{{$most_liked->discount_price+0}} <span>{{$web_setting[19]->value}}{{$most_liked->products_price+0}}, {{$most_liked->products_price_byn+0}} BYN</span> @else
+                      	{{$web_setting[19]->value}}{{$most_liked->products_price+0}}, {{$most_liked->products_price_byn+0}} BYN
                       @endif
                     </div>
 

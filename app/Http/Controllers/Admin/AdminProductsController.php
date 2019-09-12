@@ -202,6 +202,7 @@ class AdminProductsController extends Controller
 					'products_quantity'		 =>   0,
 					'products_model'		 =>   $request->products_model,
 					'products_price'		 =>   $request->products_price,
+					'products_price_byn'		 =>   $request->products_price_byn,
                     'products_emp'		 =>   $request->products_emp,
                     'products_age'		 =>   $request->products_age,
                     'products_payback'		 =>   $request->products_payback,
@@ -1637,6 +1638,8 @@ class AdminProductsController extends Controller
 					'products_model'		 =>   $request->products_model,
 
 					'products_price'		 =>   $request->products_price,
+
+					'products_price_byn'		 =>   $request->products_price_byn,
 
 					'products_emp'		 =>   $request->products_emp,
 

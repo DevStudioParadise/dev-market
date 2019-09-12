@@ -60,7 +60,7 @@
                             <h2 class="title text-center wrap-dot-1">{{$special->products_name}}</h2>                          
                             
                             <div class="price text-center">
-                            {{$web_setting[19]->value}}{{$special->discount_price+0}}<span>{{$web_setting[19]->value}}{{$special->products_price+0}}</span></div>
+                            {{$web_setting[19]->value}}{{$special->discount_price+0}}<span>{{$web_setting[19]->value}}{{$special->products_price+0}}, {{$special->products_price_byn+0}} BYN</span></div>
                             <div class="product-hover">
                                 <div class="icons">
                                     @if($special->products_type!=2)
@@ -220,9 +220,9 @@
                             <h2 class="title text-center wrap-dot-1">{{$products->products_name}}</h2>
                             <div class="price text-center"> @if(!empty($products->discount_price))
 
-                              {{$web_setting[19]->value}}{{$products->discount_price+0}} <span> {{$web_setting[19]->value}}{{$products->products_price+0}}</span> @else
+                              {{$web_setting[19]->value}}{{$products->discount_price+0}} <span> {{$web_setting[19]->value}}{{$products->products_price+0}}, {{$products->products_price_byn+0}} BYN</span> @else
 
-                              {{$web_setting[19]->value}}{{$products->products_price+0}}
+                              {{$web_setting[19]->value}}{{$products->products_price+0}}, {{$products->products_price_byn+0}} BYN
 
                               @endif
                               </div>

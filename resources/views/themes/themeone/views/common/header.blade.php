@@ -146,9 +146,9 @@
                                                     <span class="price">
                                                         @if(!empty($products->discount_price))
                                                             <span class="line-through">{{$web_setting[19]->value}}{{$products->discount_price+0}}</span>
-                                                            {{$web_setting[19]->value}}{{$products->products_price+0}}
+                                                            {{$web_setting[19]->value}}{{$products->products_price+0}}, {{$products->products_price_byn+0}} BYN
                                                         @else
-                                                            {{$web_setting[19]->value}}{{$products->products_price+0}}
+                                                            {{$web_setting[19]->value}}{{$products->products_price+0}}, {{$products->products_price_byn+0}} BYN
                                                         @endif
                                                     </span>
                                                     
@@ -256,9 +256,9 @@
                                                     <span class="price">
                                                         @if(!empty($products->discount_price))
                                                             <span class="line-through">{{$web_setting[19]->value}}{{$products->discount_price+0}}</span>
-                                                            {{$web_setting[19]->value}}{{$products->products_price+0}}
+                                                            {{$web_setting[19]->value}}{{$products->products_price+0}}, {{$products->products_price_byn+0}} BYN
                                                         @else
-                                                            {{$web_setting[19]->value}}{{$products->products_price+0}}
+                                                            {{$web_setting[19]->value}}{{$products->products_price+0}}, {{$products->products_price_byn+0}} BYN
                                                         @endif
                                                     </span>
                                                     
