@@ -74,8 +74,8 @@
                 <div class="card-body">
                     <div id="slider-range-age"></div>
                     <div id="slider-values-age">
-                        <div class="slider-value-age-0">@lang('labels.Month')<input type="text" readonly id="min_age_show"></div>
-                        <div class="slider-value-age-1">@lang('labels.Month')<input type="text" readonly id="max_age_show"></div>
+                        <div class="slider-value-age-0"><input type="text" readonly id="min_age_show"></div>
+                        <div class="slider-value-age-1"><input type="text" readonly id="max_age_show"></div>
                     </div>
                     <input type="hidden" class="maximum_age" value="500">
                 </div>
