@@ -2,20 +2,20 @@
 
 <div class="container-fuild">
   <div class="container">
-    <div class="products-area"> 
+    <div class="products-area">
         <!-- heading -->
         <div class="heading">
         	<h2>@lang('website.Special products of the Week') <small class="pull-right"><a href="{{ URL::to('/shop?type=special')}}" >@lang('website.View All')</a></small></h2>
         	<hr>
         </div>
-        <div class="row">         
-            
+        <div class="row">
+
             <div class="col-xs-12 col-sm-12">
                 <div class="row">
                 	<!-- Items -->
                     <div class="products products-5x">
-                        <!-- Product --> 
-                        
+                        <!-- Product -->
+
                         @if($result['special']['success']==1)
                         @foreach($result['special']['product_data'] as $key=>$special)
                         @if($key<=9)
@@ -24,24 +24,24 @@
                             <div class="thumb"><img class="img-fluid" src="{{asset('').$special->products_image}}" alt="{{$special->products_name}}"></div>
                             <?php
                                     $current_date = date("Y-m-d", strtotime("now"));
-                                    
+
                                     $string = substr($special->products_date_added, 0, strpos($special->products_date_added, ' '));
                                     $date=date_create($string);
                                     date_add($date,date_interval_create_from_date_string($web_setting[20]->value." days"));
-                                    
+
                                     //echo $top_seller->products_date_added . "<br>";
                                     $after_date = date_format($date,"Y-m-d");
-                                    
+
                                     if($after_date>=$current_date){
                                         print '<span class="new-tag">';
                                         print __('website.New');
                                         print '</span>';
                                     }
-                                    
+
                                     if(!empty($special->discount_price)){
-                                        $discount_price = $special->discount_price;	
-                                        $orignal_price = $special->products_price;	
-                                        
+                                        $discount_price = $special->discount_price;
+                                        $orignal_price = $special->products_price;
+
                                         if(($orignal_price+0)>0){
 											$discounted_price = $orignal_price-$discount_price;
 											$discount_percentage = $discounted_price/$orignal_price*100;
@@ -50,15 +50,15 @@
 										}
                                         echo "<span class='discount-tag'>".(int)$discount_percentage."%</span>";
                                     }
-                                     
+
                             ?>
                             <span class="tag text-center">
                             @foreach($special->categories as $key=>$category)
                             	{{$category->categories_name}}@if(++$key === count($special->categories)) @else, @endif
                         	@endforeach
                             </span>
-                            <h2 class="title text-center wrap-dot-1">{{$special->products_name}}</h2>                          
-                            
+                            <h2 class="title text-center wrap-dot-1">{{$special->products_name}}</h2>
+
                             <div class="price text-center">
                             {{$web_setting[19]->value}}{{$special->discount_price+0}}<span>{{$web_setting[19]->value}}{{$special->products_price+0}}, {{$special->products_price_byn+0}} BYN</span></div>
                             <div class="product-hover">
@@ -75,30 +75,30 @@
                         </div>
                         @endif
                         @endforeach
-                        
+
                         @endif
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    
+
     <div class="group-banners">
     	<div class="row">
         	<div class="col-xs-12 col-sm-12">
                 @if(count($result['commonContent']['homeBanners'])>0)
-                    @foreach(($result['commonContent']['homeBanners']) as $homeBanners)                
+                    @foreach(($result['commonContent']['homeBanners']) as $homeBanners)
                         @if($homeBanners->type==7)
                         <div class="banner-image">
                             <a title="Banner Image" href="{{ $homeBanners->banners_url}}"><img class="img-fluid" src="{{asset('').$homeBanners->banners_image}}" alt="Banner Image"></a>
                         </div>
-                        @endif                
+                        @endif
                     @endforeach
-                @endif                 
+                @endif
             </div>
         </div>
     </div>
-    
+
   </div>
 </div>
 
