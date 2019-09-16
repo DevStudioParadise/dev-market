@@ -1533,7 +1533,7 @@ return [
     'ProductCountry' => 'Страна',
     'ProductAddress' => 'Фактический адрес',
     'ProductProfit' => 'Ежемесячная прибыль',
-    'ProductReason' => 'Ежемесячная прибыль',
+    'ProductReason' => 'Причина продажи бизнеса',
     'EnterProductCompanyNameIn' => 'Введите название',
     'EnterProductSiteIn' => 'Введите сайт',
     'EnterProductTypesOfServicesIn' => 'Введите продукцию',
