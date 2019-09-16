@@ -16,11 +16,11 @@
         <input type="hidden" name="min_price" id="min_price" value="0">
         <input type="hidden" name="max_price" id="max_price" value="{{$result['filters']['maxPrice']}}">
         <input type="hidden" name="min_emp" id="min_emp" value="0">
-        <input type="hidden" name="max_emp" id="max_emp" value="100">
+        <input type="hidden" name="max_emp" id="max_emp" value="60">
         <input type="hidden" name="min_age" id="min_age" value="0">
-        <input type="hidden" name="max_age" id="max_age" value="100">
+        <input type="hidden" name="max_age" id="max_age" value="60">
         <input type="hidden" name="min_payback" id="min_payback" value="0">
-        <input type="hidden" name="max_payback" id="max_payback" value="36">
+        <input type="hidden" name="max_payback" id="max_payback" value="60">
         @if(app('request')->input('filters_applied')==1)
         <input type="hidden" name="filters_applied" id="filters_applied" value="1">
         <input type="hidden" name="options" id="options" value="<?php echo implode($result['filter_attribute']['options'],',')?>">
@@ -65,7 +65,7 @@
                         <div class="slider-value-emp-0"><input type="text" readonly id="min_emp_show"></div>
                         <div class="slider-value-emp-1"><input type="text" readonly id="max_emp_show"></div>
                     </div>
-                    <input type="hidden" class="maximum_emp" value="500">
+                    <input type="hidden" class="maximum_emp" value="60">
                 </div>
             </div>
 
@@ -77,7 +77,7 @@
                         <div class="slider-value-age-0"><input type="text" readonly id="min_age_show"></div>
                         <div class="slider-value-age-1"><input type="text" readonly id="max_age_show"></div>
                     </div>
-                    <input type="hidden" class="maximum_age" value="50">
+                    <input type="hidden" class="maximum_age" value="60">
                 </div>
             </div>
 
