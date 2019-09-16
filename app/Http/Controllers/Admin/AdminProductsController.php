@@ -226,7 +226,7 @@ class AdminProductsController extends Controller
 			$products_country = 'products_country_'.$languages_data->languages_id;
             $products_address = 'products_address_'.$languages_data->languages_id;
             $products_profit = 'products_profit_'.$languages_data->languages_id;
-			$products_reason = 'products_reason'.$languages_data->languages_id;
+			$products_reason = 'products_reason_'.$languages_data->languages_id;
 
 
 			$products_url = 'products_url_'.$languages_data->languages_id;
@@ -1721,7 +1721,7 @@ class AdminProductsController extends Controller
             $products_country = 'products_country_'.$languages_data->languages_id;
             $products_address = 'products_address_'.$languages_data->languages_id;
             $products_profit = 'products_profit_'.$languages_data->languages_id;
-            $products_reason = 'products_reason'.$languages_data->languages_id;
+            $products_reason = 'products_reason_'.$languages_data->languages_id;
 
 			$products_url = 'products_url_'.$languages_data->languages_id;
 
