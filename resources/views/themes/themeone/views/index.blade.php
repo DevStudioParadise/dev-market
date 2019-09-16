@@ -245,9 +245,9 @@
                         <div class="price text-center">
                         	@if(!empty($top_seller->discount_price))
                           	{{$web_setting[19]->value}}{{$top_seller->discount_price+0}}
-                                <span><small style="color: gray">{{$web_setting[19]->value}}{{$top_seller->products_price+0}}</small>, {{$top_seller->products_price_byn+0}} BYN </span>
+                               <small style="color: gray">{{$web_setting[19]->value}}{{$top_seller->products_price+0}}</small>, {{$top_seller->products_price_byn+0}} BYN
                           	@else
-                                <span><small style="color: gray">{{$web_setting[19]->value}}{{$top_seller->products_price+0}}</small>, {{$top_seller->products_price_byn+0}} BYN </span>
+                               <small style="color: gray">{{$web_setting[19]->value}}{{$top_seller->products_price+0}}</small>, {{$top_seller->products_price_byn+0}} BYN
 
                           	@endif
 						</div>
