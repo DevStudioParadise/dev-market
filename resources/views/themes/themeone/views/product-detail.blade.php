@@ -40,15 +40,15 @@
                         
                                 <div id="product-slider" class="carousel slide">
                                 	@php
-									
+
                                     if(!empty($result['detail']['product_data'][0]->discount_price) or !empty($result['detail']['product_data'][0]->flash_price)){
 										if(!empty($result['detail']['product_data'][0]->discount_price)){
-                                       	 	$discount_price = $result['detail']['product_data'][0]->discount_price;	
+                                       	 	$discount_price = $result['detail']['product_data'][0]->discount_price;
 										}else{
-											$discount_price = $result['detail']['product_data'][0]->flash_price;	
+											$discount_price = $result['detail']['product_data'][0]->flash_price;
 										}
-                                        $orignal_price = $result['detail']['product_data'][0]->products_price;	
-                                        
+                                        $orignal_price = $result['detail']['product_data'][0]->products_price;
+
                                         if(($orignal_price+0)>0){
                                             $discounted_price = $orignal_price-$discount_price;
                                             $discount_percentage = $discounted_price/$orignal_price*100;
@@ -276,9 +276,65 @@
                                             <div class="price-box">
                                                 <span>@lang('website.Business age')&nbsp;:</span>
                                                 <span class="total_price">
-                                                    {{$product_age}} @lang('labels.Month')
+                                                    {{$product_age}}
                                                 </span>
                                             </div>
+
+                                            <div class="price-box">
+                                                <span>@lang('labels.ProductCompanyName')&nbsp;:</span>
+                                                <span class="total_price">
+                                                    {{$result['detail']['product_data'][0]->products_company_name}}
+                                                </span>
+                                            </div>
+                                            <div class="price-box">
+                                                <span>@lang('labels.ProductSite')&nbsp;:</span>
+                                                <span class="total_price">
+                                                    {{$result['detail']['product_data'][0]->products_site}}
+                                                </span>
+                                            </div>
+                                            <div class="price-box">
+                                                <span>@lang('labels.ProductTypesOfServices')&nbsp;:</span>
+                                                <span class="total_price">
+                                                    {{$result['detail']['product_data'][0]->products_types_of_services}}
+                                                </span>
+                                            </div>
+                                            <div class="price-box">
+                                                <span>@lang('labels.ProductEmail')&nbsp;:</span>
+                                                <span class="total_price">
+                                                    {{$result['detail']['product_data'][0]->products_email}}
+                                                </span>
+                                            </div>
+                                            <div class="price-box">
+                                                <span>@lang('labels.ProductIncorporation')&nbsp;:</span>
+                                                <span class="total_price">
+                                                    {{$result['detail']['product_data'][0]->products_incorporation}}
+                                                </span>
+                                            </div>
+                                            <div class="price-box">
+                                                <span>@lang('labels.ProductCountry')&nbsp;:</span>
+                                                <span class="total_price">
+                                                    {{$result['detail']['product_data'][0]->products_country}}
+                                                </span>
+                                            </div>
+                                            <div class="price-box">
+                                                <span>@lang('labels.ProductAddress')&nbsp;:</span>
+                                                <span class="total_price">
+                                                    {{$result['detail']['product_data'][0]->products_address}}
+                                                </span>
+                                            </div>
+                                            <div class="price-box">
+                                                <span>@lang('labels.ProductProfit')&nbsp;:</span>
+                                                <span class="total_price">
+                                                    {{$result['detail']['product_data'][0]->products_profit}}
+                                                </span>
+                                            </div>
+                                            <div class="price-box">
+                                                <span>@lang('labels.ProductReason')&nbsp;:</span>
+                                                <span class="total_price">
+                                                    {{$result['detail']['product_data'][0]->products_reason}}
+                                                </span>
+                                            </div>
+
 
 
 {{--                                            <div class="buttons" style="margin-top: 30px;">    --}}

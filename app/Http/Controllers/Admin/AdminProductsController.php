@@ -216,6 +216,19 @@ class AdminProductsController extends Controller
 		$slug_flag = false;
 		foreach($languages as $languages_data){
 			$products_name = 'products_name_'.$languages_data->languages_id;
+
+
+			$products_company_name = 'products_company_name_'.$languages_data->languages_id;
+			$products_site = 'products_site_'.$languages_data->languages_id;
+			$products_types_of_services = 'products_types_of_services_'.$languages_data->languages_id;
+			$products_email = 'products_email_'.$languages_data->languages_id;
+			$products_incorporation = 'products_incorporation_'.$languages_data->languages_id;
+			$products_country = 'products_country_'.$languages_data->languages_id;
+            $products_address = 'products_address_'.$languages_data->languages_id;
+            $products_profit = 'products_profit_'.$languages_data->languages_id;
+			$products_reason = 'products_reason'.$languages_data->languages_id;
+
+
 			$products_url = 'products_url_'.$languages_data->languages_id;
 			$products_description = 'products_description_'.$languages_data->languages_id;
 			
@@ -307,7 +320,17 @@ class AdminProductsController extends Controller
 			
 			DB::table('products_description')->insert([
 					'products_name'  	     		 	=>   $request->$products_name,
-					'language_id'			 		 	=>   $languages_data->languages_id,
+
+					'products_types_of_services'  	   	=>   $request->$products_types_of_services,
+					'products_company_name'  	      	=>   $request->$products_company_name,
+					'products_site'  	     		 	=>   $request->$products_site,
+					'products_email'  	     		 	=>   $request->$products_email,
+					'products_incorporation'  	      	=>   $request->$products_incorporation,
+					'products_country'  	     		=>   $request->$products_country,
+					'products_address'  	     		=>   $request->$products_address,
+					'products_profit'  	     		 	=>   $request->$products_profit,
+					'products_reason'  	     		 	=>   $request->$products_reason,
+                    'language_id'			 		 	=>   $languages_data->languages_id,
 					'products_id'					 	=>   $products_id,
 					'products_url'			 		 	=>   $request->$products_url,
 					'products_left_banner'			 	=>   $leftBanner,
@@ -1374,6 +1397,19 @@ class AdminProductsController extends Controller
 
 				$description_data[$languages_data->languages_id]['products_name'] = $description[0]->products_name;
 
+
+				$description_data[$languages_data->languages_id]['products_company_name'] = $description[0]->products_company_name;
+				$description_data[$languages_data->languages_id]['products_site'] = $description[0]->products_site;
+				$description_data[$languages_data->languages_id]['products_types_of_services'] = $description[0]->products_types_of_services;
+				$description_data[$languages_data->languages_id]['products_email'] = $description[0]->products_email;
+				$description_data[$languages_data->languages_id]['products_incorporation'] = $description[0]->products_incorporation;
+				$description_data[$languages_data->languages_id]['products_country'] = $description[0]->products_country;
+				$description_data[$languages_data->languages_id]['products_address'] = $description[0]->products_address;
+				$description_data[$languages_data->languages_id]['products_profit'] = $description[0]->products_profit;
+				$description_data[$languages_data->languages_id]['products_reason'] = $description[0]->products_reason;
+
+
+
 				$description_data[$languages_data->languages_id]['products_url'] = $description[0]->products_url;
 
 				$description_data[$languages_data->languages_id]['products_description'] = $description[0]->products_description;
@@ -1397,6 +1433,16 @@ class AdminProductsController extends Controller
 			}else{
 
 				$description_data[$languages_data->languages_id]['products_name'] = '';
+
+                $description_data[$languages_data->languages_id]['products_company_name'] = '';
+                $description_data[$languages_data->languages_id]['products_site'] = '';
+                $description_data[$languages_data->languages_id]['products_types_of_services'] = '';
+                $description_data[$languages_data->languages_id]['products_email'] = '';
+                $description_data[$languages_data->languages_id]['products_incorporation'] = '';
+                $description_data[$languages_data->languages_id]['products_country'] = '';
+                $description_data[$languages_data->languages_id]['products_address'] = '';
+                $description_data[$languages_data->languages_id]['products_profit'] = '';
+                $description_data[$languages_data->languages_id]['products_reason'] = '';
 
 				$description_data[$languages_data->languages_id]['products_url'] = '';
 
@@ -1667,6 +1713,16 @@ class AdminProductsController extends Controller
 
 			$products_name = 'products_name_'.$languages_data->languages_id;
 
+            $products_company_name = 'products_company_name_'.$languages_data->languages_id;
+            $products_site = 'products_site_'.$languages_data->languages_id;
+            $products_types_of_services = 'products_types_of_services_'.$languages_data->languages_id;
+            $products_email = 'products_email_'.$languages_data->languages_id;
+            $products_incorporation = 'products_incorporation_'.$languages_data->languages_id;
+            $products_country = 'products_country_'.$languages_data->languages_id;
+            $products_address = 'products_address_'.$languages_data->languages_id;
+            $products_profit = 'products_profit_'.$languages_data->languages_id;
+            $products_reason = 'products_reason'.$languages_data->languages_id;
+
 			$products_url = 'products_url_'.$languages_data->languages_id;
 
 			$products_description = 'products_description_'.$languages_data->languages_id;	
@@ -1808,6 +1864,15 @@ class AdminProductsController extends Controller
 				DB::table('products_description')->where('products_id','=',$products_id)->where('language_id','=',$languages_data->languages_id)->update([
 
 					'products_name'  	     =>   $request->$products_name,
+                    'products_types_of_services'  	   	=>   $request->$products_types_of_services,
+                    'products_company_name'  	      	=>   $request->$products_company_name,
+                    'products_site'  	     		 	=>   $request->$products_site,
+                    'products_email'  	     		 	=>   $request->$products_email,
+                    'products_incorporation'  	      	=>   $request->$products_incorporation,
+                    'products_country'  	     		=>   $request->$products_country,
+                    'products_address'  	     		=>   $request->$products_address,
+                    'products_profit'  	     		 	=>   $request->$products_profit,
+                    'products_reason'  	     		 	=>   $request->$products_reason,
 
 					'products_url'			 =>   $request->$products_url,
 
@@ -1832,6 +1897,16 @@ class AdminProductsController extends Controller
 				DB::table('products_description')->insert([
 
 						'products_name'  	     =>   $request->$products_name,
+
+                    'products_types_of_services'  	   	=>   $request->$products_types_of_services,
+                    'products_company_name'  	      	=>   $request->$products_company_name,
+                    'products_site'  	     		 	=>   $request->$products_site,
+                    'products_email'  	     		 	=>   $request->$products_email,
+                    'products_incorporation'  	      	=>   $request->$products_incorporation,
+                    'products_country'  	     		=>   $request->$products_country,
+                    'products_address'  	     		=>   $request->$products_address,
+                    'products_profit'  	     		 	=>   $request->$products_profit,
+                    'products_reason'  	     		 	=>   $request->$products_reason,
 
 						'language_id'			 =>   $languages_data->languages_id,
 

@@ -1581,6 +1581,24 @@ return [
 	'API Key'=>'API Key',
 	'API Key Text'=>'Enter you API Key of Mailchimp.',
 	'API LIST ID'=>'API LIST ID',
-	'API LIST ID Text'=>'Enter your API LIST ID.'
+	'API LIST ID Text'=>'Enter your API LIST ID.',
+    'ProductCompanyName' => 'Company Name',
+    'ProductSite' => 'Site',
+    'ProductTypesOfServices' => 'Types Of Services',
+    'ProductEmail' => 'e-mail',
+    'ProductIncorporation' => 'Incorporation',
+    'ProductCountry' => 'Country',
+    'ProductAddress' => 'Address',
+    'ProductProfit' => 'Profit',
+    'ProductReason' => 'Reason',
+    'EnterProductCompanyNameIn' => 'Enter Product Company Name In',
+    'EnterProductSiteIn' => 'Enter Product Site In',
+    'EnterProductTypesOfServicesIn' => 'Enter Product Types Of Services In',
+    'EnterProductEmailIn' => 'Enter Product Email In',
+    'EnterProductIncorporationIn' => 'Enter Product Incorporation In',
+    'EnterProductCountryIn' => 'Enter Product Country In',
+    'EnterProductAddressIn' => 'Enter Product Address In',
+    'EnterProductProfitIn' => 'Enter Product Profit In',
+    'EnterProductReasonIn' => 'Enter Product Reason In'
 ];
 

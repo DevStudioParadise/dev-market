@@ -348,6 +348,95 @@
                                         
                                     </div>
                                 </div>
+
+
+
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductCompanyName') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_company_name_<?=$description_data['languages_id']?>" class="form-control field-validate" value='{{$description_data['products_company_name']}}'>
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductCompanyNameIn') }} {{ $description_data['language_name'] }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductSite') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_site_<?=$description_data['languages_id']?>" class="form-control field-validate" value='{{$description_data['products_site']}}'>
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductSiteIn') }} {{ $description_data['language_name'] }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductTypesOfServices') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_types_of_services_<?=$description_data['languages_id']?>" class="form-control field-validate" value='{{$description_data['products_types_of_services']}}'>
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductTypesOfServicesIn') }} {{ $description_data['language_name'] }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductEmail') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_email_<?=$description_data['languages_id']?>" class="form-control field-validate" value='{{$description_data['products_email']}}'>
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductEmailIn') }} {{ $description_data['language_name'] }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductIncorporation') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_incorporation_<?=$description_data['languages_id']?>" class="form-control field-validate" value='{{$description_data['products_incorporation']}}'>
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductIncorporationIn') }} {{ $description_data['language_name'] }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductCountry') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_country_<?=$description_data['languages_id']?>" class="form-control field-validate" value='{{$description_data['products_country']}}'>
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductCountryIn') }} {{ $description_data['language_name'] }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductAddress') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_address_<?=$description_data['languages_id']?>" class="form-control field-validate" value='{{$description_data['products_address']}}'>
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductAddressIn') }} {{ $description_data['language_name'] }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductProfit') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_profit_<?=$description_data['languages_id']?>" class="form-control field-validate" value='{{$description_data['products_profit']}}'>
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductProfitIn') }} {{ $description_data['language_name'] }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductReason') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_reason_<?=$description_data['languages_id']?>" class="form-control field-validate" value='{{$description_data['products_reason']}}'>
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductReasonIn') }} {{ $description_data['language_name'] }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+
+
+
+
+
                                 
                                 <div class="form-group external_link" style="display: none">
                                       <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.External URL') }} ({{ $description_data['language_name'] }})</label>

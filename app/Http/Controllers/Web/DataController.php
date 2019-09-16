@@ -139,7 +139,7 @@ class DataController extends Controller
 		}
 		
 		//recent product
-		$data = array('page_number'=>0, 'type'=>'', 'limit'=>5, 'categories_id'=>'', 'search'=>'', 'min_price'=>'', 'max_price'=>'', 'min_age'=>'', 'max_age'=>'', 'min_emp'=>'', 'max_emp'=>'','min_payback'=>'', 'max_payback'=>'' );
+		$data = array('page_number'=>0, 'type'=>'', 'limit'=>5, 'categories_id'=>'', 'search'=>'', 'min_price'=>'', 'max_price'=>'', 'min_age'=>'', 'max_age'=>'', 'min_emp'=>'', 'max_emp'=>'','min_payback'=>'', 'max_payback'=>'', 'country' => '');
 		$products = $this->products($data);
 		$result['recentProducts'] = $products;
 		
@@ -255,7 +255,8 @@ class DataController extends Controller
         $take									=   $data['limit'];
 		$currentDate 							=   time();	
 		$type									=	$data['type'];
-		
+		$country								=	$data['country'];
+
 		if($type=="atoz"){
 			$sortby								=	"products_name";
 			$order								=	"ASC";
@@ -365,6 +366,10 @@ class DataController extends Controller
             if(!empty($max_payback)){
                 $categories->whereBetween('products.products_payback', [$min_payback, $max_payback]);
             }
+
+            if(!empty($country)){
+                $categories->where('products_description.products_country', 'like', $country.'%');
+            }
 			
 			if(!empty($data['search'])){
 				
@@ -416,7 +421,9 @@ class DataController extends Controller
                 if(!empty($max_payback)){
                     $categories->whereBetween('products.products_payback', [$min_payback, $max_payback]);
                 }
-					
+                if(!empty($country)){
+                    $categories->where('products_description.products_country', 'like', $country.'%');
+                }
 				$categories->orWhere('products_options_values.products_options_values_name', 'LIKE', '%'.$searchValue.'%')->where('products_status','=',1);				
 				if(!empty($data['categories_id'])){
 					$categories->where('products_to_categories.categories_id','=', $data['categories_id']);
@@ -463,7 +470,9 @@ class DataController extends Controller
                 if(!empty($max_payback)){
                     $categories->whereBetween('products.products_payback', [$min_payback, $max_payback]);
                 }
-				
+                if(!empty($country)){
+                    $categories->where('products_description.products_country', 'like', $country.'%');
+                }
 				$categories->orWhere('products_name', 'LIKE', '%'.$searchValue.'%')->where('products_status','=',1);	
 							
 				if(!empty($data['categories_id'])){
@@ -512,7 +521,9 @@ class DataController extends Controller
                 if(!empty($max_payback)){
                     $categories->whereBetween('products.products_payback', [$min_payback, $max_payback]);
                 }
-				
+                if(!empty($country)){
+                    $categories->where('products_description.products_country', 'like', $country.'%');
+                }
 				$categories->orWhere('products_model', 'LIKE', '%'.$searchValue.'%')->where('products_status','=',1);
 				
 				if(!empty($data['categories_id'])){
@@ -712,7 +723,26 @@ class DataController extends Controller
 		$cart = DB::table('customers_basket')
 			->join('products', 'products.products_id','=', 'customers_basket.products_id')
 			->join('products_description', 'products_description.products_id','=', 'products.products_id')
-			->select('customers_basket.*', 'products.products_model as model', 'products.products_image as image', 'products_description.products_name as products_name', 'products.products_quantity as quantity', 'products.products_price as price', 'products.products_weight as weight', 'products.products_weight as weight', 'products.products_weight as weight' )->where('customers_basket.is_order', '=', '0')->where('products_description.language_id','=', '1');
+			->select(
+			    'customers_basket.*',
+                'products.products_model as model',
+                'products.products_image as image',
+                'products_description.products_name as products_name',
+                'products.products_quantity as quantity',
+                'products.products_price as price',
+                'products.products_weight as weight',
+                'products.products_weight as weight',
+                'products.products_weight as weight',
+                'products_description.products_company_name',
+                'products_description.products_site',
+                'products_description.products_types_of_services',
+                'products_description.products_email',
+                'products_description.products_email',
+                'products_description.products_country',
+                'products_description.products_address',
+                'products_description.products_profit',
+                'products_description.products_reason'
+            )->where('customers_basket.is_order', '=', '0')->where('products_description.language_id','=', '1');
 			
 			if(empty(session('customers_id'))){
 				$cart->where('customers_basket.session_id', '=', Session::getId());

@@ -265,6 +265,100 @@
                                       <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
                                       </div>
                                 </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductCompanyName') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_company_name_<?=$languages->languages_id?>" class="form-control field-validate">
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductCompanyNameIn') }} {{ $languages->name }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductSite') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_site_<?=$languages->languages_id?>" class="form-control field-validate">
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductSiteIn') }} {{ $languages->name }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductTypesOfServices') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_types_of_services_<?=$languages->languages_id?>" class="form-control field-validate">
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductTypesOfServicesIn') }} {{ $languages->name }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductEmail') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_email_<?=$languages->languages_id?>" class="form-control field-validate">
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductEmailIn') }} {{ $languages->name }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductIncorporation') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_incorporation_<?=$languages->languages_id?>" class="form-control field-validate">
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductIncorporationIn') }} {{ $languages->name }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductCountry') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_country_<?=$languages->languages_id?>" class="form-control field-validate">
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductCountryIn') }} {{ $languages->name }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductAddress') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_address_<?=$languages->languages_id?>" class="form-control field-validate">
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductAddressIn') }} {{ $languages->name }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductProfit') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_profit_<?=$languages->languages_id?>" class="form-control field-validate">
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductProfitIn') }} {{ $languages->name }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductReason') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_reason_<?=$languages->languages_id?>" class="form-control field-validate">
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductReasonIn') }} {{ $languages->name }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+
+
+
+
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.OrganizationName') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_name_<?=$languages->languages_id?>" class="form-control field-validate">
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductNameIn') }} {{ $languages->name }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
                                 
                                 <div class="form-group external_link" style="display: none">
                                       <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.External URL') }} ({{ $languages->name }})</label>

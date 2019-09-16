@@ -123,6 +123,23 @@ class ProductsController extends DataController
             $max_payback = '';
         }
 
+        if (!empty($request->country)) {
+            $country = $request->country;
+        } else {
+            $country = '';
+        }
+
+        $result['old_value'] = [
+            'country' => $country,
+            'max_price' => $max_price,
+            'min_price' => $min_price,
+            'max_payback' => $max_payback,
+            'min_payback' => $min_payback,
+            'max_age' => $max_age,
+            'min_age' => $min_age,
+            'max_emp' => $max_emp,
+            'min_emp' => $min_emp
+        ];
 
         //category
 		if(!empty($request->category) and $request->category!='all'){
@@ -220,6 +237,7 @@ class ProductsController extends DataController
             'max_age'=>$max_age,
             'min_payback'=>$min_payback,
             'max_payback'=>$max_payback,
+            'country'=> $country
         );
 		
 		$products = $myVar->products($data);
@@ -310,6 +328,12 @@ class ProductsController extends DataController
             $max_payback = '';
         }
 
+        if(!empty($request->country)){
+            $country = $request->country;
+        }else{
+            $country = '';
+        }
+
         if(!empty($request->limit)){
 			$limit = $request->limit;
 		}else{
@@ -367,6 +391,7 @@ class ProductsController extends DataController
             'max_age'=>$max_age,
             'min_payback'=>$min_payback,
             'max_payback'=>$max_payback,
+            'country'=> $country
         );
 		$detail = $myVar->products($data);
 		$result['detail'] = $detail;
@@ -385,7 +410,8 @@ class ProductsController extends DataController
             'min_age'=>$min_age,
             'max_age'=>$max_age,
             'min_payback'=>$min_payback,
-            'max_payback'=>$max_payback);
+            'max_payback'=>$max_payback,
+            'country'=> $country);
 		$simliar_products = $myVar->products($data);
 		$result['simliar_products'] = $simliar_products;
 		
@@ -467,6 +493,11 @@ class ProductsController extends DataController
 		}else{
 			$type = '';
 		}
+		if(!empty($request->country)){
+            $country = $request->country;
+		}else{
+            $country = '';
+		}
 		
 		//if(!empty($request->category_id)){
 		if(!empty($request->category) and $request->category!='all'){
@@ -520,7 +551,8 @@ class ProductsController extends DataController
             'min_age'=>$min_age,
             'max_age'=>$max_age,
             'min_payback'=>$min_payback,
-            'max_payback'=>$max_payback
+            'max_payback'=>$max_payback,
+            'country'=>$country,
             );
 		$products = $myVar->products($data);
 		$result['products'] = $products;	
