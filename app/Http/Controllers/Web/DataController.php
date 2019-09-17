@@ -176,6 +176,7 @@ class DataController extends Controller
 				 )
 			->where('categories_description.language_id','=', Session::get('language_id'))
 			->where('parent_id','0')
+            ->orderBy('categories_description.categories_name', 'ASC')
 			->get();
 		
 		$index = 0;
