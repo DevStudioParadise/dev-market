@@ -577,7 +577,8 @@ class ProductsController extends DataController
 							$price->where('products_to_categories.categories_id','=', $categories_id);
 						}
 						
-		$priceContent 	=	$price->max('products_price');			
+		$priceContent 	=	$price->max('products_price');
+						$coutries = DB::table('products_description')->select(DB::raw("DISTINCT(products_country) as products_country"))->whereNotNull('products_country')->get();
 		if(!empty($priceContent)){
 			$maxPrice = round($priceContent+1);	
 		}else{
@@ -659,15 +660,15 @@ class ProductsController extends DataController
 						}
 						$index3++;
 					}
-					$response = array('success'=>'1', 'attr_data'=>$attr, 'message'=> Lang::get('website.Returned all filters successfully'), 'maxPrice'=>$maxPrice);
+					$response = array('success'=>'1', 'attr_data'=>$attr, 'message'=> Lang::get('website.Returned all filters successfully'), 'maxPrice'=>$maxPrice, 'coutries' => $coutries);
 				}else{
-					$response = array('success'=>'0', 'attr_data'=>array(), 'message'=> Lang::get('website.Filter is empty for this category'), 'maxPrice'=>$maxPrice);
+					$response = array('success'=>'0', 'attr_data'=>array(), 'message'=> Lang::get('website.Filter is empty for this category'), 'maxPrice'=>$maxPrice, 'coutries' => $coutries);
 				}
 			
 			}
 			
 		}else{
-			$response = array('success'=>'0', 'attr_data'=>array(), 'message'=>Lang::get('website.Filter is empty for this category'), 'maxPrice'=>$maxPrice);
+			$response = array('success'=>'0', 'attr_data'=>array(), 'message'=>Lang::get('website.Filter is empty for this category'), 'maxPrice'=>$maxPrice, 'coutries' => $coutries);
 		}
 		
 		return($response);
