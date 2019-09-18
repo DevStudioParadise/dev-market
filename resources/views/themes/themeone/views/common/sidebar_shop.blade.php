@@ -42,6 +42,7 @@
                         <select type="text"  name="country"
                                 style="border: 1px solid #e53935;margin-left: 5px;margin-right: 5px;text-align: left; padding-left: 5px; width: 100%"
                                 value="{{ $result['old_value']['country'] }}">
+                            <option></option>
                             @foreach($result['filters']['coutries'] as $county)
                                 <option value="{{$county->products_country}}">{{$county->products_country}}</option>
                             @endforeach
