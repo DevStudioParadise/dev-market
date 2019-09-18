@@ -126,13 +126,13 @@
                                                     <p class="read-more"></p>
                                                 </div>
                                                 <div class="block-inner">
-                                                    <div class="price">
+                                                    <div class="price" style="width: 100%">
 
                                                         @if(!empty($products->discount_price))
                                                             {{$web_setting[19]->value}}{{$products->discount_price+0}}
-                                                           <small style="color: gray">{{$web_setting[19]->value}}{{$products->products_price+0}}</small><span> {{$products->products_price_byn+0}} BYN</span>
+                                                           <small style="color: gray">{{$web_setting[19]->value}}{{$products->products_price+0}}</small> {{$products->products_price_byn+0}} BYN
                                                         @else
-                                                           <small style="color: gray;">{{$web_setting[19]->value}}{{$products->products_price+0}}</small> <span>{{$products->products_price_byn+0}} BYN</span>
+                                                           <small style="color: gray;">{{$web_setting[19]->value}}{{$products->products_price+0}}</small>  {{$products->products_price_byn+0}} BYN
                                                         @endif
                                                     </div>
 
