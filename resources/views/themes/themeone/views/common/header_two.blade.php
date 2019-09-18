@@ -1,4 +1,4 @@
-<header id="header-area" class="header-area bg-primary" style="z-index: 50">
+<header id="header-area" class="header-area bg-primary" style="z-index: 100">
     <div class="header-mini">
         <div class="container">
             <div class="row align-items-center">
