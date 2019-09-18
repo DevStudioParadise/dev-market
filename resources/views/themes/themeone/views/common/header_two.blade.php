@@ -66,7 +66,7 @@
     <div class="header-maxi">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-12  col-sm-12 col-lg-3 spaceright-0 d-none">
+                <div class="col-12  col-sm-12 col-lg-3 spaceright-0">
                     <a href="{{ URL::to('/')}}" class="logo">
                         @if($result['commonContent']['setting'][78]->value=='name')
                             <?=stripslashes($result['commonContent']['setting'][79]->value)?>
@@ -78,7 +78,7 @@
                         @endif
                     </a>
                 </div>
-                <div class="col-12 col-sm-7 col-md-8 col-lg-6 px-0">
+                <div class="col-12 col-sm-7 col-md-8 col-lg-6 px-0  d-none">
                     <form class="form-inline" action="{{ URL::to('/shop')}}" method="get">
                         <div class="search-categories">
                             <select id="category_id" name="category">
