@@ -143,7 +143,7 @@
                                         
                                         <!--discount_price-->
                                         <span class="price @if(!empty($result['detail']['product_data'][0]->discount_price) or !empty($result['detail']['product_data'][0]->flash_price)) line-through @else change_price @endif" >
-                                            {{$web_setting[19]->value}}{{$result['detail']['product_data'][0]->products_price+0}},
+                                           <small style="color: gray; margin-right: 10px">{{$web_setting[19]->value}}{{$result['detail']['product_data'][0]->products_price+0}}</small>
                                             {{$result['detail']['product_data'][0]->products_price_byn+0}} BYN
                                         </span>
                                        
