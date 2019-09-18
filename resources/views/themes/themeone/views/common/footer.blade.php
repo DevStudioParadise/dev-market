@@ -96,7 +96,7 @@
             <img class="img-fluid" src="{{asset('').'images/payments.png'}}">
         </div>
         <div class="footer-info col-12 col-md-6">
-            <p> © @lang('website.Copy Rights'). <a href="#">@lang('website.Privacy')</a> · <a href="#">@lang('website.Terms')</a> </p>
+            <p> © Консалт Маркет </p>
         </div>
         <div class="floating-top"><a href="#" class="fa fa-angle-up"></a></div>
     </div>
