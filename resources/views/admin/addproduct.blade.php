@@ -346,6 +346,24 @@
                                           <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
                                       </div>
                                   </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductContact') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_contact_<?=$languages->languages_id?>" class="form-control field-validate">
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductContactIn') }} {{ $languages->name }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductPhone') }} ({{ $languages->name }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_phone_<?=$languages->languages_id?>" class="form-control field-validate">
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductPhoneIn') }} {{ $languages->name }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
 
 
 

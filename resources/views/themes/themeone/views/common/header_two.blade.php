@@ -78,7 +78,7 @@
                         @endif
                     </a>
                 </div>
-                <div class="col-12 col-sm-7 col-md-8 col-lg-6 px-0  d-none">
+                <div class="col-12 col-sm-7 col-md-8 col-lg-6 px-0 d-none d-sm-block d-md-block d-lg-block d-xl-block">
                     <form class="form-inline" action="{{ URL::to('/shop')}}" method="get">
                         <div class="search-categories">
                             <select id="category_id" name="category">
@@ -105,28 +105,15 @@
                 </div>
                 <div class="col-12 col-sm-5 col-md-4 col-lg-3 spaceleft-0">
                     <ul class="top-right-list">
-                    <!--<li class="phone-header">
+                    <li class="phone-header">
                             <a>
-                                <img class="img-fluid" src="{{asset('').'public/images/phone.png'}}" alt="icon">
+                                <img class="img-fluid" src="{{asset('resources/assets/images/site_logo/phone.png')}}" alt="icon">
                                 <span class="block">
                                     <span class="title">@lang('website.Call Us Free'):</span>
-                                    <span class="items">888 9436 6000</span>
+                                    <span class="items" style="color: black">{{$result['commonContent']['setting'][11]->value}}</span>
                                 </span>
                             </a>
-                        </li>-->
-                        {{--                        <li class="wishlist-header">--}}
-                        {{--                            <a href="{{ URL::to('/wishlist')}}">--}}
-                        {{--                                <span class="badge badge-secondary" id="wishlist-count">{{$result['commonContent']['totalWishList']}}</span>--}}
-                        {{--                                <!--<img class="img-fluid" src="{{asset('').'public/images/wishlist_bag.png'}}" alt="icon">-->--}}
-                        {{--                                --}}
-                        {{--                                <span class="fa-stack fa-lg">--}}
-                        {{--                                  <i class="fa fa-shopping-bag fa-stack-2x"></i>--}}
-                        {{--                                  <i class="fa fa-heart fa-stack-2x"></i>--}}
-                        {{--                                </span>--}}
-                        {{--                            </a>--}}
-                        {{--                        </li>--}}
-                        {{--                        --}}
-                        {{--                        <li class="cart-header dropdown head-cart-content"></li>--}}
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -220,8 +207,7 @@
                                 <li class="nav-item"><a class="nav-link"
                                                         href="{{ URL::to('/contact-us')}}">@lang('website.Contact Us')</a>
                                 </li>
-                                <li class="nav-item last"><a
-                                            class="nav-link"><span>@lang('website.hotline')</span>{{$result['commonContent']['setting'][11]->value}}</a></li>
+
                             </ul>
                         </div>
                     </nav>

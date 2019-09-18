@@ -102,7 +102,7 @@ return [
 		
 	'Copy Rights'=>'2019 Company, Inc',
 		
-	'From our News'=>'Из наших новостей',
+	'From our News'=>'Новости',
 		
 	'View All News'=>'Посмотреть все новости',
 
@@ -122,7 +122,7 @@ return [
 		
 	'View Detail'=>'Подробнее',
 		
-	'Newest Products'=>'Новейшие продукты',
+	'Newest Products'=>'Последние предложения',
 		
 	'View All'=>'Посмотреть все',
 		
@@ -412,7 +412,7 @@ return [
 		
 	'Sort'=>'Сортировка',
 		
-	'Shop'=>'Магазин',
+	'Shop'=>'Каталон',
 		
 	'Newest'=>'Новейший',
 		
@@ -514,7 +514,7 @@ return [
 		
 	'Search results empty'=>'Результаты поиска пустые.',
 		
-	'Categories'=>'категории',
+	'Categories'=>'Категории',
 		
 	'Product Detail'=>'Информация о продукте',
 		
@@ -530,7 +530,7 @@ return [
 		
 	'Product is added'=>'Товар добавлен!',
 		
-	'Special products of the Week'=>'Специальные продукты недели',
+	'Special products of the Week'=>'СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ',
 		
 	'Please Enter your email to recover your password'=>'Пожалуйста, введите адрес электронной почты, чтобы восстановить пароль.',
 		
@@ -550,7 +550,7 @@ return [
 		
 	'Your email address here'=>'Ваш адрес электронной почты здесь ...',
 		
-	'About Store'=>'О магазине',
+	'About Store'=>'Контакты',
 		
 	'Our Services'=>'Наши услуги',
 		

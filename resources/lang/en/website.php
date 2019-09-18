@@ -579,7 +579,7 @@ return [
 		
 	'Subscribe'=>'Subscribe!',
 		
-	'About Store'=>'About Store',
+	'About Store'=>'Contacts',
 		
 	'Our Services'=>'Our Services',
 		

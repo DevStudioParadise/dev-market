@@ -514,7 +514,7 @@ return [
 		
 	'Search results empty'=>'Результаты поиска пустые.',
 		
-	'Categories'=>'категории',
+	'Categories'=>'Категории',
 		
 	'Product Detail'=>'Информация о продукте',
 		

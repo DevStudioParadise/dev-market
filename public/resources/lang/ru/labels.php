@@ -1534,6 +1534,8 @@ return [
     'ProductAddress' => 'Фактический адрес',
     'ProductProfit' => 'Ежемесячная прибыль',
     'ProductReason' => 'Причина продажи бизнеса',
+    'ProductPhone' => 'Телефон',
+    'ProductContact' => 'Контакты',
     'EnterProductCompanyNameIn' => 'Введите название',
     'EnterProductSiteIn' => 'Введите сайт',
     'EnterProductTypesOfServicesIn' => 'Введите продукцию',
@@ -1542,6 +1544,8 @@ return [
     'EnterProductCountryIn' => 'Введите страну',
     'EnterProductAddressIn' => 'Введите адрес',
     'EnterProductProfitIn' => 'Введите окупаемость',
-    'EnterProductReasonIn' => 'Введите причину продажи'
+    'EnterProductReasonIn' => 'Введите причину продажи',
+    'EnterProductPhoneIn' => 'Введите номер телефона',
+    'EnterProductContactIn' => 'Введите контактную информацию'
 ];
 

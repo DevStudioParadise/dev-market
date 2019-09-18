@@ -490,7 +490,7 @@
                                         ?>
                                     </span>
 
-                                    <div class="blog-overlay">
+                                    <div class="blog-overlay" style="cursor: pointer;" onclick="window.open('{{ URL::to('/news-detail/'.$news_data->news_slug)}}')">
                                         <a href="{{ URL::to('/news-detail/'.$news_data->news_slug)}}" class="fa fa-search-plus"></a>
                                     </div>
 

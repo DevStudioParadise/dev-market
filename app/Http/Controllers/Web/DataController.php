@@ -742,7 +742,9 @@ class DataController extends Controller
                 'products_description.products_country',
                 'products_description.products_address',
                 'products_description.products_profit',
-                'products_description.products_reason'
+                'products_description.products_reason',
+                'products_description.products_contact',
+                'products_description.products_phone'
             )->where('customers_basket.is_order', '=', '0')->where('products_description.language_id','=', '1');
 			
 			if(empty(session('customers_id'))){

@@ -334,6 +334,18 @@
                                                     {{$result['detail']['product_data'][0]->products_reason}}
                                                 </span>
                                             </div>
+                                            <div class="price-box">
+                                                <span>@lang('labels.ProductContact')&nbsp;:</span>
+                                                <span class="total_price">
+                                                    {{$result['detail']['product_data'][0]->products_contact}}
+                                                </span>
+                                            </div>
+                                            <div class="price-box">
+                                                <span>@lang('labels.ProductPhone')&nbsp;:</span>
+                                                <span class="total_price">
+                                                    {{$result['detail']['product_data'][0]->products_phone}}
+                                                </span>
+                                            </div>
 
 
 

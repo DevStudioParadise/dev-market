@@ -1599,6 +1599,10 @@ return [
     'EnterProductCountryIn' => 'Enter Product Country In',
     'EnterProductAddressIn' => 'Enter Product Address In',
     'EnterProductProfitIn' => 'Enter Product Profit In',
-    'EnterProductReasonIn' => 'Enter Product Reason In'
+    'EnterProductReasonIn' => 'Enter Product Reason In',
+    'ProductPhone' => 'Product Phone',
+    'ProductContact' => 'Product Contact',
+    'EnterProductPhoneIn' => 'Enter Product Phone In',
+    'EnterProductContactIn' => 'Enter Product Contact In'
 ];
 

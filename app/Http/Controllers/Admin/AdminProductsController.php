@@ -227,6 +227,8 @@ class AdminProductsController extends Controller
             $products_address = 'products_address_'.$languages_data->languages_id;
             $products_profit = 'products_profit_'.$languages_data->languages_id;
 			$products_reason = 'products_reason_'.$languages_data->languages_id;
+			$products_contact = 'products_contact_'.$languages_data->languages_id;
+			$products_phone = 'products_phone_'.$languages_data->languages_id;
 
 
 			$products_url = 'products_url_'.$languages_data->languages_id;
@@ -330,6 +332,8 @@ class AdminProductsController extends Controller
 					'products_address'  	     		=>   $request->$products_address,
 					'products_profit'  	     		 	=>   $request->$products_profit,
 					'products_reason'  	     		 	=>   $request->$products_reason,
+                'products_contact'  	     		 	=>   $request->$products_contact,
+                'products_phone'  	     		 	=>   $request->$products_phone,
                     'language_id'			 		 	=>   $languages_data->languages_id,
 					'products_id'					 	=>   $products_id,
 					'products_url'			 		 	=>   $request->$products_url,
@@ -1407,6 +1411,8 @@ class AdminProductsController extends Controller
 				$description_data[$languages_data->languages_id]['products_address'] = $description[0]->products_address;
 				$description_data[$languages_data->languages_id]['products_profit'] = $description[0]->products_profit;
 				$description_data[$languages_data->languages_id]['products_reason'] = $description[0]->products_reason;
+				$description_data[$languages_data->languages_id]['products_contact'] = $description[0]->products_contact;
+				$description_data[$languages_data->languages_id]['products_phone'] = $description[0]->products_phone;
 
 
 
@@ -1443,6 +1449,8 @@ class AdminProductsController extends Controller
                 $description_data[$languages_data->languages_id]['products_address'] = '';
                 $description_data[$languages_data->languages_id]['products_profit'] = '';
                 $description_data[$languages_data->languages_id]['products_reason'] = '';
+                $description_data[$languages_data->languages_id]['products_contact'] = '';
+                $description_data[$languages_data->languages_id]['products_phone'] = '';
 
 				$description_data[$languages_data->languages_id]['products_url'] = '';
 
@@ -1722,6 +1730,8 @@ class AdminProductsController extends Controller
             $products_address = 'products_address_'.$languages_data->languages_id;
             $products_profit = 'products_profit_'.$languages_data->languages_id;
             $products_reason = 'products_reason_'.$languages_data->languages_id;
+            $products_contact = 'products_contact_'.$languages_data->languages_id;
+            $products_phone = 'products_phone_'.$languages_data->languages_id;
 
 			$products_url = 'products_url_'.$languages_data->languages_id;
 
@@ -1873,6 +1883,8 @@ class AdminProductsController extends Controller
                     'products_address'  	     		=>   $request->$products_address,
                     'products_profit'  	     		 	=>   $request->$products_profit,
                     'products_reason'  	     		 	=>   $request->$products_reason,
+                    'products_contact'  	     		 	=>   $request->$products_contact,
+                    'products_phone'  	     		 	=>   $request->$products_phone,
 
 					'products_url'			 =>   $request->$products_url,
 
@@ -1907,6 +1919,8 @@ class AdminProductsController extends Controller
                     'products_address'  	     		=>   $request->$products_address,
                     'products_profit'  	     		 	=>   $request->$products_profit,
                     'products_reason'  	     		 	=>   $request->$products_reason,
+                    'products_contact'  	     		 	=>   $request->$products_contact,
+                    'products_phone'  	     		 	=>   $request->$products_phone,
 
 						'language_id'			 =>   $languages_data->languages_id,
 

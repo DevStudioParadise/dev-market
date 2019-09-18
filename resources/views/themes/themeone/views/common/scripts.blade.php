@@ -1489,7 +1489,7 @@ function initialize(location){
 
 	var map = new google.maps.Map(document.getElementById('googleMap'), {
 		mapTypeId: google.maps.MapTypeId.TERRAIN,
-		zoom: 13
+		zoom: 10
 	});
 	var geocoder = new google.maps.Geocoder();
 	geocoder.geocode({
