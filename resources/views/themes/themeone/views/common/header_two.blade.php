@@ -66,7 +66,7 @@
     <div class="header-maxi">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-12  col-sm-12 col-lg-3 spaceright-0">
+                <div class="col-12  col-sm-12 col-lg-3 spaceright-0 d-none">
                     <a href="{{ URL::to('/')}}" class="logo">
                         @if($result['commonContent']['setting'][78]->value=='name')
                             <?=stripslashes($result['commonContent']['setting'][79]->value)?>
