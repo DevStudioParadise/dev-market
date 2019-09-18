@@ -447,9 +447,9 @@
                                         <div class="price text-center">
                                             @if(!empty($products->discount_price))
                                                 {{$web_setting[19]->value}}{{$products->discount_price+0}}
-                                                <span>{{$web_setting[19]->value}}{{$products->products_price+0}}, {{$products->products_price_byn+0}} BYN</span>
+                                                <span><small style="color: grey">{{$web_setting[19]->value}}{{$products->products_price+0}}</small>  {{$products->products_price_byn+0}} BYN</span>
                                             @else
-                                                {{$web_setting[19]->value}}{{$products->products_price+0}}, {{$products->products_price_byn+0}} BYN
+                                                <small style="color: grey">{{$web_setting[19]->value}}{{$products->products_price+0}}</small> {{$products->products_price_byn+0}} BYN
                                             @endif
                                         </div>
 
