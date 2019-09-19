@@ -5,16 +5,16 @@
                 <div class="single-footer">
                     <h5>@lang('website.About Store')</h5>
                     <ul class="contact-list  pl-0 mb-0">
-                        <li><i class="fa fa-map-marker"></i><span>
+                        <li><i class="fa fa-map-marker"></i><span class="col-10">
                     {{$result['commonContent']['setting'][6]->value}},
                     {{$result['commonContent']['setting'][7]->value}},
                     {{$result['commonContent']['setting'][8]->value}},
                     {{$result['commonContent']['setting'][5]->value}},
                     {{$result['commonContent']['setting'][4]->value}}
                 </span></li>
-                        <li><i class="fa fa-phone"></i><span>{{$result['commonContent']['setting'][11]->value}}</span>
+                        <li><i class="fa fa-phone"></i><span class="col-10">{{$result['commonContent']['setting'][11]->value}}</span>
                         </li>
-                        <li><i class="fa fa-envelope"></i><span> <a
+                        <li><i class="fa fa-envelope"></i><span class="col-10"> <a
                                         href="mailto:sales@brandbychoice.com">{{$result['commonContent']['setting'][3]->value}}</a> </span>
                         </li>
 

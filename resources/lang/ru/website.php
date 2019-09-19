@@ -98,7 +98,7 @@ return [
 
     'Number Of Employees' => 'Кол-Во Сотрудников',
 
-    'Business age' => 'Возраст бизнеса',
+    'Business age' => 'Возраст бизнеса(лет)',
 		
 	'Copy Rights'=>'2019 Company, Inc',
 		
@@ -412,7 +412,7 @@ return [
 		
 	'Sort'=>'Сортировка',
 		
-	'Shop'=>'Каталон',
+	'Shop'=>'Каталог',
 		
 	'Newest'=>'Новейший',
 		

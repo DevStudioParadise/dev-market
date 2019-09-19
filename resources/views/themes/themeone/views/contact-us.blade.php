@@ -22,9 +22,9 @@
                 <div class="col-12 col-md-6 col-lg-4">
                     
                     <ul class="contact-list">
-                      <li> <i class="fa fa-map-marker"></i><span>{{$result['commonContent']['setting'][4]->value}} {{$result['commonContent']['setting'][5]->value}} {{$result['commonContent']['setting'][6]->value}}, {{$result['commonContent']['setting'][7]->value}} {{$result['commonContent']['setting'][8]->value}}</span> </li>
-                      <li> <i class="fa fa-phone"></i><span>{{$result['commonContent']['setting'][11]->value}}</span> </li>
-                      <li> <i class="fa fa-envelope"></i><span> <a href="mailto:{{$result['commonContent']['setting'][3]->value}}">{{$result['commonContent']['setting'][3]->value}}</a> </span> </li>
+                      <li> <i class="fa fa-map-marker"></i><span class="col-10">{{$result['commonContent']['setting'][4]->value}} {{$result['commonContent']['setting'][5]->value}} {{$result['commonContent']['setting'][6]->value}}, {{$result['commonContent']['setting'][7]->value}} {{$result['commonContent']['setting'][8]->value}}</span> </li>
+                      <li> <i class="fa fa-phone"></i><span class="col-10">{{$result['commonContent']['setting'][11]->value}}</span> </li>
+                      <li> <i class="fa fa-envelope"></i><span class="col-10"> <a href="mailto:{{$result['commonContent']['setting'][3]->value}}">{{$result['commonContent']['setting'][3]->value}}</a> </span> </li>
                     </ul>
                 </div>
             </div>
