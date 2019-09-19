@@ -1542,6 +1542,10 @@ return [
     'EnterProductCountryIn' => 'Введите страну',
     'EnterProductAddressIn' => 'Введите адрес',
     'EnterProductProfitIn' => 'Введите окупаемость',
-    'EnterProductReasonIn' => 'Введите причину продажи'
+    'EnterProductReasonIn' => 'Введите причину продажи',
+    'EnterProductPhoneIn' => 'Введите номер телефона',
+    'EnterProductContactIn' => 'Введите контактную информацию',
+    'ProductPhone' => 'Телефон',
+    'ProductContact' => 'Контакты'
 ];
 
