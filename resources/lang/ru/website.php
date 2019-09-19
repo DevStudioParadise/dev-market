@@ -529,8 +529,8 @@ return [
 	'All Products'=>'Все продукты',
 		
 	'Product is added'=>'Товар добавлен!',
-		
-	'Special products of the Week'=>'СПЕЦИАЛЬНОЕ ПРЕДЛОЖЕНИЕ',
+
+	'Special products of the Week'=>'Специальное предложение',
 		
 	'Please Enter your email to recover your password'=>'Пожалуйста, введите адрес электронной почты, чтобы восстановить пароль.',
 		
