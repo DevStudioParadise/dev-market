@@ -628,7 +628,7 @@ return [
 		
 	'categroies'=>'категории',
 		
-	'Call Us Free'=>'Звоните нам бесплатно',
+	'Call Us Free'=>'Позвонить нам',
 		
 	'Featured News'=>'Рекомендуемые Новости',
 		

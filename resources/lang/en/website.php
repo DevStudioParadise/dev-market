@@ -657,7 +657,7 @@ return [
 		
 	'categroies'=>'Categroies',
 		
-	'Call Us Free'=>'Call Us Free',
+	'Call Us Free'=>'Call Us',
 		
 	'Featured News'=>'Featured News',
 		
