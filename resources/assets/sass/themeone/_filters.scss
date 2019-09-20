@@ -249,6 +249,8 @@
 			border-top:$border-width solid $border-color;
 			text-align: right;
 			padding:9px;
+			display: flex;
+			justify-content: space-around;
 		}
     }
 }
