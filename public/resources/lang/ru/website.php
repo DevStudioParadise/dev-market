@@ -502,13 +502,13 @@ return [
 		
 	'Featured'=>'Рекомендуемые',
 		
-	'Filters'=>'фильтры',
+	'Filters'=>'Фильтры',
 		
 	'Reset'=>'Сброс',
 		
 	'Subscribe'=>'Подписывайся!',
 		
-	'Shipping Address'=>'адреса доставки',
+	'Shipping Address'=>'Адреса доставки',
 		
 	'Returned all products'=>'Вернули все товары.',
 		

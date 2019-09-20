@@ -28,8 +28,9 @@
                     </ul>
                 </div>
             </div>
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aad42d468eba3f42ea38b10de2bf1bedfa4c9755ea342302835ed7927b97cd2a8&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
         </div>
 	</div>
-    <div id="googleMap" style="width:100%;height:380px; margin-top:-30px; margin-bottom:30px; "></div>
+
 </section>
 @endsection
