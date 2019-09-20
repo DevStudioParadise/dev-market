@@ -26,19 +26,6 @@
                     <div class="single-footer">
                         <h5>@lang('website.Our Services')</h5>
                         <ul class="links-list pl-0 mb-0">
-                            <li><a href="{{ URL::to('/')}}"><i class="fa fa-angle-double-right"
-                                                               aria-hidden="true"></i>@lang('website.Home')</a></li>
-                            <li><a href="{{ URL::to('/shop')}}"><i class="fa fa-angle-double-right"
-                                                                   aria-hidden="true"></i>@lang('website.Shop')</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-md-6 col-lg-3">
-                <div class="footer-block">
-                    <div class="single-footer">
-                        <h5>@lang('website.Information')</h5>
-                        <ul class="links-list pl-0 mb-0">
                             @if(count($result['commonContent']['pages']))
                                 @foreach($result['commonContent']['pages'] as $page)
                                     <li><a href="{{ URL::to('/page?name='.$page->slug)}}"><i
@@ -49,6 +36,19 @@
                             <li><a href="{{ URL::to('/contact-us')}}"><i class="fa fa-angle-double-right"
                                                                          aria-hidden="true"></i>@lang('website.Contact Us')
                                 </a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-3">
+                <div class="footer-block">
+                    <div class="single-footer">
+                        <h5>@lang('website.Information')</h5>
+                        <ul class="links-list pl-0 mb-0">
+                            <li><a href="{{ URL::to('/')}}"><i class="fa fa-angle-double-right"
+                                                               aria-hidden="true"></i>@lang('website.Home')</a></li>
+                            <li><a href="{{ URL::to('/shop')}}"><i class="fa fa-angle-double-right"
+                                                                   aria-hidden="true"></i>@lang('website.Shop')</a></li>
                         </ul>
                     </div>
                 </div>

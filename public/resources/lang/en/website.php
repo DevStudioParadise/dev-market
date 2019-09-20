@@ -579,7 +579,7 @@ return [
 		
 	'Subscribe'=>'Subscribe!',
 		
-	'About Store'=>'About Store',
+	'About Store'=>'Contacts',
 		
 	'Our Services'=>'Our Services',
 		
@@ -657,7 +657,7 @@ return [
 		
 	'categroies'=>'Categroies',
 		
-	'Call Us Free'=>'Call Us Free',
+	'Call Us Free'=>'Call Us',
 		
 	'Featured News'=>'Featured News',
 		

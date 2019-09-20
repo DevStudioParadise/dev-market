@@ -432,7 +432,24 @@
                                           <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
                                       </div>
                                   </div>
-
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductContact') }} ({{ $description_data['language_name'] }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_contact_<?=$description_data['languages_id']?>" class="form-control field-validate" value='{{$description_data['products_contact']}}'>
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductContactIn') }} {{ $description_data['language_name'] }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
+                                  <div class="form-group">
+                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductPhone') }} ({{ $description_data['language_name'] }})</label>
+                                      <div class="col-sm-10 col-md-4">
+                                          <input type="text" name="products_phone_<?=$description_data['languages_id']?>" class="form-control field-validate" value='{{$description_data['products_phone']}}'>
+                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                           {{ trans('labels.EnterProductPhoneIn') }} {{ $description_data['language_name'] }} </span>
+                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
+                                      </div>
+                                  </div>
 
 
 

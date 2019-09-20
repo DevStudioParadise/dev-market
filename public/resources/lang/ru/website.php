@@ -98,11 +98,11 @@ return [
 
     'Number Of Employees' => 'Кол-Во Сотрудников',
 
-    'Business age' => 'Возраст бизнеса',
+    'Business age' => 'Возраст бизнеса(лет)',
 		
 	'Copy Rights'=>'2019 Company, Inc',
 		
-	'From our News'=>'Из наших новостей',
+	'From our News'=>'Новости',
 		
 	'View All News'=>'Посмотреть все новости',
 
@@ -122,7 +122,7 @@ return [
 		
 	'View Detail'=>'Подробнее',
 		
-	'Newest Products'=>'Новейшие продукты',
+	'Newest Products'=>'Последние предложения',
 		
 	'View All'=>'Посмотреть все',
 		
@@ -412,7 +412,7 @@ return [
 		
 	'Sort'=>'Сортировка',
 		
-	'Shop'=>'Магазин',
+	'Shop'=>'Каталог',
 		
 	'Newest'=>'Новейший',
 		
@@ -529,8 +529,8 @@ return [
 	'All Products'=>'Все продукты',
 		
 	'Product is added'=>'Товар добавлен!',
-		
-	'Special products of the Week'=>'Специальные продукты недели',
+
+	'Special products of the Week'=>'Специальное предложение',
 		
 	'Please Enter your email to recover your password'=>'Пожалуйста, введите адрес электронной почты, чтобы восстановить пароль.',
 		
@@ -550,7 +550,7 @@ return [
 		
 	'Your email address here'=>'Ваш адрес электронной почты здесь ...',
 		
-	'About Store'=>'О магазине',
+	'About Store'=>'Контакты',
 		
 	'Our Services'=>'Наши услуги',
 		
@@ -628,7 +628,7 @@ return [
 		
 	'categroies'=>'категории',
 		
-	'Call Us Free'=>'Звоните нам бесплатно',
+	'Call Us Free'=>'Позвонить нам',
 		
 	'Featured News'=>'Рекомендуемые Новости',
 		

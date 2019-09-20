@@ -109,8 +109,8 @@
                             <a>
                                 <img class="img-fluid" src="{{asset('resources/assets/images/site_logo/phone.png')}}" alt="icon">
                                 <span class="block">
-                                    <span class="title">@lang('website.Call Us Free'):</span>
-                                    <span class="items" style="color: black">{{$result['commonContent']['setting'][11]->value}}</span>
+                                    <span class="items" style="color: black">@lang('website.Call Us Free'):</span>
+                                    <span class="title" >{{$result['commonContent']['setting'][11]->value}}</span>
                                 </span>
                             </a>
                         </li>
