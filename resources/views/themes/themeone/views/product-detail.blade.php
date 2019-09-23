@@ -91,7 +91,7 @@
                                         @foreach( $result['detail']['product_data'][0]->images as $key=>$images )
                                             <div class="thumbnail" data-slide-to="{{++$key}}" data-target="#product-slider" style="float: left; margin-bottom:10px;">
                                                 <a id="carousel-selector-1">
-                                                    <img class="img-thumbnail " src="{{asset('').$images->image }}" alt="img-fluid" style="    max-width: 80px;">
+                                                    <img class="img-thumbnail " src="{{asset('').$images->image }}" alt="img-fluid">
                                                 </a>
                                             </div>
                                         @endforeach
