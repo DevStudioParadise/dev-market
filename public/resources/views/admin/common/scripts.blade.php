@@ -1218,6 +1218,13 @@ $(document).on('click', '#updateAddress', function(e){
 		$("#deleteCountryModal").modal('show');
 	});
 
+	//deleteCountrytModal
+	$(document).on('click', '#deleteRegionId', function(){
+		var region_id = $(this).attr('countries_id');
+		$('#region_id').val(region_id);
+		$("#deleteRegionModal").modal('show');
+	});
+
 	//deleteZoneModal
 	$(document).on('click', '#deletezoneId', function(){
 		var zone_id = $(this).attr('zone_id');

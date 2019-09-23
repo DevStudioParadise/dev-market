@@ -11,7 +11,6 @@
             @include('common.categories')
         </div>
     </div>
-
  	<form enctype="multipart/form-data" name="filters" method="get">
         <input type="hidden" name="min_price" id="min_price" value="0">
         <input type="hidden" name="max_price" id="max_price" value="{{$result['filters']['maxPrice']}}">
@@ -36,15 +35,30 @@
 				</h2>
 			</div>
             <div class="block">
-                <div class="card-title">@lang('website.Country')</div>
+                <div class="card-title">@lang('labels.Countries')</div>
                 <div class="card-body">
-                    <div class="slider-value-0">
-                        <select type="text"  name="country"
-                                style="border: 1px solid #e53935;margin-left: 5px;margin-right: 5px;text-align: left; padding-left: 5px; width: 100%"
-                                value="{{ $result['old_value']['country'] }}">
-                            <option></option>
-                            @foreach($result['filters']['coutries'] as $county)
-                                <option value="{{$county->products_country}}">{{$county->products_country}}</option>
+                <div class="form-group">
+                        <select class="form-control" name="countries_id" id="country" style="border-color:#e53935">
+                            <option value="">{{ trans('labels.ChooseCountries') }}</option>
+                            @foreach ($result['countries_id'] as $country)
+                                <option value="{{ $country->countries_id }}"
+                                        @if($result['old_value']['countries_id'] == $country->countries_id) selected @endif
+                                >{{ $country->countries_name }}</option>
+                            @endforeach
+                        </select>
+                </div>
+                </div>
+            </div>
+            <div class="block">
+                <div class="card-title">@lang('labels.Region')</div>
+                <div class="card-body">
+                <div class="form-group">
+                        <select class="form-control" name="region_id" id="region" style="border-color:#e53935">
+                            <option value="">{{ trans('labels.ChooseRegion') }}</option>
+                            @foreach ($result['region_id'] as $region)
+                                <option value="{{ $region->region_id }}"
+                                @if($result['old_value']['region_id'] == $region->region_id) selected @endif
+                                >{{ $region->region_name }}</option>
                             @endforeach
                         </select>
                     </div>

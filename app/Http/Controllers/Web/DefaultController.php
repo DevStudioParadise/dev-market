@@ -77,10 +77,15 @@ class DefaultController extends DataController
 			$min_price = '';
 		}
 
-        if(!empty($request->country)){
-            $country = $request->country;
+        if(!empty($request->countries_id)){
+            $countries_id = $request->countries_id;
         }else{
-            $country = '';
+            $countries_id = '';
+        }
+        if(!empty($request->region_id)){
+            $region_id = $request->region_id;
+        }else{
+            $region_id = '';
         }
 		
 		//max_price
@@ -144,7 +149,9 @@ class DefaultController extends DataController
             'max_age'=>$max_age,
             'min_payback'=>$min_payback,
             'max_payback'=>$max_payback,
-            'country' => $country);
+            'region_id' => $region_id,
+            'countries_id' => $countries_id,
+        );
 		$special_products = $myVar->products($data);
 		$result['products'] = $special_products;
 		
@@ -157,7 +164,8 @@ class DefaultController extends DataController
             'max_age'=>$max_age,
             'min_payback'=>$min_payback,
             'max_payback'=>$max_payback,
-            'country' => $country);
+            'region_id' => $region_id,
+            'countries_id' => $countries_id,);
 		$special_products = $myVar->products($data);
 		$result['special'] = $special_products;
 		
@@ -170,7 +178,8 @@ class DefaultController extends DataController
             'max_age'=>$max_age,
             'min_payback'=>$min_payback,
             'max_payback'=>$max_payback,
-            'country' => $country);
+            'region_id' => $region_id,
+            'countries_id' => $countries_id,);
 		$top_seller = $myVar->products($data);
 		$result['top_seller'] = $top_seller;
 		
@@ -183,7 +192,8 @@ class DefaultController extends DataController
             'max_age'=>$max_age,
             'min_payback'=>$min_payback,
             'max_payback'=>$max_payback,
-            'country' => $country);
+            'region_id' => $region_id,
+            'countries_id' => $countries_id,);
 		$most_liked = $myVar->products($data);
 		$result['most_liked'] = $most_liked;
 		
@@ -196,7 +206,8 @@ class DefaultController extends DataController
             'max_age'=>$max_age,
             'min_payback'=>$min_payback,
             'max_payback'=>$max_payback,
-            'country' => $country);
+            'region_id' => $region_id,
+            'countries_id' => $countries_id,);
 		$featured = $myVar->products($data);
 		$result['featured'] = $featured;
 		
@@ -209,7 +220,8 @@ class DefaultController extends DataController
             'max_age'=>$max_age,
             'min_payback'=>$min_payback,
             'max_payback'=>$max_payback,
-            'country' => $country);
+            'region_id' => $region_id,
+            'countries_id' => $countries_id,);
 		$flash_sale = $myVar->products($data);
 		$result['flash_sale'] = $flash_sale;
 		//dd($result['flash_sale']);
@@ -271,7 +283,8 @@ class DefaultController extends DataController
                 'max_age'=>$max_age,
                 'min_payback'=>$min_payback,
                 'max_payback'=>$max_payback,
-                'country' => $country);
+                'region_id' => $region_id,
+                'countries_id' => $countries_id,);
 			$single_product = $myVar->products($data);
 			if(!empty($single_product['product_data'][0])){
 				$detail[] = $single_product['product_data'][0];

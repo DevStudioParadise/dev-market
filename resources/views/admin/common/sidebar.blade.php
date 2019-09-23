@@ -94,6 +94,18 @@
           </ul>
         </li>
          @endif
+          @if(session('tax_location_view')==1  or auth()->guard('admin')->user()->adminType=='1')
+
+              <li class="treeview {{ Request::is('admin/region') ? 'active' : '' }} {{ Request::is('admin/addregion') ? 'active' : '' }} {{ Request::is('admin/editregion/*') ? 'active' : '' }} ">
+                  <a href="#">
+                      <i class="fa fa-money" aria-hidden="true"></i>
+                      <span>{{ trans('labels.link_region') }}</span> <i class="fa fa-angle-left pull-right"></i>
+                  </a>
+                  <ul class="treeview-menu">
+                      <li class="{{ Request::is('admin/region') ? 'active' : '' }} {{ Request::is('admin/addcountry') ? 'active' : '' }} {{ Request::is('admin/editcountry/*') ? 'active' : '' }} "><a href="{{ URL::to('admin/region')}}"><i class="fa fa-circle-o"></i> {{ trans('labels.link_region') }}</a></li>
+                  </ul>
+              </li>
+          @endif
         @if(session('coupons_view')==1  or auth()->guard('admin')->user()->adminType=='1')
         <li class="treeview {{ Request::is('admin/coupons') ? 'active' : '' }} {{ Request::is('admin/editcoupons/*') ? 'active' : '' }}">
           <a href="{{ URL::to('admin/coupons')}}" ><i class="fa fa-tablet" aria-hidden="true"></i> <span>{{ trans('labels.link_coupons') }}</span></a>

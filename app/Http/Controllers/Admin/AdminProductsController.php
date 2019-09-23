@@ -56,6 +56,8 @@ class AdminProductsController extends Controller
 		
 		$product = DB::table('products')
 			->leftJoin('products_description','products_description.products_id','=','products.products_id')
+			->leftJoin('countries','countries.countries_id','=','products.products_country_id')
+			->leftJoin('region','region.region_id','=','products.products_region_id')
 			->leftJoin('manufacturers','manufacturers.manufacturers_id','=','products.manufacturers_id')
 			->leftJoin('manufacturers_info','manufacturers.manufacturers_id','=','manufacturers_info.manufacturers_id')
 			->LeftJoin('specials', function ($join) {
@@ -89,13 +91,15 @@ class AdminProductsController extends Controller
 		
 		$data = DB::table('products')
 			->leftJoin('products_description','products_description.products_id','=','products.products_id')
+            ->leftJoin('countries','countries.countries_id','=','products.products_country_id')
+            ->leftJoin('region','region.region_id','=','products.products_region_id')
 			->LeftJoin('manufacturers', function ($join) {
 				$join->on('manufacturers.manufacturers_id', '=', 'products.manufacturers_id');
 			 })
 			->LeftJoin('specials', function ($join) {
 				$join->on('specials.products_id', '=', 'products.products_id')->where('status', '=', '1');
 			 });
-			 			 
+
 			if(isset($_REQUEST['categories_id']) and !empty($_REQUEST['categories_id']) or !empty(session('categories_id'))){
 			$data->leftJoin('products_to_categories', 'products.products_id', '=', 'products_to_categories.products_id')
 				 ->leftJoin('categories', 'categories.categories_id', '=', 'products_to_categories.categories_id');
@@ -157,7 +161,8 @@ class AdminProductsController extends Controller
 		//get function from other controller
 		$myVar = new AdminManufacturerController();
 		$result['manufacturer'] = $myVar->getManufacturer($language_id);
-		
+		$result['countries'] = DB::table('countries')->select('countries_id', 'countries_name')->get();
+
 		//tax class
 		
 		//get function from other controller
@@ -211,6 +216,8 @@ class AdminProductsController extends Controller
 					'low_limit'				 =>   0,
 					'products_type'			 =>	  $request->products_type,
 					'is_feature'			 =>	  $request->is_feature,
+                    'products_country_id'    => $request->countries_id,
+                    'products_region_id'    => $request->region_id,
 					]);
 					
 		$slug_flag = false;
@@ -223,7 +230,6 @@ class AdminProductsController extends Controller
 			$products_types_of_services = 'products_types_of_services_'.$languages_data->languages_id;
 			$products_email = 'products_email_'.$languages_data->languages_id;
 			$products_incorporation = 'products_incorporation_'.$languages_data->languages_id;
-			$products_country = 'products_country_'.$languages_data->languages_id;
             $products_address = 'products_address_'.$languages_data->languages_id;
             $products_profit = 'products_profit_'.$languages_data->languages_id;
 			$products_reason = 'products_reason_'.$languages_data->languages_id;
@@ -328,12 +334,11 @@ class AdminProductsController extends Controller
 					'products_site'  	     		 	=>   $request->$products_site,
 					'products_email'  	     		 	=>   $request->$products_email,
 					'products_incorporation'  	      	=>   $request->$products_incorporation,
-					'products_country'  	     		=>   $request->$products_country,
 					'products_address'  	     		=>   $request->$products_address,
 					'products_profit'  	     		 	=>   $request->$products_profit,
 					'products_reason'  	     		 	=>   $request->$products_reason,
-                'products_contact'  	     		 	=>   $request->$products_contact,
-                'products_phone'  	     		 	=>   $request->$products_phone,
+                    'products_contact'  	     		=>   $request->$products_contact,
+                    'products_phone'  	     		 	=>   $request->$products_phone,
                     'language_id'			 		 	=>   $languages_data->languages_id,
 					'products_id'					 	=>   $products_id,
 					'products_url'			 		 	=>   $request->$products_url,
@@ -1373,6 +1378,10 @@ class AdminProductsController extends Controller
 
 		$product = DB::table('products')
 
+
+            ->leftJoin('countries','countries.countries_id','=','products.products_country_id')
+            ->leftJoin('region','region.region_id','=','products.products_region_id')
+
 			->where('products.products_id','=', $products_id)
 
 			->get();
@@ -1407,7 +1416,6 @@ class AdminProductsController extends Controller
 				$description_data[$languages_data->languages_id]['products_types_of_services'] = $description[0]->products_types_of_services;
 				$description_data[$languages_data->languages_id]['products_email'] = $description[0]->products_email;
 				$description_data[$languages_data->languages_id]['products_incorporation'] = $description[0]->products_incorporation;
-				$description_data[$languages_data->languages_id]['products_country'] = $description[0]->products_country;
 				$description_data[$languages_data->languages_id]['products_address'] = $description[0]->products_address;
 				$description_data[$languages_data->languages_id]['products_profit'] = $description[0]->products_profit;
 				$description_data[$languages_data->languages_id]['products_reason'] = $description[0]->products_reason;
@@ -1445,7 +1453,6 @@ class AdminProductsController extends Controller
                 $description_data[$languages_data->languages_id]['products_types_of_services'] = '';
                 $description_data[$languages_data->languages_id]['products_email'] = '';
                 $description_data[$languages_data->languages_id]['products_incorporation'] = '';
-                $description_data[$languages_data->languages_id]['products_country'] = '';
                 $description_data[$languages_data->languages_id]['products_address'] = '';
                 $description_data[$languages_data->languages_id]['products_profit'] = '';
                 $description_data[$languages_data->languages_id]['products_reason'] = '';
@@ -1482,6 +1489,13 @@ class AdminProductsController extends Controller
 
 		$result['product'] = $product;
 
+		if (isset($result['product'][0]->products_country_id)) {
+            $result['region'] = DB::table('region')->where('region_countries_id', $result['product'][0]->products_country_id)->get();
+        } else {
+		    $result['region'] = [];
+        }
+		$result['countries'] = DB::table('countries')->select('countries_id', 'countries_name')->get();
+
 		
 
 		//get product category
@@ -1490,7 +1504,7 @@ class AdminProductsController extends Controller
 
 				->leftJoin('categories','categories.categories_id','=','products_to_categories.categories_id')
 
-				->leftJoin('categories_description','categories_description.categories_id', '=', 'categories.categories_id')				
+				->leftJoin('categories_description','categories_description.categories_id', '=', 'categories.categories_id')
 
 				->where('products_id','=', $products_id)->where('categories_description.language_id','=', $language_id )
 
@@ -1709,7 +1723,11 @@ class AdminProductsController extends Controller
 
 					'products_slug'			 =>   $slug,
 
-					'products_type'			 =>	  $request->products_type,					
+					'products_type'			 =>	  $request->products_type,
+
+					'products_country_id'	 =>	  $request->products_country_id,
+
+					'products_region_id'	 =>	  $request->products_region_id,
 
 					'is_feature'			 =>	  $request->is_feature
 

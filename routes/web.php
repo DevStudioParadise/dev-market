@@ -197,6 +197,15 @@ Route::group(['prefix' => 'admin'], function () {
 			Route::post('/updatecountry', 'AdminTaxController@updatecountry');
 			Route::post('/deletecountry', 'AdminTaxController@deletecountry');
 
+			//region
+			Route::get('/region', 'AdminRegionController@region');
+			Route::get('/getRegionByCounty/{country}', 'AdminRegionController@getRegionByCounty')->name('getRegionByCounty');
+			Route::get('/addregion', 'AdminRegionController@addregion');
+			Route::post('/addnewregion', 'AdminRegionController@addnewregion');
+			Route::get('/editregion/{id}', 'AdminRegionController@editregion');
+			Route::post('/updateregion', 'AdminRegionController@updateregion');
+			Route::post('/deleteregion', 'AdminRegionController@deleteregion');
+
 			//zones
 			Route::get('/listingZones', 'AdminTaxController@listingZones');
 			Route::get('/addZone', 'AdminTaxController@addZone');

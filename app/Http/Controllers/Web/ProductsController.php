@@ -123,14 +123,18 @@ class ProductsController extends DataController
             $max_payback = '';
         }
 
-        if (!empty($request->country)) {
-            $country = $request->country;
+        if (!empty($request->countries_id)) {
+            $countries_id = $request->countries_id;
         } else {
-            $country = '';
+            $countries_id = '';
+        }
+        if (!empty($request->region_id)) {
+            $region_id = $request->region_id;
+        } else {
+            $region_id = '';
         }
 
         $result['old_value'] = [
-            'country' => $country,
             'max_price' => $max_price,
             'min_price' => $min_price,
             'max_payback' => $max_payback,
@@ -138,7 +142,9 @@ class ProductsController extends DataController
             'max_age' => $max_age,
             'min_age' => $min_age,
             'max_emp' => $max_emp,
-            'min_emp' => $min_emp
+            'min_emp' => $min_emp,
+            'countries_id' => $countries_id,
+            'region_id' => $region_id
         ];
 
         //category
@@ -168,6 +174,13 @@ class ProductsController extends DataController
 		}
 		
 		$result['category_name'] = $category_name;
+		$result['countries_id'] = DB::table('countries')->get();
+		if ($result['old_value']['countries_id']) {
+            $result['region_id'] = DB::table('region')->where('region_countries_id', '=', $result['old_value']['countries_id'])->get();
+        } else {
+            $result['region_id'] = null;
+        }
+
 		$result['category_slug'] = $category_slug;
 		$result['sub_category_name'] = $sub_category_name;
 		 
@@ -237,9 +250,10 @@ class ProductsController extends DataController
             'max_age'=>$max_age,
             'min_payback'=>$min_payback,
             'max_payback'=>$max_payback,
-            'country'=> $country
+            'region_id'=>$region_id,
+            'countries_id'=>$countries_id
         );
-		
+
 		$products = $myVar->products($data);
 		$result['products'] = $products;
 		
@@ -328,10 +342,15 @@ class ProductsController extends DataController
             $max_payback = '';
         }
 
-        if(!empty($request->country)){
-            $country = $request->country;
-        }else{
-            $country = '';
+        if (!empty($request->countries_id)) {
+            $countries_id = $request->countries_id;
+        } else {
+            $countries_id = '';
+        }
+        if (!empty($request->region_id)) {
+            $region_id = $request->region_id;
+        } else {
+            $region_id = '';
         }
 
         if(!empty($request->limit)){
@@ -391,7 +410,8 @@ class ProductsController extends DataController
             'max_age'=>$max_age,
             'min_payback'=>$min_payback,
             'max_payback'=>$max_payback,
-            'country'=> $country
+            'region_id'=>$region_id,
+            'countries_id'=>$countries_id
         );
 		$detail = $myVar->products($data);
 		$result['detail'] = $detail;
@@ -411,7 +431,8 @@ class ProductsController extends DataController
             'max_age'=>$max_age,
             'min_payback'=>$min_payback,
             'max_payback'=>$max_payback,
-            'country'=> $country);
+            'region_id'=>$region_id,
+            'countries_id'=>$countries_id);
 		$simliar_products = $myVar->products($data);
 		$result['simliar_products'] = $simliar_products;
 		
@@ -493,11 +514,16 @@ class ProductsController extends DataController
 		}else{
 			$type = '';
 		}
-		if(!empty($request->country)){
-            $country = $request->country;
-		}else{
-            $country = '';
-		}
+        if (!empty($request->countries_id)) {
+            $countries_id = $request->countries_id;
+        } else {
+            $countries_id = '';
+        }
+        if (!empty($request->region_id)) {
+            $region_id = $request->region_id;
+        } else {
+            $region_id = '';
+        }
 		
 		//if(!empty($request->category_id)){
 		if(!empty($request->category) and $request->category!='all'){
@@ -552,7 +578,8 @@ class ProductsController extends DataController
             'max_age'=>$max_age,
             'min_payback'=>$min_payback,
             'max_payback'=>$max_payback,
-            'country'=>$country,
+            'region_id'=>$region_id,
+            'countries_id'=>$countries_id
             );
 		$products = $myVar->products($data);
 		$result['products'] = $products;	
@@ -578,7 +605,7 @@ class ProductsController extends DataController
 						}
 						
 		$priceContent 	=	$price->max('products_price');
-						$coutries = DB::table('products_description')->select(DB::raw("DISTINCT(products_country) as products_country"))->whereNotNull('products_country')->get();
+						$countries = DB::table('countries')->get();
 		if(!empty($priceContent)){
 			$maxPrice = round($priceContent+1);	
 		}else{
@@ -660,15 +687,15 @@ class ProductsController extends DataController
 						}
 						$index3++;
 					}
-					$response = array('success'=>'1', 'attr_data'=>$attr, 'message'=> Lang::get('website.Returned all filters successfully'), 'maxPrice'=>$maxPrice, 'coutries' => $coutries);
+					$response = array('success'=>'1', 'attr_data'=>$attr, 'message'=> Lang::get('website.Returned all filters successfully'), 'maxPrice'=>$maxPrice, 'countries_id' => $countries);
 				}else{
-					$response = array('success'=>'0', 'attr_data'=>array(), 'message'=> Lang::get('website.Filter is empty for this category'), 'maxPrice'=>$maxPrice, 'coutries' => $coutries);
+					$response = array('success'=>'0', 'attr_data'=>array(), 'message'=> Lang::get('website.Filter is empty for this category'), 'maxPrice'=>$maxPrice, 'countries_id' => $countries);
 				}
 			
 			}
 			
 		}else{
-			$response = array('success'=>'0', 'attr_data'=>array(), 'message'=>Lang::get('website.Filter is empty for this category'), 'maxPrice'=>$maxPrice, 'coutries' => $coutries);
+			$response = array('success'=>'0', 'attr_data'=>array(), 'message'=>Lang::get('website.Filter is empty for this category'), 'maxPrice'=>$maxPrice, 'countries_id' => $countries);
 		}
 		
 		return($response);

@@ -40,7 +40,6 @@ class DataController extends Controller
      */
 	
 	public function commonContent(){
-		
 		$languages = DB::table('languages')->where('is_default','1')->get();
 		
 		if(empty(Session::get('language_id'))){
@@ -139,7 +138,7 @@ class DataController extends Controller
 		}
 		
 		//recent product
-		$data = array('page_number'=>0, 'type'=>'', 'limit'=>5, 'categories_id'=>'', 'search'=>'', 'min_price'=>'', 'max_price'=>'', 'min_age'=>'', 'max_age'=>'', 'min_emp'=>'', 'max_emp'=>'','min_payback'=>'', 'max_payback'=>'', 'country' => '');
+		$data = array('page_number'=>0, 'type'=>'', 'limit'=>5, 'categories_id'=>'', 'search'=>'', 'min_price'=>'', 'max_price'=>'', 'min_age'=>'', 'max_age'=>'', 'min_emp'=>'', 'max_emp'=>'','min_payback'=>'', 'max_payback'=>'', 'countries_id' => '', 'region_id' => '');
 		$products = $this->products($data);
 		$result['recentProducts'] = $products;
 		
@@ -159,7 +158,7 @@ class DataController extends Controller
 		return ($result);
 	}
 	
-	//categories 
+	//categories
 	public function categories(){
 				
 		$result 	= 	array();
@@ -238,13 +237,12 @@ class DataController extends Controller
 	
 	//products 
 	public function products($data){
-		
 		if(empty($data['page_number']) or $data['page_number'] == 0 ){
 			$skip								=   $data['page_number'].'0';
 		}else{
 			$skip								=   $data['limit']*$data['page_number'];
-		}		
-		
+		}
+
 		$min_price	 							=   $data['min_price'];	
 		$max_price	 							=   $data['max_price'];
         $min_emp	 							=   $data['min_emp'];
@@ -256,7 +254,8 @@ class DataController extends Controller
         $take									=   $data['limit'];
 		$currentDate 							=   time();	
 		$type									=	$data['type'];
-		$country								=	$data['country'];
+		$countries_id								=	$data['countries_id'];
+		$region_id								=	$data['region_id'];
 
 		if($type=="atoz"){
 			$sortby								=	"products_name";
@@ -286,8 +285,8 @@ class DataController extends Controller
 		}else{
 			$sortby = "products.products_id";
 			$order = "desc";
-		}	
-				
+		}
+
 		$filterProducts = array();
 		$eliminateRecord = array();
 			
@@ -368,10 +367,14 @@ class DataController extends Controller
                 $categories->whereBetween('products.products_payback', [$min_payback, $max_payback]);
             }
 
-            if(!empty($country)){
-                $categories->where('products_description.products_country', 'like', $country.'%');
+            if(!empty($countries_id)){
+                $categories->where('products.products_country_id', '=', $countries_id);
             }
-			
+            if(!empty($region_id)){
+                $categories->where('products.products_region_id', '=', $region_id);
+            }
+
+
 			if(!empty($data['search'])){
 				
 				$searchValue = $data['search'];
@@ -422,8 +425,11 @@ class DataController extends Controller
                 if(!empty($max_payback)){
                     $categories->whereBetween('products.products_payback', [$min_payback, $max_payback]);
                 }
-                if(!empty($country)){
-                    $categories->where('products_description.products_country', 'like', $country.'%');
+                if(!empty($countries_id)){
+                    $categories->where('products.products_country_id', '=', $countries_id);
+                }
+                if(!empty($region_id)){
+                    $categories->where('products.products_region_id', '=', $region_id);
                 }
 				$categories->orWhere('products_options_values.products_options_values_name', 'LIKE', '%'.$searchValue.'%')->where('products_status','=',1);				
 				if(!empty($data['categories_id'])){
@@ -471,8 +477,11 @@ class DataController extends Controller
                 if(!empty($max_payback)){
                     $categories->whereBetween('products.products_payback', [$min_payback, $max_payback]);
                 }
-                if(!empty($country)){
-                    $categories->where('products_description.products_country', 'like', $country.'%');
+                if(!empty($countries_id)){
+                    $categories->where('products.products_country_id', '=', $countries_id);
+                }
+                if(!empty($region_id)){
+                    $categories->where('products.products_region_id', '=', $region_id);
                 }
 				$categories->orWhere('products_name', 'LIKE', '%'.$searchValue.'%')->where('products_status','=',1);	
 							
@@ -522,8 +531,11 @@ class DataController extends Controller
                 if(!empty($max_payback)){
                     $categories->whereBetween('products.products_payback', [$min_payback, $max_payback]);
                 }
-                if(!empty($country)){
-                    $categories->where('products_description.products_country', 'like', $country.'%');
+                if(!empty($countries_id)){
+                    $categories->where('products.products_country_id', '=', $countries_id);
+                }
+                if(!empty($region_id)){
+                    $categories->where('products.products_region_id', '=', $region_id);
                 }
 				$categories->orWhere('products_model', 'LIKE', '%'.$searchValue.'%')->where('products_status','=',1);
 				
@@ -739,7 +751,6 @@ class DataController extends Controller
                 'products_description.products_types_of_services',
                 'products_description.products_email',
                 'products_description.products_email',
-                'products_description.products_country',
                 'products_description.products_address',
                 'products_description.products_profit',
                 'products_description.products_reason',
