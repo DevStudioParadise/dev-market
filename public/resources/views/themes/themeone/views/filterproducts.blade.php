@@ -7,16 +7,16 @@
                         $current_date = date("Y-m-d", strtotime("now"));
                         $string = substr($products->products_date_added, 0, strpos($products->products_date_added, ' '));
                         $date=date_create($string);
-                        date_add($date,date_interval_create_from_date_string($web_setting[20]->value." days"));						
+                        date_add($date,date_interval_create_from_date_string($web_setting[20]->value." days"));
                         $after_date = date_format($date,"Y-m-d");
                         if($after_date>=$current_date){
                         print '<span class="new-tag">New</span>';
                     }
-                    
+
                     if(!empty($products->discount_price)){
-                        $discount_price = $products->discount_price;	
-                        $orignal_price = $products->products_price;	
-                        
+                        $discount_price = $products->discount_price;
+                        $orignal_price = $products->products_price;
+
                         if(($orignal_price+0)>0){
 							$discounted_price = $orignal_price-$discount_price;
 							$discount_percentage = $discounted_price/$orignal_price*100;
@@ -33,7 +33,7 @@
                         @endforeach
                     </span>
                     <h2 class="title wrap-dot-1">{{$products->products_name}}</h2>
-                    
+
                     <div class="description">
 						<?=stripslashes($products->products_description)?>
                         <p class="read-more"></p>
@@ -47,23 +47,23 @@
                                 {{$web_setting[19]->value}}{{$products->products_price+0}}, {{$products->products_price_byn+0}} BYN
                             @endif
                         </div>
-                        
+
                         <div class="buttons">
                             <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$products->products_slug)}}">@lang('website.View Detail')</a>
                         </div>
                     </div>
                 </div>
-            
+
                 <div class="product-hover">
                     <div class="icons">
                         <div class="icon-liked">
                             <span products_id = '{{$products->products_id}}' class="fa @if($products->isLiked==1) fa-heart @else fa-heart-o @endif is_liked"></span>
-                        </div>                    
+                        </div>
                         @if($products->products_type!=2)
                             <a href="{{ URL::to('/product-detail/'.$products->products_slug)}}" class="fa fa-eye"></a>
                         @endif
                     </div>
-                
+
                     <div class="buttons">
                         <a class="btn btn-block btn-secondary" href="{{ URL::to('/product-detail/'.$products->products_slug)}}">@lang('website.View Detail')</a>
                     </div>
@@ -71,8 +71,8 @@
             </article>
         </div>
     @endforeach
-    <input id="filter_total_record" type="hidden" value="{{$result['products']['total_record']}}"> 
-    
+    <input id="filter_total_record" type="hidden" value="{{$result['products']['total_record']}}">
+
     @if(count($result['products']['product_data'])> 0 and $result['limit'] > $result['products']['total_record'])
 		<style>
 			#load_products{

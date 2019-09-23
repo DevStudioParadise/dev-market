@@ -313,7 +313,13 @@
                                             <div class="price-box">
                                                 <span>@lang('labels.ProductCountry')&nbsp;:</span>
                                                 <span class="total_price">
-                                                    {{$result['detail']['product_data'][0]->products_country}}
+                                                    {{$result['detail']['product_data'][0]->countries_name}}
+                                                </span>
+                                            </div>
+                                            <div class="price-box">
+                                                <span>@lang('labels.ProductRegion')&nbsp;:</span>
+                                                <span class="total_price">
+                                                    {{$result['detail']['product_data'][0]->region_name}}
                                                 </span>
                                             </div>
                                             <div class="price-box">

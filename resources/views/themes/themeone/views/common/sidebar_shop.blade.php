@@ -154,12 +154,12 @@
 					$url.= $sign."search=".$_REQUEST['search'];
 				}
 			?>
-        	<a href="{{ URL::to('/shop'.$url)}}" class="btn btn-dark" id="apply_options"> @lang('website.Reset') </a>
+        	<a href="{{ URL::to('/shop'.$url)}}" class="btn btn-dark" id="apply_options" style="width: 40%; background-color: green"> @lang('website.Reset') </a>
              @if(app('request')->input('filters_applied')==1)
-        	<button type="button" class="btn btn-secondary" id="apply_options_btn"> @lang('website.Apply')</button>
+        	<button type="button" class="btn btn-secondary" id="apply_options_btn" style="width: 40%; background-color: red"> @lang('website.Apply')</button>
             @else
         	<!--<button type="button" class="btn btn-secondary" id="apply_options_btn" disabled> @lang('website.Apply')</button>-->
-            <button type="button" class="btn btn-secondary" id="apply_options_btn" > @lang('website.Apply')</button>
+            <button type="button" class="btn btn-secondary" id="apply_options_btn" style="width: 40%; background-color: red; color: white"> @lang('website.Apply')</button>
             @endif
         </div>
 		</div>

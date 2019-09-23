@@ -1220,7 +1220,7 @@ $(document).on('click', '#updateAddress', function(e){
 
 	//deleteCountrytModal
 	$(document).on('click', '#deleteRegionId', function(){
-		var region_id = $(this).attr('countries_id');
+		var region_id = $(this).attr('region_id');
 		$('#region_id').val(region_id);
 		$("#deleteRegionModal").modal('show');
 	});
@@ -1230,6 +1230,24 @@ $(document).on('click', '#updateAddress', function(e){
 		var zone_id = $(this).attr('zone_id');
 		$('#zone_id').val(zone_id);
 		$("#deleteZoneModal").modal('show');
+	});
+	$('#country').change(function () {
+		let region = $('#region');
+		let currentCountry = $('#country').val();
+		region.empty()
+				.append('<option value="">{{ trans('labels.ChooseRegion') }}</option>')
+				.find('option:first')
+				.attr("selected","selected");
+		$.ajax({
+			url: '{{ URL::to("admin/getRegionByCounty")}}/'+currentCountry,
+			type: "GET",
+			success: function (data) {
+				$.each(data, function(index, item) {
+					region.append(new Option(item.region_name, item.region_id));
+				});
+			},
+		});
+
 	});
 
 	//deleteTaxClassModal

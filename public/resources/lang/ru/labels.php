@@ -1546,6 +1546,19 @@ return [
     'EnterProductPhoneIn' => 'Введите номер телефона',
     'EnterProductContactIn' => 'Введите контактную информацию',
     'ProductPhone' => 'Телефон',
-    'ProductContact' => 'Контакты'
+    'ProductContact' => 'Контакты',
+    'RegionAddedMessage' => 'Регион добавлен',
+    'ProductRegion' => 'Регион',
+    'ChooseCountries' => 'Ввведите страну',
+    'ChooseRegion' => 'Ввведите регион',
+    'Region' => 'Регион',
+    'AddRegion' => 'Добавить регион',
+    'RegionNameText' => 'Наименование региона',
+    'link_region' => 'Регион',
+    'RegionName' => 'Название',
+    'ChooseRegionText' => 'Введите регион',
+    'ChooseCountriesText' => 'Введите текст',
+
+
 ];
 

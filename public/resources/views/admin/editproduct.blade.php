@@ -130,6 +130,38 @@
                                   	  <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">{{ trans('labels.ChooseManufacturerText') }}..</span>
                                   </div>
                                 </div>
+                              <div class="form-group">
+                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Countries') }} </label>
+                                  <div class="col-sm-10 col-md-4">
+                                      <select class="form-control" name="products_country_id" id="country">
+                                          <option value="">{{ trans('labels.ChooseCountries') }}</option>
+                                          @foreach ($result['countries'] as $country)
+                                              <option value="{{ $country->countries_id }}"
+                                                      @if($result['product'][0]->products_country_id == $country->countries_id )
+                                                      selected
+                                                      @endif
+                                              >{{ $country->countries_name }}</option>
+                                          @endforeach
+                                      </select><span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                      {{ trans('labels.ChooseCountriesText') }}.</span>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Region') }} </label>
+                                  <div class="col-sm-10 col-md-4">
+                                      <select class="form-control" name="products_region_id" id="region">
+                                          <option value="">{{ trans('labels.ChooseRegion') }}</option>
+                                          @foreach ($result['region'] as $region)
+                                              <option value="{{ $region->region_id }}"
+                                                      @if($result['product'][0]->products_region_id == $region->region_id )
+                                                      selected
+                                                      @endif
+                                              >{{ $region->region_name }}</option>
+                                          @endforeach
+                                      </select><span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                      {{ trans('labels.ChooseRegionText') }}.</span>
+                                  </div>
+                              </div>
                                 <hr>
                                 <div class="form-group">
                                   <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.FlashSale') }}</label>
@@ -393,15 +425,6 @@
                                           <input type="text" name="products_incorporation_<?=$description_data['languages_id']?>" class="form-control field-validate" value='{{$description_data['products_incorporation']}}'>
                                           <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
                                            {{ trans('labels.EnterProductIncorporationIn') }} {{ $description_data['language_name'] }} </span>
-                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
-                                      </div>
-                                  </div>
-                                  <div class="form-group">
-                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductCountry') }} ({{ $description_data['language_name'] }})</label>
-                                      <div class="col-sm-10 col-md-4">
-                                          <input type="text" name="products_country_<?=$description_data['languages_id']?>" class="form-control field-validate" value='{{$description_data['products_country']}}'>
-                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                           {{ trans('labels.EnterProductCountryIn') }} {{ $description_data['language_name'] }} </span>
                                           <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
                                       </div>
                                   </div>

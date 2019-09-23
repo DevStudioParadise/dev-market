@@ -1604,6 +1604,16 @@ return [
     'ProductContact' => 'Product Contact',
     'EnterProductPhoneIn' => 'Enter Product Phone In',
     'EnterProductContactIn' => 'Enter Product Contact In',
-
+    'RegionAddedMessage' => 'Region Added',
+    'ProductRegion' => 'Region',
+    'ChooseCountries' => 'Choose Countries',
+    'ChooseRegion' => 'Choose Region',
+    'Region' => 'Region',
+    'AddRegion' => 'Add Region',
+    'RegionNameText' => 'Region Name',
+    'link_region' => 'Region',
+    'RegionName' => 'Region Name',
+    'ChooseRegionText' => 'Choose Region',
+    'ChooseCountriesText' => 'Choose Countries',
 ];
 

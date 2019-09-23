@@ -110,6 +110,27 @@
                                       {{ trans('labels.ChooseManufacturerText') }}.</span>
                                   </div>
                                 </div>
+                              <div class="form-group">
+                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Countries') }} </label>
+                                  <div class="col-sm-10 col-md-4">
+                                      <select class="form-control" name="countries_id" id="country">
+                                          <option value="">{{ trans('labels.ChooseCountries') }}</option>
+                                          @foreach ($result['countries'] as $country)
+                                              <option value="{{ $country->countries_id }}">{{ $country->countries_name }}</option>
+                                          @endforeach
+                                      </select><span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                      {{ trans('labels.ChooseCountriesText') }}.</span>
+                                  </div>
+                              </div>
+                              <div class="form-group">
+                                  <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.Region') }} </label>
+                                  <div class="col-sm-10 col-md-4">
+                                      <select class="form-control" name="region_id" id="region">
+                                          <option value="">{{ trans('labels.ChooseRegion') }}</option>
+                                      </select><span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
+                                      {{ trans('labels.ChooseRegionText') }}.</span>
+                                  </div>
+                              </div>
                                 <hr>
                                 <div class="form-group">
                                   <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.FlashSale') }}</label>
@@ -307,15 +328,6 @@
                                           <input type="text" name="products_incorporation_<?=$languages->languages_id?>" class="form-control field-validate">
                                           <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
                                            {{ trans('labels.EnterProductIncorporationIn') }} {{ $languages->name }} </span>
-                                          <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
-                                      </div>
-                                  </div>
-                                  <div class="form-group">
-                                      <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.ProductCountry') }} ({{ $languages->name }})</label>
-                                      <div class="col-sm-10 col-md-4">
-                                          <input type="text" name="products_country_<?=$languages->languages_id?>" class="form-control field-validate">
-                                          <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                           {{ trans('labels.EnterProductCountryIn') }} {{ $languages->name }} </span>
                                           <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
                                       </div>
                                   </div>
