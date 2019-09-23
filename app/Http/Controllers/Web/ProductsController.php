@@ -234,7 +234,7 @@ class ProductsController extends DataController
 			$result['filter_attribute']['option_values'] = $option_values;
 		}
 		
-		$myVar = new DataController();	
+		$myVar = new DataController();
 		$data = array(
 		    'page_number'=>$page_number,
             'type'=>$type,
@@ -359,7 +359,10 @@ class ProductsController extends DataController
 			$limit = 15;
 		}
 		
-		$products = DB::table('products')->where('products_slug',$request->slug)->get();
+		$products = DB::table('products')->where('products_slug',$request->slug)
+            ->leftJoin('countries', 'products_country_id', '=', 'countries_id')
+            ->leftJoin('region', 'products_region_id', '=', 'region_id')
+            ->get();
 		
 		//category		
 		$category = DB::table('categories')->leftJoin('categories_description','categories_description.categories_id','=','categories.categories_id')->leftJoin('products_to_categories','products_to_categories.categories_id','=','categories.categories_id')->where('products_to_categories.products_id',$products[0]->products_id)->where('categories.parent_id',0)->where('language_id',Session::get('language_id'))->get();
@@ -441,8 +444,7 @@ class ProductsController extends DataController
 		$result['cartArray'] = $myVar->cartIdArray($cart);
 		
 		//liked products
-		$result['liked_products'] = $this->likedProducts();	
-		
+		$result['liked_products'] = $this->likedProducts();
 		return view("product-detail", $title)->with('result', $result); 
 	}
 	

@@ -55,11 +55,13 @@
                 <div class="form-group">
                         <select class="form-control" name="region_id" id="region" style="border-color:#e53935">
                             <option value="">{{ trans('labels.ChooseRegion') }}</option>
+                            @if($result['region_id'])
                             @foreach ($result['region_id'] as $region)
                                 <option value="{{ $region->region_id }}"
                                 @if($result['old_value']['region_id'] == $region->region_id) selected @endif
                                 >{{ $region->region_name }}</option>
                             @endforeach
+                                @endif
                         </select>
                     </div>
                 </div>

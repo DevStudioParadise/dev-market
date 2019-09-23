@@ -1604,6 +1604,6 @@ return [
     'ProductContact' => 'Product Contact',
     'EnterProductPhoneIn' => 'Enter Product Phone In',
     'EnterProductContactIn' => 'Enter Product Contact In',
-    'RegionAddedMessage' => 'Region Added'
+
 ];
 

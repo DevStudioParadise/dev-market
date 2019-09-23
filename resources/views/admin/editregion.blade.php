@@ -50,12 +50,12 @@
                             {!! Form::hidden('id',  $countryData['region'][0]->region_id , array('class'=>'form-control', 'id'=>'id')) !!}
 
                              <div class="form-group">
-                                 <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.RegionName') }}
+                                 <label for="name" class="col-sm-2 col-md-3 control-label">{{ trans('labels.CountryName') }}
                                  </label>
                                  <div class="col-sm-10 col-md-4">
                                      {!! Form::select('region_countries_id', $countryData['countries'], $countryData['region'][0]->region_countries_id)!!}
                                      <span class="help-block" style="font-weight: normal;font-size: 11px;margin-bottom: 0;">
-                                    {{ trans('labels.RegionNameText') }}</span>
+                                    {{ trans('labels.CountryNameText') }}</span>
                                      <span class="help-block hidden">{{ trans('labels.textRequiredFieldMessage') }}</span>
                                  </div>
                              </div>

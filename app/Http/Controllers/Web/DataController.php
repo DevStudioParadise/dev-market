@@ -186,6 +186,8 @@ class DataController extends Controller
 					->LeftJoin('categories as sub_categories', 'sub_categories.parent_id', '=', 'categories.categories_id')
 					->LeftJoin('products_to_categories', 'products_to_categories.categories_id', '=', 'sub_categories.categories_id')
 					->LeftJoin('products', 'products.products_id', '=', 'products_to_categories.products_id')
+                    ->leftJoin('countries', 'products.products_country_id', '=', 'countries.countries_id')
+                    ->leftJoin('region', 'products.products_region_id', '=', 'region.region_id')
 					->select('categories.categories_id', DB::raw('COUNT(DISTINCT products.products_id) as total_products'))
 					->where('categories.categories_id','=', $categories_id)
 					->get();
@@ -214,6 +216,8 @@ class DataController extends Controller
 								
 				$individual_products = DB::table('products_to_categories')
 					->LeftJoin('products', 'products.products_id', '=', 'products_to_categories.products_id')
+                    ->leftJoin('countries', 'products.products_country_id', '=', 'countries.countries_id')
+                    ->leftJoin('region', 'products.products_region_id', '=', 'region.region_id')
 					->select('products_to_categories.categories_id', DB::raw('COUNT(DISTINCT products.products_id) as total_products'))
 					->where('products_to_categories.categories_id','=', $sub_categories_id)
 					->get();
@@ -293,8 +297,9 @@ class DataController extends Controller
 			$categories = DB::table('products')
 				->leftJoin('manufacturers','manufacturers.manufacturers_id','=','products.manufacturers_id')
 				->leftJoin('manufacturers_info','manufacturers.manufacturers_id','=','manufacturers_info.manufacturers_id')
-				->leftJoin('products_description','products_description.products_id','=','products.products_id');
-				
+				->leftJoin('products_description','products_description.products_id','=','products.products_id')
+                ->leftJoin('countries', 'products.products_country_id', '=', 'countries.countries_id')
+                ->leftJoin('region', 'products.products_region_id', '=', 'region.region_id');
 			if(!empty($data['categories_id'])){
 				$categories->LeftJoin('products_to_categories', 'products.products_id', '=', 'products_to_categories.products_id')
 						->leftJoin('categories','categories.categories_id','=','products_to_categories.categories_id')
@@ -318,18 +323,18 @@ class DataController extends Controller
 			//parameter special
 			elseif($type == "special"){
 				$categories->LeftJoin('specials', 'specials.products_id', '=', 'products.products_id')
-					->select('products.*', 'products_description.*', 'manufacturers.*', 'manufacturers_info.manufacturers_url', 'specials.specials_new_products_price as discount_price', 'specials.specials_new_products_price as discount_price');
+					->select('products.*','countries.*','region.*', 'products_description.*', 'manufacturers.*', 'manufacturers_info.manufacturers_url', 'specials.specials_new_products_price as discount_price', 'specials.specials_new_products_price as discount_price');
 			}
 			elseif($type == "flashsale"){
 				//flash sale				
 				$categories->LeftJoin('flash_sale', 'flash_sale.products_id', '=', 'products.products_id')
-				->select(DB::raw(time().' as server_time'),'products.*', 'products_description.*', 'manufacturers.*', 'manufacturers_info.manufacturers_url','flash_sale.flash_start_date', 'flash_sale.flash_expires_date', 'flash_sale.flash_sale_products_price as flash_price');
+				->select(DB::raw(time().' as server_time'),'products.*','countries.*','region.*', 'products_description.*', 'manufacturers.*', 'manufacturers_info.manufacturers_url','flash_sale.flash_start_date', 'flash_sale.flash_expires_date', 'flash_sale.flash_sale_products_price as flash_price');
 				
 			}
 			else{
 				$categories->LeftJoin('specials', function ($join) use ($currentDate) {  
 					$join->on('specials.products_id', '=', 'products.products_id')->where('status', '=', '1')->where('expires_date', '>', $currentDate);
-				})->select('products.*','products_description.*', 'manufacturers.*', 'manufacturers_info.manufacturers_url', 'specials.specials_new_products_price as discount_price');
+				})->select('products.*','products_description.*','countries.*','region.*', 'manufacturers.*', 'manufacturers_info.manufacturers_url', 'specials.specials_new_products_price as discount_price');
 			}
 			
 			if($type == "special"){ //deals special products
@@ -725,7 +730,7 @@ class DataController extends Controller
 				}else{
 					$responseData = array('success'=>'0', 'product_data'=>$result,  'message'=>Lang::get('website.Empty record'), 'total_record'=>count($total_record));
 				}	
-				
+
 		return($responseData);
 	
 	}	
@@ -736,6 +741,8 @@ class DataController extends Controller
 		$cart = DB::table('customers_basket')
 			->join('products', 'products.products_id','=', 'customers_basket.products_id')
 			->join('products_description', 'products_description.products_id','=', 'products.products_id')
+            ->leftJoin('countries', 'products.products_country_id', '=', 'countries.countries_id')
+            ->leftJoin('region', 'products.products_region_id', '=', 'region.region_id')
 			->select(
 			    'customers_basket.*',
                 'products.products_model as model',
@@ -755,7 +762,9 @@ class DataController extends Controller
                 'products_description.products_profit',
                 'products_description.products_reason',
                 'products_description.products_contact',
-                'products_description.products_phone'
+                'products_description.products_phone',
+                'countries.*',
+                'region.*'
             )->where('customers_basket.is_order', '=', '0')->where('products_description.language_id','=', '1');
 			
 			if(empty(session('customers_id'))){
