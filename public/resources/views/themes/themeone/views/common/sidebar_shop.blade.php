@@ -71,8 +71,11 @@
 				<div class="card-body">
                     <div id="slider-range"></div>
                     <div id="slider-values">
-                        <div class="slider-value-0">{{$web_setting[19]->value}}<input type="text" readonly id="min_price_show"></div>
-                        <div class="slider-value-1">{{$web_setting[19]->value}}<input type="text" readonly id="max_price_show"></div>
+                        <div class="slider-value-0"><input type="text" readonly id="min_price_show"></div>
+                        <div class="driver" style="margin: 0 17px;">
+                            <span>—</span>
+                        </div>
+                        <div class="slider-value-1"><input type="text" readonly id="max_price_show"></div>
                     </div>
                     <input type="hidden" class="maximum_price" value="{{$result['filters']['maxPrice']}}">
 				</div>
@@ -84,6 +87,9 @@
                     <div id="slider-range-emp"></div>
                     <div id="slider-values-emp">
                         <div class="slider-value-emp-0"><input type="text" readonly id="min_emp_show"></div>
+                        <div class="driver" style="margin: 0 17px;">
+                            <span>—</span>
+                        </div>
                         <div class="slider-value-emp-1"><input type="text" readonly id="max_emp_show"></div>
                     </div>
                     <input type="hidden" class="maximum_emp" value="60">
@@ -96,6 +102,9 @@
                     <div id="slider-range-age"></div>
                     <div id="slider-values-age">
                         <div class="slider-value-age-0"><input type="text" readonly id="min_age_show"></div>
+                        <div class="driver" style="margin: 0 17px;">
+                            <span>—</span>
+                        </div>
                         <div class="slider-value-age-1"><input type="text" readonly id="max_age_show"></div>
                     </div>
                     <input type="hidden" class="maximum_age" value="60">
@@ -108,6 +117,9 @@
                     <div id="slider-range-payback"></div>
                     <div id="slider-values-payback">
                         <div class="slider-value-payback-0"><input type="text" readonly id="min_payback_show"></div>
+                        <div class="driver" style="margin: 0 17px;">
+                            <span>—</span>
+                        </div>
                         <div class="slider-value-payback-1"><input type="text" readonly id="max_payback_show"></div>
                     </div>
                     <input type="hidden" class="maximum_payback" value="60">

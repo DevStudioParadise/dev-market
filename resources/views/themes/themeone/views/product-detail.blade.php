@@ -84,7 +84,7 @@
                                     <div class="carousel-indicators" style="display: inline-block; margin-left: 0; margin-right: 0;">                                
                                         <div class="thumbnail active" data-slide-to="0" data-target="#product-slider" style="float: left; margin-bottom:10px;">
                                             <a id="carousel-selector-0">
-                                                <img class="img-thumbnail " src="{{asset('').$result['detail']['product_data'][0]->products_image }}" alt="img-fluid" style="    max-width: 80px;">
+                                                <img class="img-thumbnail " src="{{asset('').$result['detail']['product_data'][0]->products_image }}" alt="img-fluid">
                                             </a>
                                         </div>
                                                     
