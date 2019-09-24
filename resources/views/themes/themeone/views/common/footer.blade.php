@@ -119,11 +119,17 @@
         <div class="row">
             <div class="footer-image col-12 col-md-6">
 
-                <div id="ex1" class="modal" data-show-close="false" style="z-index: 99999;padding:0; height: 500px; text-align: center">
+                <div id="ex1" class="modal" data-show-close="false" style="z-index: 99999;padding:0; height: 535px; text-align: center">
                     <img src="{{ asset('images/qr.png') }}" class="img-fluid">
-                    <ol style="list-style-type: decimal; font-size: 11px;text-align: left">Для проведения платежа за услуги необходимо:
+                    <ol style="
+                    list-style-type: decimal;
+                    font-size: 11px;
+                    text-align: left;
+                    padding-right: 30px;
+                    padding-bottom: 30px;"
+                    >Для проведения платежа за услуги необходимо:
                     <li>Войти в личный кабинет интернет-банка.</li>
-                    <li>В списке "Мои операции" выбрать <стр></стр>оку "Платежи и переводы" / "Оплата услуг".</li>
+                    <li>В списке "Мои операции" выбрать строку "Платежи и переводы" / "Оплата услуг".</li>
                     <li>В открывшемся дереве (списке) нажать на строку система «Расчет» (ЕРИП)/Оплата по QR-коду.</li>
                     <li>Выбрать "Оплата в ЕРИП по коду услуги", ввести код и оплатить / Выбрать категорию "Информационные услуги".</li>
                     <li>Далее - строку "Прочие организации".</li>
