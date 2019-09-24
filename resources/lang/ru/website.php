@@ -96,7 +96,7 @@ return [
 	'Email'=>'Email',
 
 
-    'Number Of Employees' => 'Кол-Во Сотрудников',
+    'Number Of Employees' => 'Кол-во Сотрудников',
 
     'Business age' => 'Возраст бизнеса(лет)',
 		
