@@ -5,7 +5,14 @@
 <!-- meta contains meta taga, css and fontawesome icons etc -->
 
 @include('common.meta')
-
+<style>
+    .jquery-modal {
+        z-index: 999999!important;
+    }
+    .modal a.close-modal {
+        display: none!important;
+    }
+</style>
 <!-- ./end of meta -->
 
 <!--dir="rtl"-->
@@ -65,13 +72,14 @@
 	<!-- all js scripts including custom js -->
 
 	@include('common.scripts')
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
     <script>
         (function(w,d,u){
             var s=d.createElement('script');s.async=true;s.src=u+'?'+(Date.now()/60000|0);
             var h=d.getElementsByTagName('script')[0];h.parentNode.insertBefore(s,h);
         })(window,document,'https://cdn.bitrix24.by/b10862054/crm/site_button/loader_2_h44e8g.js');
     </script>
-
     <!-- ./end of js scripts -->
     @if(!empty($result['commonContent']['setting'][77]->value))
 		<?=stripslashes($result['commonContent']['setting'][77]->value)?>
