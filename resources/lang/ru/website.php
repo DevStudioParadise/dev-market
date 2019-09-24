@@ -590,7 +590,7 @@ return [
 		
 	'Remove Item'=>'Удалить объект',
 		
-	'per page'=>'на страницу',
+	'per page'=>'на стр.',
 		
 	'orderNotesandSummary'=>'Заказ Примечания и Резюме',
 		
