@@ -96,7 +96,7 @@ return [
 	'Email'=>'Email',
 
 
-    'Number Of Employees' => 'Кол-Во Сотрудников',
+    'Number Of Employees' => 'Кол-во сотрудников',
 
     'Business age' => 'Возраст бизнеса(лет)',
 		
@@ -590,7 +590,7 @@ return [
 		
 	'Remove Item'=>'Удалить объект',
 		
-	'per page'=>'на страницу',
+	'per page'=>'на стр.',
 		
 	'orderNotesandSummary'=>'Заказ Примечания и Резюме',
 		

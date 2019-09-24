@@ -105,7 +105,7 @@
             			    @if(!empty($result['detail']['product_data'][0]->products_left_banner) and $result['detail']['product_data'][0]->products_left_banner_start_date <= time() and $result['detail']['product_data'][0]->products_left_banner_expire_date >= time() or !empty($result['detail']['product_data'][0]->products_right_banner) and $result['detail']['product_data'][0]->products_right_banner_start_date <= time() and $result['detail']['product_data'][0]->products_right_banner_expire_date >= time())
                             <div class="col-12 col-lg-4">
                             @else
-                                <div class="col-12 col-lg-5">
+                                <div class="col-12 col-lg-7">
                             @endif
                             
                                 <div class="product-summary">

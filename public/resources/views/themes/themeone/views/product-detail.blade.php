@@ -84,14 +84,14 @@
                                     <div class="carousel-indicators" style="display: inline-block; margin-left: 0; margin-right: 0;">                                
                                         <div class="thumbnail active" data-slide-to="0" data-target="#product-slider" style="float: left; margin-bottom:10px;">
                                             <a id="carousel-selector-0">
-                                                <img class="img-thumbnail " src="{{asset('').$result['detail']['product_data'][0]->products_image }}" alt="img-fluid" style="    max-width: 80px;">
+                                                <img class="img-thumbnail " src="{{asset('').$result['detail']['product_data'][0]->products_image }}" alt="img-fluid">
                                             </a>
                                         </div>
                                                     
                                         @foreach( $result['detail']['product_data'][0]->images as $key=>$images )
                                             <div class="thumbnail" data-slide-to="{{++$key}}" data-target="#product-slider" style="float: left; margin-bottom:10px;">
                                                 <a id="carousel-selector-1">
-                                                    <img class="img-thumbnail " src="{{asset('').$images->image }}" alt="img-fluid" style="    max-width: 80px;">
+                                                    <img class="img-thumbnail " src="{{asset('').$images->image }}" alt="img-fluid">
                                                 </a>
                                             </div>
                                         @endforeach
@@ -105,7 +105,7 @@
             			    @if(!empty($result['detail']['product_data'][0]->products_left_banner) and $result['detail']['product_data'][0]->products_left_banner_start_date <= time() and $result['detail']['product_data'][0]->products_left_banner_expire_date >= time() or !empty($result['detail']['product_data'][0]->products_right_banner) and $result['detail']['product_data'][0]->products_right_banner_start_date <= time() and $result['detail']['product_data'][0]->products_right_banner_expire_date >= time())
                             <div class="col-12 col-lg-4">
                             @else
-                                <div class="col-12 col-lg-5">
+                                <div class="col-12 col-lg-7">
                             @endif
                             
                                 <div class="product-summary">

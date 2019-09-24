@@ -57,9 +57,9 @@
 	@yield('content')
 	
 
-	<section class="banner-content">
-    	@include('common.banner')
-    </section>
+{{--	<section class="banner-content">--}}
+{{--    	@include('common.banner')--}}
+{{--    </section>--}}
     
     @include('common.footer')
 	<!-- all js scripts including custom js -->

@@ -220,9 +220,10 @@
 				
 				.price-box{
 					display: flex;
-					justify-content: center;
+					justify-content: flex-start;
 					align-items: center;
 					margin-right:30px;
+					width: 100%;
 
 					span{
 						font-size:$font-size-md;
