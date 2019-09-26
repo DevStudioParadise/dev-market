@@ -121,7 +121,6 @@
                             <li class="nav-item dropdown mega-dropdown open">
                               <a href="javascript:void(0);" class="nav-link dropdown-toggle">
                                 @lang('website.collection')
-                                <span class="badge badge-secondary">@lang('website.hot')</span>
                               </a>
                     
                               <ul class="dropdown-menu mega-dropdown-menu row" >
@@ -231,7 +230,6 @@
                             <li class="nav-item dropdown mega-dropdown open">
                               <div class="nav-link dropdown-toggle">
                                 @lang('website.collection')
-                                <span class="badge badge-secondary">@lang('website.hot')</span>
                               </div>
                     
                               <ul class="dropdown-menu mega-dropdown-menu row" >

@@ -118,7 +118,30 @@
     <div class="container">
         <div class="row">
             <div class="footer-image col-12 col-md-6">
-                <img class="img-fluid" src="{{asset('').'images/payments.png'}}">
+
+                <div id="ex1" class="modal" data-show-close="false" style="z-index: 99999;padding:0; height: 555px; text-align: center">
+                    <img src="{{ asset('images/qr.png') }}" class="img-fluid">
+                    <ol style="
+                    list-style-type: decimal;
+                    font-size: 11px;
+                    text-align: left;
+                    padding-right: 30px;
+                    padding-bottom: 30px;"
+                    >Для проведения платежа за услуги необходимо:
+                    <li>Войти в личный кабинет интернет-банка.</li>
+                    <li>В списке "Мои операции" выбрать строку "Платежи и переводы" / "Оплата услуг".</li>
+                    <li>В открывшемся дереве (списке) нажать на строку система «Расчет» (ЕРИП)/Оплата по QR-коду.</li>
+                    <li>Выбрать "Оплата в ЕРИП по коду услуги", ввести код и оплатить / Выбрать категорию "Информационные услуги".</li>
+                    <li>Далее - строку "Прочие организации".</li>
+                    <li>В списке компаний по алфавиту выбрать "КонсалтМаркет" и нажмите "Информационные услуги".</li>
+                    <li>Откроется страница с параметрами платежа, нужно ввести код услуги.</li>
+                    <li>Далее следовать инструкции интернет-банка.</li>
+                    </ol>
+                </div>
+
+                <!-- Link to open the modal -->
+                <a href="#ex1" rel="modal:open"> <img class="img-fluid" src="{{asset('').'images/payments.png'}}"></a>
+
             </div>
             <div class="footer-info col-12 col-md-6">
                 <p> © Консалт Маркет </p>

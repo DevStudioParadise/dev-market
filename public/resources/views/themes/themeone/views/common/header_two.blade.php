@@ -238,7 +238,6 @@
                                 <li class="nav-item dropdown mega-dropdown open">
                                     <div class="nav-link dropdown-toggle">
                                         @lang('website.collection')
-                                        <span class="badge badge-secondary">@lang('website.hot')</span>
                                     </div>
 
                                     <ul class="dropdown-menu mega-dropdown-menu row">
