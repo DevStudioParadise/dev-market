@@ -5,7 +5,7 @@
     
     @if($homeBanners->type==1)
     
-    <div class="new-product">
+    <div class="new-product mt-3">
 	<a title="Banner Image" href="{{ $homeBanners->banners_url}}"><div class="like-bnr" style="background-image: url('{{asset('').$homeBanners->banners_image}}');"></div></a>
     </div>
 

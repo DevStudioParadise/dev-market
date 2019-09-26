@@ -20,14 +20,14 @@
 <body dir="{{ session('direction')}}">
 	<!-- header -->
 
-		@if(session('homeStyle')=='two' )
+		@if(session('homeStyless="')=='two' )
         	@include('common.header_two')
             @if(Request::path() == 'index' or Request::path() == '/')
             <section class="carousel-content">
               <div class="container">
                 <div class="row">
                   <div class="col-12 col-lg-9 p-0"> @include('common.carousel') </div>
-                  <div class="col-12 col-lg-3 p-0 pl-2"> @include('common.offers') </div>
+                  <div class="col-12 col-lg-3 p-0 pl-lg-2 pl-md-2 pl-sm-2"> @include('common.offers') </div>
                 </div>
               </div>
             </section>
