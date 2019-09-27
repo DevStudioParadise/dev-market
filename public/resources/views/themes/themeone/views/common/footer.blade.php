@@ -119,7 +119,7 @@
         <div class="row">
             <div class="footer-image col-12 col-md-6">
 
-                <div id="ex1" class="modal" data-show-close="false" style="z-index: 99999;padding:0; height: 555px; text-align: center">
+                <div id="ex1" class="modal" data-show-close="false" style="z-index: 99999;padding:0; height: auto!important; text-align: center">
                     <img src="{{ asset('images/qr.png') }}" class="img-fluid">
                     <ol style="
                     list-style-type: decimal;
