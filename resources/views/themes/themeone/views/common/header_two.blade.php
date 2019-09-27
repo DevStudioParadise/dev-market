@@ -66,7 +66,7 @@
     <div class="header-maxi">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-12  col-sm-12 col-lg-3 spaceright-0">
+                <div class="col-12  col-sm-12 col-lg-3 spaceright-0" id="logo">
                     <a href="{{ URL::to('/')}}" class="logo">
                         @if($result['commonContent']['setting'][78]->value=='name')
                             <?=stripslashes($result['commonContent']['setting'][79]->value)?>
@@ -110,7 +110,7 @@
                                 <img class="img-fluid" src="{{asset('resources/assets/images/site_logo/phone.png')}}" alt="icon">
                                 <span class="block">
                                     <span class="items" style="color: black">@lang('website.Call Us Free'):</span>
-                                    <span class="title" >{{$result['commonContent']['setting'][11]->value}}</span>
+                                    <a class="title" href="tel:{{$result['commonContent']['setting'][11]->value}}">{{$result['commonContent']['setting'][11]->value}}</a>
                                 </span>
                             </a>
                         </li>
@@ -343,8 +343,9 @@
                                 <li class="nav-item"><a class="nav-link"
                                                         href="{{ URL::to('/contact-us')}}">@lang('website.Contact Us')</a>
                                 </li>
-                                <li class="nav-item last"><a
-                                            class="nav-link"><span>@lang('website.hotline')</span>{{$result['commonContent']['setting'][11]->value}}</a></li>
+                                <li class="nav-item last">
+                                    <a class="title" style="padding: .5615rem;" href="tel:{{$result['commonContent']['setting'][11]->value}}">{{$result['commonContent']['setting'][11]->value}}</a>
+                                </li>
                             </ul>
                         </div>
                     </nav>
@@ -353,3 +354,17 @@
         </div>
     </div>
 </header>
+<script>
+    myID = document.getElementById("logo");
+
+    var myScrollFunc = function() {
+        var y = window.scrollY;
+        if (y > 20) {
+            myID.className = "d-none"
+        } else {
+            myID.className = "col-12  col-sm-12 col-lg-3 spaceright-0"
+        }
+    };
+
+    window.addEventListener("scroll", myScrollFunc);
+</script>
