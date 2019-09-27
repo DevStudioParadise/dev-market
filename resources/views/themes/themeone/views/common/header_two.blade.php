@@ -372,10 +372,11 @@
     }
     var myScrollFunc = throttle(function() {
         var y = window.scrollY;
-        if ((y <= 100 && myID.className !== "d-none") || (myID.className === "d-none" && y <=20)) {
-            myID.className = "col-12  col-sm-12 col-lg-3 spaceright-0"
-        } else {
+        if (y > 100) {
             myID.className = "d-none"
+        }
+        if (y === 1) {
+            myID.className = "col-12  col-sm-12 col-lg-3 spaceright-0"
         }
     },10);
 
