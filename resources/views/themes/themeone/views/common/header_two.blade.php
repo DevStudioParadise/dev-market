@@ -375,7 +375,7 @@
         if (y > 100) {
             myID.className = "d-none"
         }
-        if (y === 1) {
+        if (y < 5) {
             myID.className = "col-12  col-sm-12 col-lg-3 spaceright-0"
         }
     },10);
