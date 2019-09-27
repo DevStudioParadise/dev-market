@@ -359,10 +359,10 @@
 
     var myScrollFunc = function() {
         var y = window.scrollY;
-        if (y > 20) {
-            myID.className = "d-none"
-        } else {
+        if (y < 20) {
             myID.className = "col-12  col-sm-12 col-lg-3 spaceright-0"
+        } else {
+            myID.className = "d-none"
         }
     };
 
