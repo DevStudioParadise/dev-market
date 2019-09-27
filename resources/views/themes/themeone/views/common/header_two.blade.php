@@ -377,7 +377,7 @@
         } else {
             myID.className = "d-none"
         }
-    },40);
+    },10);
 
     window.addEventListener("scroll", myScrollFunc);
 </script>
