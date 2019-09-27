@@ -359,7 +359,7 @@
 
     var myScrollFunc = function() {
         var y = window.scrollY;
-        if (y < 20) {
+        if (y < 50) {
             myID.className = "col-12  col-sm-12 col-lg-3 spaceright-0"
         } else {
             myID.className = "d-none"
