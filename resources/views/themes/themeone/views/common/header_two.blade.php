@@ -356,15 +356,28 @@
 </header>
 <script>
     myID = document.getElementById("logo");
+    function throttle (callback, limit) {
 
-    var myScrollFunc = function() {
+        var wait = false;
+        return function () {
+            if (!wait) {
+
+                callback.apply(null, arguments);
+                wait = true;
+                setTimeout(function () {
+                    wait = false;
+                }, limit);
+            }
+        }
+    }
+    var myScrollFunc = throttle(function() {
         var y = window.scrollY;
-        if (y <= 50) {
+        if ((y <= 100 && myID.className !== "d-none") || (myID.className === "d-none" && y <=20)) {
             myID.className = "col-12  col-sm-12 col-lg-3 spaceright-0"
         } else {
             myID.className = "d-none"
         }
-    };
+    },40);
 
     window.addEventListener("scroll", myScrollFunc);
 </script>
