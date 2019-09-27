@@ -372,7 +372,7 @@
     }
     var myScrollFunc = throttle(function() {
         var y = window.scrollY;
-        if (y > 100) {
+        if (y > 150) {
             myID.className = "d-none"
         }
         if (y < 5) {
