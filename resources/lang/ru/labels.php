@@ -697,6 +697,8 @@ return [
     'Liked' => 'Понравилось',
 
     'ListingBanners' => 'Список баннеров',
+    'ListingRegion' => 'Список регионов',
+    'DeleteRegionText' => 'Удалить регион',
     'AddBanner' => 'Добавить баннер',
     'BannerAddedMessage' => 'Баннер успешно добавлен!',
     'EditBanner' => 'Редактировать баннер',
