@@ -106,7 +106,7 @@
                 <div class="col-12 col-sm-5 col-md-4 col-lg-3 spaceleft-0">
                     <ul class="top-right-list">
                     <li class="phone-header">
-                            <span style="display: fle;">
+                            <span style="display: flex;">
                                 <img class="img-fluid" src="{{asset('resources/assets/images/site_logo/phone.png')}}" alt="icon" style="width: 40px;height: 40px;">
                                 <span class="block">
                                     <span class="items" style="color: black">@lang('website.Call Us Free'):</span>
