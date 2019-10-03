@@ -78,10 +78,10 @@
                         <h5>@lang('website.Follow Us')</h5>
                         <ul class="list">
                             <li>
-                                <a href="#" class="fa fa-telegram"></a>
+                                <a href="#" class="fa fa-viber"></a>
                             </li>
                             <li>
-                                <a href="#" class="fab fa-viber"></a>
+                                <a href="#" class="fa fa-telegram"></a>
                             </li>
                             <li>
                                 <a href="#" class="fa fa-vk"></a>
