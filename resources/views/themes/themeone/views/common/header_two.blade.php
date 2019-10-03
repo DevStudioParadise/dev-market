@@ -371,7 +371,7 @@
     var myScrollFunc = throttle(function() {
         var y = window.scrollY;
         if (y > 150) {
-            myID.className = "d-none"
+            myID.className = "col-12  col-sm-12 col-lg-3 spaceright-0 d-none d-sm-block"
         }
         if (y < 5) {
             myID.className = "col-12  col-sm-12 col-lg-3 spaceright-0"

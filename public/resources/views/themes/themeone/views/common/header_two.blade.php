@@ -66,7 +66,7 @@
     <div class="header-maxi">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-12  col-sm-12 col-lg-3 spaceright-0">
+                <div class="col-12  col-sm-12 col-lg-3 spaceright-0" id="logo">
                     <a href="{{ URL::to('/')}}" class="logo">
                         @if($result['commonContent']['setting'][78]->value=='name')
                             <?=stripslashes($result['commonContent']['setting'][79]->value)?>
@@ -106,13 +106,11 @@
                 <div class="col-12 col-sm-5 col-md-4 col-lg-3 spaceleft-0">
                     <ul class="top-right-list">
                     <li class="phone-header">
-                            <a>
-                                <img class="img-fluid" src="{{asset('resources/assets/images/site_logo/phone.png')}}" alt="icon">
+                            <span style="display: flex;">
                                 <span class="block">
-                                    <span class="items" style="color: black">@lang('website.Call Us Free'):</span>
-                                    <span class="title" >{{$result['commonContent']['setting'][11]->value}}</span>
+                                    <a style="font-size: 1.275rem;" class="title" href="tel:{{$result['commonContent']['setting'][11]->value}}">{{$result['commonContent']['setting'][11]->value}}</a>
                                 </span>
-                            </a>
+                            </span>
                         </li>
                     </ul>
                 </div>
@@ -343,8 +341,9 @@
                                 <li class="nav-item"><a class="nav-link"
                                                         href="{{ URL::to('/contact-us')}}">@lang('website.Contact Us')</a>
                                 </li>
-                                <li class="nav-item last"><a
-                                            class="nav-link"><span>@lang('website.hotline')</span>{{$result['commonContent']['setting'][11]->value}}</a></li>
+                                <li class="nav-item last">
+                                    <a class="title" style="padding: .5615rem;" href="tel:{{$result['commonContent']['setting'][11]->value}}">{{$result['commonContent']['setting'][11]->value}}</a>
+                                </li>
                             </ul>
                         </div>
                     </nav>
@@ -353,3 +352,31 @@
         </div>
     </div>
 </header>
+<script>
+    myID = document.getElementById("logo");
+    function throttle (callback, limit) {
+
+        var wait = false;
+        return function () {
+            if (!wait) {
+
+                callback.apply(null, arguments);
+                wait = true;
+                setTimeout(function () {
+                    wait = false;
+                }, limit);
+            }
+        }
+    }
+    var myScrollFunc = throttle(function() {
+        var y = window.scrollY;
+        if (y > 150) {
+            myID.className = "col-12  col-sm-12 col-lg-3 spaceright-0 d-none d-sm-block"
+        }
+        if (y < 5) {
+            myID.className = "col-12  col-sm-12 col-lg-3 spaceright-0"
+        }
+    },10);
+
+    window.addEventListener("scroll", myScrollFunc);
+</script>

@@ -46,8 +46,8 @@
                   <thead>
                     <tr>
                       <th>{{ trans('labels.ID') }}</th>
-                      <th>{{ trans('labels.CountryName') }}</th>
                       <th>{{ trans('labels.RegionName') }}</th>
+                      <th>{{ trans('labels.CountryName') }}</th>
                     </tr>
                   </thead>
                   <tbody>

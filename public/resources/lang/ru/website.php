@@ -45,7 +45,7 @@ return [
 		
 	'All Categories'=>'Все категории',
 		
-	'Search entire store here'=>'Поиск по всему магазину здесь',
+	'Search entire store here'=>'Поиск по всему каталогу',
 		
 	'Profile'=>'Профиль',
 		
@@ -165,7 +165,7 @@ return [
 		
 	'cartEmptyText'=>'В вашей корзине нет товаров. <br> Нажмите <a href="shop"> здесь </a>, чтобы продолжить покупки.',
 		
-	'Home'=>'Домой',
+	'Home'=>'Главная',
 		
 	'Shopping cart'=>'Корзина',
 		

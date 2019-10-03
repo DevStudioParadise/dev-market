@@ -1234,7 +1234,7 @@ return [
     'seo content' => 'SEO Content',
     'Set Default' => 'Установить по умолчанию',
     'ListingOptions' => 'Параметры',
-    'Home' => 'Домой',
+    'Home' => 'Главная',
     'ProductInventory' => 'Инвентаризация продукции',
     'addinventory' => 'Добавить инвентарь',
     'Inventory' => 'Инвентарь',

@@ -697,6 +697,8 @@ return [
     'Liked' => 'Понравилось',
 
     'ListingBanners' => 'Список баннеров',
+    'ListingRegion' => 'Список регионов',
+    'DeleteRegionText' => 'Удалить регион',
     'AddBanner' => 'Добавить баннер',
     'BannerAddedMessage' => 'Баннер успешно добавлен!',
     'EditBanner' => 'Редактировать баннер',
@@ -1232,7 +1234,7 @@ return [
     'seo content' => 'SEO Content',
     'Set Default' => 'Установить по умолчанию',
     'ListingOptions' => 'Параметры',
-    'Home' => 'Домой',
+    'Home' => 'Главная',
     'ProductInventory' => 'Инвентаризация продукции',
     'addinventory' => 'Добавить инвентарь',
     'Inventory' => 'Инвентарь',
