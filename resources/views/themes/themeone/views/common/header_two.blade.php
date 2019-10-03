@@ -107,10 +107,8 @@
                     <ul class="top-right-list">
                     <li class="phone-header">
                             <span style="display: flex;">
-                                <img class="img-fluid" src="{{asset('resources/assets/images/site_logo/phone.png')}}" alt="icon" style="width: 40px;height: 40px;">
                                 <span class="block">
-                                    <span class="items" style="color: black">@lang('website.Call Us Free'):</span>
-                                    <a class="title" href="tel:{{$result['commonContent']['setting'][11]->value}}">{{$result['commonContent']['setting'][11]->value}}</a>
+                                    <a style="font-size: 1.275rem;" class="title" href="tel:{{$result['commonContent']['setting'][11]->value}}">{{$result['commonContent']['setting'][11]->value}}</a>
                                 </span>
                             </span>
                         </li>
