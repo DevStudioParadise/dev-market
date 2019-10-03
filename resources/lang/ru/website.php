@@ -45,7 +45,7 @@ return [
 		
 	'All Categories'=>'Все категории',
 		
-	'Search entire store here'=>'Поиск по всему магазину здесь',
+	'Search entire store here'=>'Поиск по всему каталогу',
 		
 	'Profile'=>'Профиль',
 		

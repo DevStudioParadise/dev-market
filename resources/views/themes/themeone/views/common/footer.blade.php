@@ -6,7 +6,7 @@
                     <h5>@lang('website.About Store')</h5>
                     <ul class="contact-list  pl-0 mb-0">
                         <li><i class="fa fa-map-marker"></i><span class="col-10">
-                    {{$result['commonContent']['setting'][6]->value}},
+                    {{$result['commonContent']['setting'][6]->value}}
                     {{$result['commonContent']['setting'][7]->value}},
                     {{$result['commonContent']['setting'][8]->value}},
                     {{$result['commonContent']['setting'][5]->value}},
@@ -78,12 +78,24 @@
                         <h5>@lang('website.Follow Us')</h5>
                         <ul class="list">
                             <li>
+                                <a href="#" class="fa fa-telegram"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fab fa-viber"></a>
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-vk"></a>
+                            </li>
+                            <li>
                                 @if(!empty($result['commonContent']['setting'][50]->value))
                                     <a href="{{$result['commonContent']['setting'][50]->value}}" class="fa fa-facebook"
                                        target="_blank"></a>
                                 @else
                                     <a href="#" class="fa fa-facebook"></a>
                                 @endif
+                            </li>
+                            <li>
+                                <a href="#" class="fa fa-instagram"></a>
                             </li>
                             <li>
                                 @if(!empty($result['commonContent']['setting'][53]->value))
@@ -93,18 +105,8 @@
                                     <a href="#" class="fa fa-linkedin"></a>
                                 @endif
                             </li>
-                            <li>
-                                    <a href="#" class="fa fa-vk"></a>
-                            </li>
-{{--                            <li>--}}
-{{--                                <a href="#" class="fa fa-odnoklassniki-square"></a>--}}
-{{--                            </li>--}}
-                            <li>
-                                <a href="#" class="fa fa-telegram"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="fa fa-instagram"></a>
-                            </li>
+
+
                         </ul>
                     </div>
 
