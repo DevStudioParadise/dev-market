@@ -97,9 +97,10 @@
 			
 			.thumb{
 				float:left;
-				width:315px;
+				width:200px;
 				img{
 					height:100%;
+					width: 100%;
 					max-width:none;
 					/*transform: translateY(-15%);*/
 				}
@@ -107,7 +108,7 @@
 			
 			.block-panel{
 				float:left;
-				width:calc(100% - 315px);
+				width:calc(100% - 200px);
 				padding-left:15px;
 				
 				.tag, .title, .price{
